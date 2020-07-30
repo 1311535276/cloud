@@ -16,9 +16,7 @@ public class TestService {
 @Resource
     public TestMapper testMapper;
     public List<Test> list(){
-
         TestExample testExample = new TestExample();
-
         testExample.createCriteria().andIdEqualTo("1");
         //查询 where  id==1 IdEqualTo
         //多个查询 需要在表达式后面继续and xxx
