@@ -239,9 +239,8 @@
 </template>
 
 <script>
-
   $('body').attr('class', 'login-layout light-login');
-export default {
+  export default {
   name: 'App',
 }
 </script>
