@@ -1,5 +1,6 @@
 module.exports = {
     root: true,
+    // BASE_API: "'http://192.168.0.6:8765'",
     env: {
         node: true
     },
