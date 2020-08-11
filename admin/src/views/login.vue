@@ -84,7 +84,6 @@
 </template>
 
 <script>
-
     export default {
         name: 'login',
         mounted:function(){
@@ -98,7 +97,6 @@
             }
         }
     }
-
 </script>
 
 <style scoped>
