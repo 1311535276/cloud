@@ -1,11 +1,11 @@
 <template>
-<div>
+    <div>
         <table id="simple-table" class="table  table-bordered table-hover">
             <thead>
             <tr>
                 <th class="center">
                     <label class="pos-rel">
-                        <input type="checkbox" class="ace" />
+                        <input type="checkbox" class="ace"/>
                         <span class="lbl"></span>
                     </label>
                 </th>
@@ -28,7 +28,7 @@
             <tr>
                 <td class="center">
                     <label class="pos-rel">
-                        <input type="checkbox" class="ace" />
+                        <input type="checkbox" class="ace"/>
                         <span class="lbl"></span>
                     </label>
                 </td>
@@ -74,7 +74,8 @@
 
                     <div class="hidden-md hidden-lg">
                         <div class="inline pos-rel">
-                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown"
+                                    data-position="auto">
                                 <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
                             </button>
 
@@ -114,8 +115,9 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-2">
                                 <div class="text-center">
-                                    <img height="150" class="thumbnail inline no-margin-bottom" alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg" />
-                                    <br />
+                                    <img height="150" class="thumbnail inline no-margin-bottom"
+                                         alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg"/>
+                                    <br/>
                                     <div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
                                         <div class="inline position-relative">
                                             <a class="user-title-label" href="#">
@@ -133,7 +135,7 @@
 
                                 <div class="profile-user-info profile-user-info-striped">
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Username </div>
+                                        <div class="profile-info-name"> Username</div>
 
                                         <div class="profile-info-value">
                                             <span>alexdoe</span>
@@ -141,7 +143,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Location </div>
+                                        <div class="profile-info-name"> Location</div>
 
                                         <div class="profile-info-value">
                                             <i class="fa fa-map-marker light-orange bigger-110"></i>
@@ -150,7 +152,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Age </div>
+                                        <div class="profile-info-name"> Age</div>
 
                                         <div class="profile-info-value">
                                             <span>38</span>
@@ -158,7 +160,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Joined </div>
+                                        <div class="profile-info-name"> Joined</div>
 
                                         <div class="profile-info-value">
                                             <span>2010/06/20</span>
@@ -166,7 +168,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Last Online </div>
+                                        <div class="profile-info-name"> Last Online</div>
 
                                         <div class="profile-info-value">
                                             <span>3 hours ago</span>
@@ -174,7 +176,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> About Me </div>
+                                        <div class="profile-info-name"> About Me</div>
 
                                         <div class="profile-info-value">
                                             <span>Bio</span>
@@ -191,18 +193,20 @@
 
                                 <form>
                                     <fieldset>
-                                        <textarea class="width-100" resize="none" placeholder="Type something…"></textarea>
+                                        <textarea class="width-100" resize="none"
+                                                  placeholder="Type something…"></textarea>
                                     </fieldset>
 
                                     <div class="hr hr-dotted"></div>
 
                                     <div class="clearfix">
                                         <label class="pull-left">
-                                            <input type="checkbox" class="ace" />
+                                            <input type="checkbox" class="ace"/>
                                             <span class="lbl"> Email me a copy</span>
                                         </label>
 
-                                        <button class="pull-right btn btn-sm btn-primary btn-white btn-round" type="button">
+                                        <button class="pull-right btn btn-sm btn-primary btn-white btn-round"
+                                                type="button">
                                             Submit
                                             <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
                                         </button>
@@ -217,7 +221,7 @@
             <tr>
                 <td class="center">
                     <label class="pos-rel">
-                        <input type="checkbox" class="ace" />
+                        <input type="checkbox" class="ace"/>
                         <span class="lbl"></span>
                     </label>
                 </td>
@@ -263,7 +267,8 @@
 
                     <div class="hidden-md hidden-lg">
                         <div class="inline pos-rel">
-                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown"
+                                    data-position="auto">
                                 <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
                             </button>
 
@@ -303,8 +308,9 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-2">
                                 <div class="text-center">
-                                    <img height="150" class="thumbnail inline no-margin-bottom" alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg" />
-                                    <br />
+                                    <img height="150" class="thumbnail inline no-margin-bottom"
+                                         alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg"/>
+                                    <br/>
                                     <div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
                                         <div class="inline position-relative">
                                             <a class="user-title-label" href="#">
@@ -322,7 +328,7 @@
 
                                 <div class="profile-user-info profile-user-info-striped">
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Username </div>
+                                        <div class="profile-info-name"> Username</div>
 
                                         <div class="profile-info-value">
                                             <span>alexdoe</span>
@@ -330,7 +336,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Location </div>
+                                        <div class="profile-info-name"> Location</div>
 
                                         <div class="profile-info-value">
                                             <i class="fa fa-map-marker light-orange bigger-110"></i>
@@ -339,7 +345,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Age </div>
+                                        <div class="profile-info-name"> Age</div>
 
                                         <div class="profile-info-value">
                                             <span>38</span>
@@ -347,7 +353,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Joined </div>
+                                        <div class="profile-info-name"> Joined</div>
 
                                         <div class="profile-info-value">
                                             <span>2010/06/20</span>
@@ -355,7 +361,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Last Online </div>
+                                        <div class="profile-info-name"> Last Online</div>
 
                                         <div class="profile-info-value">
                                             <span>3 hours ago</span>
@@ -363,7 +369,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> About Me </div>
+                                        <div class="profile-info-name"> About Me</div>
 
                                         <div class="profile-info-value">
                                             <span>Bio</span>
@@ -380,18 +386,20 @@
 
                                 <form>
                                     <fieldset>
-                                        <textarea class="width-100" resize="none" placeholder="Type something…"></textarea>
+                                        <textarea class="width-100" resize="none"
+                                                  placeholder="Type something…"></textarea>
                                     </fieldset>
 
                                     <div class="hr hr-dotted"></div>
 
                                     <div class="clearfix">
                                         <label class="pull-left">
-                                            <input type="checkbox" class="ace" />
+                                            <input type="checkbox" class="ace"/>
                                             <span class="lbl"> Email me a copy</span>
                                         </label>
 
-                                        <button class="pull-right btn btn-sm btn-primary btn-white btn-round" type="button">
+                                        <button class="pull-right btn btn-sm btn-primary btn-white btn-round"
+                                                type="button">
                                             Submit
                                             <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
                                         </button>
@@ -406,7 +414,7 @@
             <tr>
                 <td class="center">
                     <label class="pos-rel">
-                        <input type="checkbox" class="ace" />
+                        <input type="checkbox" class="ace"/>
                         <span class="lbl"></span>
                     </label>
                 </td>
@@ -452,7 +460,8 @@
 
                     <div class="hidden-md hidden-lg">
                         <div class="inline pos-rel">
-                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown"
+                                    data-position="auto">
                                 <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
                             </button>
 
@@ -492,8 +501,9 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-2">
                                 <div class="text-center">
-                                    <img height="150" class="thumbnail inline no-margin-bottom" alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg" />
-                                    <br />
+                                    <img height="150" class="thumbnail inline no-margin-bottom"
+                                         alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg"/>
+                                    <br/>
                                     <div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
                                         <div class="inline position-relative">
                                             <a class="user-title-label" href="#">
@@ -511,7 +521,7 @@
 
                                 <div class="profile-user-info profile-user-info-striped">
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Username </div>
+                                        <div class="profile-info-name"> Username</div>
 
                                         <div class="profile-info-value">
                                             <span>alexdoe</span>
@@ -519,7 +529,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Location </div>
+                                        <div class="profile-info-name"> Location</div>
 
                                         <div class="profile-info-value">
                                             <i class="fa fa-map-marker light-orange bigger-110"></i>
@@ -528,7 +538,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Age </div>
+                                        <div class="profile-info-name"> Age</div>
 
                                         <div class="profile-info-value">
                                             <span>38</span>
@@ -536,7 +546,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Joined </div>
+                                        <div class="profile-info-name"> Joined</div>
 
                                         <div class="profile-info-value">
                                             <span>2010/06/20</span>
@@ -544,7 +554,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Last Online </div>
+                                        <div class="profile-info-name"> Last Online</div>
 
                                         <div class="profile-info-value">
                                             <span>3 hours ago</span>
@@ -552,7 +562,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> About Me </div>
+                                        <div class="profile-info-name"> About Me</div>
 
                                         <div class="profile-info-value">
                                             <span>Bio</span>
@@ -569,18 +579,20 @@
 
                                 <form>
                                     <fieldset>
-                                        <textarea class="width-100" resize="none" placeholder="Type something…"></textarea>
+                                        <textarea class="width-100" resize="none"
+                                                  placeholder="Type something…"></textarea>
                                     </fieldset>
 
                                     <div class="hr hr-dotted"></div>
 
                                     <div class="clearfix">
                                         <label class="pull-left">
-                                            <input type="checkbox" class="ace" />
+                                            <input type="checkbox" class="ace"/>
                                             <span class="lbl"> Email me a copy</span>
                                         </label>
 
-                                        <button class="pull-right btn btn-sm btn-primary btn-white btn-round" type="button">
+                                        <button class="pull-right btn btn-sm btn-primary btn-white btn-round"
+                                                type="button">
                                             Submit
                                             <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
                                         </button>
@@ -595,7 +607,7 @@
             <tr>
                 <td class="center">
                     <label class="pos-rel">
-                        <input type="checkbox" class="ace" />
+                        <input type="checkbox" class="ace"/>
                         <span class="lbl"></span>
                     </label>
                 </td>
@@ -641,7 +653,8 @@
 
                     <div class="hidden-md hidden-lg">
                         <div class="inline pos-rel">
-                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown"
+                                    data-position="auto">
                                 <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
                             </button>
 
@@ -681,8 +694,9 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-2">
                                 <div class="text-center">
-                                    <img height="150" class="thumbnail inline no-margin-bottom" alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg" />
-                                    <br />
+                                    <img height="150" class="thumbnail inline no-margin-bottom"
+                                         alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg"/>
+                                    <br/>
                                     <div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
                                         <div class="inline position-relative">
                                             <a class="user-title-label" href="#">
@@ -700,7 +714,7 @@
 
                                 <div class="profile-user-info profile-user-info-striped">
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Username </div>
+                                        <div class="profile-info-name"> Username</div>
 
                                         <div class="profile-info-value">
                                             <span>alexdoe</span>
@@ -708,7 +722,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Location </div>
+                                        <div class="profile-info-name"> Location</div>
 
                                         <div class="profile-info-value">
                                             <i class="fa fa-map-marker light-orange bigger-110"></i>
@@ -717,7 +731,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Age </div>
+                                        <div class="profile-info-name"> Age</div>
 
                                         <div class="profile-info-value">
                                             <span>38</span>
@@ -725,7 +739,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Joined </div>
+                                        <div class="profile-info-name"> Joined</div>
 
                                         <div class="profile-info-value">
                                             <span>2010/06/20</span>
@@ -733,7 +747,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Last Online </div>
+                                        <div class="profile-info-name"> Last Online</div>
 
                                         <div class="profile-info-value">
                                             <span>3 hours ago</span>
@@ -741,7 +755,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> About Me </div>
+                                        <div class="profile-info-name"> About Me</div>
 
                                         <div class="profile-info-value">
                                             <span>Bio</span>
@@ -758,18 +772,20 @@
 
                                 <form>
                                     <fieldset>
-                                        <textarea class="width-100" resize="none" placeholder="Type something…"></textarea>
+                                        <textarea class="width-100" resize="none"
+                                                  placeholder="Type something…"></textarea>
                                     </fieldset>
 
                                     <div class="hr hr-dotted"></div>
 
                                     <div class="clearfix">
                                         <label class="pull-left">
-                                            <input type="checkbox" class="ace" />
+                                            <input type="checkbox" class="ace"/>
                                             <span class="lbl"> Email me a copy</span>
                                         </label>
 
-                                        <button class="pull-right btn btn-sm btn-primary btn-white btn-round" type="button">
+                                        <button class="pull-right btn btn-sm btn-primary btn-white btn-round"
+                                                type="button">
                                             Submit
                                             <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
                                         </button>
@@ -784,7 +800,7 @@
             <tr>
                 <td class="center">
                     <label class="pos-rel">
-                        <input type="checkbox" class="ace" />
+                        <input type="checkbox" class="ace"/>
                         <span class="lbl"></span>
                     </label>
                 </td>
@@ -830,7 +846,8 @@
 
                     <div class="hidden-md hidden-lg">
                         <div class="inline pos-rel">
-                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown"
+                                    data-position="auto">
                                 <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
                             </button>
 
@@ -870,8 +887,9 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-2">
                                 <div class="text-center">
-                                    <img height="150" class="thumbnail inline no-margin-bottom" alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg" />
-                                    <br />
+                                    <img height="150" class="thumbnail inline no-margin-bottom"
+                                         alt="Domain Owner's Avatar" src="assets/images/avatars/profile-pic.jpg"/>
+                                    <br/>
                                     <div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
                                         <div class="inline position-relative">
                                             <a class="user-title-label" href="#">
@@ -889,7 +907,7 @@
 
                                 <div class="profile-user-info profile-user-info-striped">
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Username </div>
+                                        <div class="profile-info-name"> Username</div>
 
                                         <div class="profile-info-value">
                                             <span>alexdoe</span>
@@ -897,7 +915,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Location </div>
+                                        <div class="profile-info-name"> Location</div>
 
                                         <div class="profile-info-value">
                                             <i class="fa fa-map-marker light-orange bigger-110"></i>
@@ -906,7 +924,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Age </div>
+                                        <div class="profile-info-name"> Age</div>
 
                                         <div class="profile-info-value">
                                             <span>38</span>
@@ -914,7 +932,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Joined </div>
+                                        <div class="profile-info-name"> Joined</div>
 
                                         <div class="profile-info-value">
                                             <span>2010/06/20</span>
@@ -922,7 +940,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> Last Online </div>
+                                        <div class="profile-info-name"> Last Online</div>
 
                                         <div class="profile-info-value">
                                             <span>3 hours ago</span>
@@ -930,7 +948,7 @@
                                     </div>
 
                                     <div class="profile-info-row">
-                                        <div class="profile-info-name"> About Me </div>
+                                        <div class="profile-info-name"> About Me</div>
 
                                         <div class="profile-info-value">
                                             <span>Bio</span>
@@ -947,18 +965,20 @@
 
                                 <form>
                                     <fieldset>
-                                        <textarea class="width-100" resize="none" placeholder="Type something…"></textarea>
+                                        <textarea class="width-100" resize="none"
+                                                  placeholder="Type something…"></textarea>
                                     </fieldset>
 
                                     <div class="hr hr-dotted"></div>
 
                                     <div class="clearfix">
                                         <label class="pull-left">
-                                            <input type="checkbox" class="ace" />
+                                            <input type="checkbox" class="ace"/>
                                             <span class="lbl"> Email me a copy</span>
                                         </label>
 
-                                        <button class="pull-right btn btn-sm btn-primary btn-white btn-round" type="button">
+                                        <button class="pull-right btn btn-sm btn-primary btn-white btn-round"
+                                                type="button">
                                             Submit
                                             <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
                                         </button>
@@ -971,17 +991,16 @@
             </tr>
             </tbody>
         </table>
-</div>
+    </div>
 </template>
 
 <script>
     export default {
         name: 'chapter',
-        mounted:function(){
-            this.$parent.activeSidebar("business-sidebar")
+        mounted: function () {
+            //sidebar激活样式方法一
+            // this.$parent.activeSidebar("business-sidebar");
         },
-        methods: {
-
-        }
+        methods: {}
     }
 </script>
