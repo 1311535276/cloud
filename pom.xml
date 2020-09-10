@@ -8,26 +8,31 @@
     <artifactId>springcloudthree</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <!--子项目-->
     <modules>
         <module>system</module>
         <module>eureka</module>
         <module>gateway</module>
         <module>server</module>
         <module>business</module>
-
     </modules>
+<!--设置项目是1.8jdk控制-->
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
     </properties>
+
+    <!--设置项目由spring boot掌管-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
+
     </parent>
     <build>
         <plugins>
+            <!--maven插件-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -44,6 +49,7 @@
                     <overwrite>true</overwrite>
                     <verbose>true</verbose>
                 </configuration>
+                <!--这个插件需要连接数据库获得表数据结构 所以需要加驱动包管理-->
                 <dependencies>
                     <dependency>
                         <groupId>mysql</groupId>
@@ -54,8 +60,11 @@
             </plugin>
         </plugins>
     </build>
+
     <dependencyManagement>
+
         <dependencies>
+            <!--spring cloud依赖管理-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -63,7 +72,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
+            <!--gateway的jar-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-gateway</artifactId>
@@ -101,11 +110,21 @@
                 <version>2.2.3.RELEASE</version>
             </dependency>
 
+            <!--2020-8-26-->
+            <!-- mybatis分页插件pagehelper -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <!--<artifactId>pagehelper</artifactId>-->
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                    <version>1.2.10</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-redis</artifactId>
                 <version>2.2.3.RELEASE</version>
             </dependency>
+
             <dependency>
                 <groupId>com.accp</groupId>
                 <artifactId>server</artifactId>

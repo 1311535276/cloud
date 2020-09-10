@@ -86,16 +86,19 @@
         },
         mounted: function () {
             let _this=this;
+            // 调用 list()方法
             _this.list();
             //sidebar激活样式方法一
             // this.$parent.activeSidebar("business-sidebar");
         },
-
         methods: {
             list(){
                 let _this=this;
+                // 获取list 从后台获取sql数据
                 _this.$ajax.get('http://127.0.0.1:9000/business/admin/chapter/list').then((response)=>{
+                 // 数据存储在response
                     console.log("查询大章列表结果:",response);
+                    // 就数据放进前端data(双面数据)
               _this.chapters =response.data;
                 })
             }
