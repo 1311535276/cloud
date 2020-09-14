@@ -2,7 +2,9 @@ package com.accp.business.controller.admin;
 
 import com.accp.server.domain.Chapter;
 import com.accp.server.dto.ChapterDto;
+import com.accp.server.dto.PageDto;
 import com.accp.server.service.ChapterService;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,8 +20,8 @@ public class ChapterController {
     private ChapterService chapterService;
 
 @RequestMapping("/list")
-    public List<ChapterDto> list(){
-
-    return chapterService.list();
+    public PageDto list(@RequestBody PageDto pageDto){
+    chapterService.list(pageDto);
+    return pageDto;
     }
 }
