@@ -99,22 +99,22 @@
                     <div class="modal-body">
                         <form class="form-horizontal">
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">名称</label>
+                                <label class="col-sm-2 control-label" >名称</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control"  placeholder="名称">
+                                    <input v-model="chapter.name" type="text" class="form-control"  placeholder="名称">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">课程ID</label>
+                                <label  class="col-sm-2 control-label">课程ID</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control"  placeholder="课程ID">
+                                    <input v-model="chapter.courseId" type="text" class="form-control"  placeholder="课程ID">
                                 </div>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="button" class="btn btn-primary">保存</button>
+                        <button type="button" class="btn btn-primary" v-on:click="save()">保存</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
@@ -132,7 +132,9 @@
         components: {Pagination},
         name: "chapter",
         data:function(){
+            //数据绑定写在这里
             return {
+                chapter:{},
                 chapters:[]
             }
         },
@@ -170,8 +172,19 @@
                     //获取到数据 存进data ,data点出list(记录)  渲染数据
                     _this.chapters =response.data.list;
                     //获取到数据 存进data ,data点出total(总页数) 渲染数据
-
                     _this.$refs.pagination.render(page,response.data.total);
+                })
+            },
+            // save方法:表单新增前端核心代码
+            save(page){
+                let _this=this;
+                // 获取list 从后台获取sql数据
+                _this.$ajax.post('http://127.0.0.1:9000/business/admin/chapter/save',
+                       //参数
+                       _this.chapter
+                    ).then((response)=>{
+                    // 数据存储在response
+                    console.log("保存大章列表结果:",response);
 
                 })
             }

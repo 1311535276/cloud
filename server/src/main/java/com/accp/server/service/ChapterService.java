@@ -42,4 +42,9 @@ public class ChapterService {
         pageDto.setList(chapterDtoList);
     }
 
+    public void save(ChapterDto chapterDto){
+        Chapter chapter = new Chapter();
+        BeanUtils.copyProperties(chapterDto,chapter);
+    chapterMapper.insert(chapter);
+    }
 }
