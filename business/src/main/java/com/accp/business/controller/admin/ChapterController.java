@@ -3,6 +3,7 @@ package com.accp.business.controller.admin;
 import com.accp.server.domain.Chapter;
 import com.accp.server.dto.ChapterDto;
 import com.accp.server.dto.PageDto;
+import com.accp.server.dto.ResponseDto;
 import com.accp.server.service.ChapterService;
 import com.accp.server.util.UuidUtil;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,17 +22,25 @@ public class ChapterController {
     private ChapterService chapterService;
 
 @RequestMapping("/list")
-    public PageDto list(@RequestBody PageDto pageDto){
+    public ResponseDto list(@RequestBody PageDto pageDto){
+    //ResponseDto: 业务接口数据回调(是否接口调用成功等一系列处理)
+    ResponseDto responseDto=new ResponseDto();
+    //存储结果: 可看底层代码
+    responseDto.setContent(pageDto);
     chapterService.list(pageDto);
-    return pageDto;
+    return responseDto;
     }
 
     @RequestMapping("/save")
-    public ChapterDto save(@RequestBody ChapterDto chapterDto){
-    //表单新增
+    public ResponseDto save(@RequestBody ChapterDto chapterDto){
+        //表单新增
+        //ResponseDto: 业务接口数据回调(是否接口调用成功等一系列处理)
+        ResponseDto responseDto=new ResponseDto();
         //给chapter表的id 存储Uuid(特殊处理的id,64位8位数字符)
         chapterDto.setId(UuidUtil.getShortUuid());
+        //存储结果: 可看底层代码
+        responseDto.setContent(chapterDto);
         chapterService.save(chapterDto);
-        return chapterDto;
+        return responseDto;
     }
 }

@@ -89,7 +89,7 @@
             </tbody>
         </table>
 <!--模态框-->
-        <div class="modal fade" tabindex="-1" role="dialog">
+        <div id="forn-modal" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -151,7 +151,7 @@
         methods: {
             add(){
                 let _this=this;
-                $(".modal").modal("show");
+                $("#forn-modal").modal("show");
                 // $(".modal").modal("hide");
 
             },
@@ -170,9 +170,12 @@
                     console.log("查询大章列表结果:",response);
                     // 就数据放进前端data(双面数据) 渲染数据
                     //获取到数据 存进data ,data点出list(记录)  渲染数据
-                    _this.chapters =response.data.list;
+                    // resp指的是ResponseDto
+                  let resp= response.data;
+                    _this.chapters =resp.content.list;
                     //获取到数据 存进data ,data点出total(总页数) 渲染数据
-                    _this.$refs.pagination.render(page,response.data.total);
+                    //前端获取到传来的 泛型数据:content,然后点出里面的参数
+                    _this.$refs.pagination.render(page,resp.content.total);
                 })
             },
             // save方法:表单新增前端核心代码
@@ -185,7 +188,13 @@
                     ).then((response)=>{
                     // 数据存储在response
                     console.log("保存大章列表结果:",response);
-
+                    // resp指的是ResponseDto
+                    let resp= response.data;
+                    if(resp.success){
+                        //如果保存成功的话:resp.success 就关闭模态框 并且刷新页面到第一页使他更新数据
+                        $("#forn-modal").modal("hide");
+                        _this.list(1);
+                    }
                 })
             }
         }
