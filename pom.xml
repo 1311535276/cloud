@@ -28,7 +28,6 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
-
     </parent>
     <build>
         <plugins>
@@ -62,7 +61,6 @@
     </build>
 
     <dependencyManagement>
-
         <dependencies>
             <!--spring cloud依赖管理-->
             <dependency>

@@ -5,8 +5,11 @@ import com.accp.server.domain.ChapterExample;
 import com.accp.server.dto.ChapterDto;
 import com.accp.server.dto.PageDto;
 import com.accp.server.mapper.ChapterMapper;
+import com.accp.server.util.CopyUtil;
+import com.accp.server.util.UuidUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.github.pagehelper.util.StringUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
@@ -43,8 +46,29 @@ public class ChapterService {
     }
 
     public void save(ChapterDto chapterDto){
-        Chapter chapter = new Chapter();
-        BeanUtils.copyProperties(chapterDto,chapter);
-    chapterMapper.insert(chapter);
+        Chapter chapter= CopyUtil.copy(chapterDto,Chapter.class);
+        //判断id是否为空 为空就新增
+     if(StringUtil.isEmpty(chapterDto.getId())){
+         this.insert(chapter);
+     }else{
+         //不为空id 就是修改 进入修改方法
+        this.update(chapter);
+
+     }
+    }
+    /**
+     * 新增
+     */
+    public void insert(Chapter  chapter ){
+        chapter .setId(UuidUtil.getShortUuid());
+//        Chapter chapter = new Chapter();
+//        BeanUtils.copyProperties(chapterDto,chapter);
+        chapterMapper.insert(chapter);
+    }
+    /**
+     *  修改
+     */
+    public void update(Chapter  chapter ){
+        chapterMapper.updateByPrimaryKey(chapter);
     }
 }
