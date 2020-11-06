@@ -60,13 +60,12 @@ public class ChapterService {
          LOG.info("进入修改:{}",chapterDto);
          //不为空id 就是修改 进入修改方法
         this.update(chapter);
-
      }
     }
     /**
      * 新增
      */
-    public void insert(Chapter  chapter ){
+    private void insert(Chapter  chapter ){
         chapter.setId(UuidUtil.getShortUuid());
 //        Chapter chapter = new Chapter();
 //        BeanUtils.copyProperties(chapterDto,chapter);
@@ -75,7 +74,15 @@ public class ChapterService {
     /**
      *  修改
      */
-    public void update(Chapter  chapter ){
+    private void update(Chapter  chapter ){
         chapterMapper.updateByPrimaryKey(chapter);
     }
+
+    /**
+     * 删除
+     */
+    public void delete(String id){
+    chapterMapper.deleteByPrimaryKey(id);
+    }
+
 }
