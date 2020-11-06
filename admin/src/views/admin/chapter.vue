@@ -191,6 +191,7 @@
                         //如果保存成功的话:resp.success 就关闭模态框 并且刷新页面到第一页使他更新数据
                         $("#forn-modal").modal("hide");
                         _this.list(1);
+                        toast.success("保存成功!")
                     }
                 })
             },
@@ -212,11 +213,7 @@
                             let resp=response.data;
                             if(resp.success){
                                 _this.list(1);
-                                Swal.fire(
-                                    '删除成功!',
-                                    '删除成功!',
-                                    'success'
-                                )
+                                toast.success("删除成功!")
                             }
 
                         })
