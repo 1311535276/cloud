@@ -10,6 +10,8 @@ import com.accp.server.util.UuidUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.github.pagehelper.util.StringUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
@@ -44,13 +46,18 @@ public class ChapterService {
         }
         pageDto.setList(chapterDtoList);
     }
-
+    private static final Logger LOG = LoggerFactory.getLogger(ChapterService.class);
+    /**
+     * save:增 改
+     */
     public void save(ChapterDto chapterDto){
         Chapter chapter= CopyUtil.copy(chapterDto,Chapter.class);
         //判断id是否为空 为空就新增
      if(StringUtil.isEmpty(chapterDto.getId())){
+         LOG.info("进入新增:{}",chapterDto);
          this.insert(chapter);
      }else{
+         LOG.info("进入修改:{}",chapterDto);
          //不为空id 就是修改 进入修改方法
         this.update(chapter);
 
@@ -60,7 +67,7 @@ public class ChapterService {
      * 新增
      */
     public void insert(Chapter  chapter ){
-        chapter .setId(UuidUtil.getShortUuid());
+        chapter.setId(UuidUtil.getShortUuid());
 //        Chapter chapter = new Chapter();
 //        BeanUtils.copyProperties(chapterDto,chapter);
         chapterMapper.insert(chapter);
