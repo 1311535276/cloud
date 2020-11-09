@@ -15,6 +15,7 @@
         <module>gateway</module>
         <module>server</module>
         <module>business</module>
+        <module>generator</module>
     </modules>
 <!--设置项目是1.8jdk控制-->
     <properties>
@@ -116,6 +117,15 @@
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
                     <version>1.2.10</version>
             </dependency>
+
+            <!--2020年11月9日17:32:33-->
+            <!--freemarker(模板引擎jar包)-->
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>2.3.29</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>

@@ -9,6 +9,7 @@
         <module name="business" />
         <module name="eureka" />
         <module name="gateway" />
+        <module name="generator" />
         <module name="server" />
         <module name="system" />
       </profile>
@@ -19,6 +20,7 @@
       <module name="business" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="generator" options="-parameters" />
       <module name="server" options="-parameters" />
       <module name="system" options="-parameters" />
     </option>
