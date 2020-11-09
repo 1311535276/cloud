@@ -154,6 +154,8 @@
             },
             list(page){
                 let _this=this;
+                // loading显示
+                Loading.show();
                 // 获取list 从后台获取sql数据
                 _this.$ajax.post('http://127.0.0.1:9000/business/admin/chapter/list',
                     {
@@ -163,6 +165,8 @@
                         //pagination是外部文件 在上面有引入
                         size: _this.$refs.pagination.size,
                     }).then((response)=>{
+                    // loading隐藏
+                    Loading.hide();
                     // 数据存储在response
                     console.log("查询大章列表结果:",response);
                     // 就数据放进前端data(双面数据) 渲染数据
@@ -178,11 +182,15 @@
             // save方法:表单新增前端核心代码
             save(page){
                 let _this=this;
+                // loading显示
+                Loading.show();
                 // 获取list 从后台获取sql数据
                 _this.$ajax.post('http://127.0.0.1:9000/business/admin/chapter/save',
                        //参数
                        _this.chapter
                     ).then((response)=>{
+                    // loading隐藏
+                    Loading.hide();
                     // 数据存储在response
                     console.log("保存大章列表结果:",response);
                     // resp指的是ResponseDto
@@ -207,8 +215,12 @@
                     confirmButtonText: '确认!'
                 }).then((result) => {
                     if (result.value) {
+                        // loading显示
+                        Loading.show();
                         //执行弹出框
                         _this.$ajax.delete('http://127.0.0.1:9000/business/admin/chapter/delete/'+id).then((response)=>{
+                            // loading显示
+                            Loading.hide();
                             console.log("删除大章列表结果:",response);
                             let resp=response.data;
                             if(resp.success){
