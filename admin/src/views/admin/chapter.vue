@@ -199,38 +199,41 @@
                         //如果保存成功的话:resp.success 就关闭模态框 并且刷新页面到第一页使他更新数据
                         $("#forn-modal").modal("hide");
                         _this.list(1);
-                        toast.success("保存成功!")
+                        Toast.success("保存成功!")
                     }
                 })
             },
             del(id){
                 let _this=this;
-                Swal.fire({
-                    title: '确认删除?',
-                    text: "删除后不可恢复,确认删除?!",
-                    type: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: '确认!'
-                }).then((result) => {
-                    if (result.value) {
-                        // loading显示
-                        Loading.show();
-                        //执行弹出框
-                        _this.$ajax.delete('http://127.0.0.1:9000/business/admin/chapter/delete/'+id).then((response)=>{
-                            // loading显示
-                            Loading.hide();
-                            console.log("删除大章列表结果:",response);
-                            let resp=response.data;
-                            if(resp.success){
-                                _this.list(1);
-                                toast.success("删除成功!")
-                            }
 
-                        })
-                    }
-                })
+                Confirm.show("删除大章后不可恢复,确认删除?!",function(){
+                    _this.$ajax.delete('http://127.0.0.1:9000/business/admin/chapter/delete/'+id).then((response)=>{
+                        // loading显示
+                        Loading.hide();
+                        console.log("删除大章列表结果:",response);
+                        let resp=response.data;
+                        if(resp.success){
+                            _this.list(1);
+                            Toast.success("删除成功!")
+                        }
+                    })
+            });
+                // Swal.fire({
+                //     title: '确认删除?',
+                //     text: "删除后不可恢复,确认删除?!",
+                //     type: 'warning',
+                //     showCancelButton: true,
+                //     confirmButtonColor: '#3085d6',
+                //     cancelButtonColor: '#d33',
+                //     confirmButtonText: '确认!'
+                // }).then((result) => {
+                //     if (result.value) {
+                //         // loading显示
+                //         Loading.show();
+                //         //执行弹出框
+                //
+                //     }
+                // })
 
 
             }
