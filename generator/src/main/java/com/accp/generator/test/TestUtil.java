@@ -25,7 +25,7 @@ public class TestUtil {
         //读取模板具体所在的 就是哪一个模板
         Template temp = cfg.getTemplate("test.ftl");
 
-        //根据模板生成模板
+        //根据模板生成模板文件
         FileWriter fw = new FileWriter(toPath + "Test.java");
         BufferedWriter bw = new BufferedWriter(fw);
         temp.process(null, bw);
