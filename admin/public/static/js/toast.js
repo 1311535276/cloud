@@ -4,7 +4,7 @@ Toast ={
             position: 'top-end',
             icon:'success',
             type: 'success',
-            title: 'message',
+            title:message,
             showConfirmButton: false,
             timer: 3000
         })
@@ -14,7 +14,7 @@ Toast ={
             position: 'top-end',
             icon:'error',
             type: 'error',
-            title: 'message',
+            title: message,
             showConfirmButton: false,
             timer: 3000
         })
@@ -25,7 +25,7 @@ Toast ={
             position: 'top-end',
             icon:'warning',
             type: 'warning',
-            title: 'message',
+            title: message,
             showConfirmButton: false,
             timer: 3000
         })
