@@ -157,7 +157,7 @@
                 // loading显示
                 Loading.show();
                 // 获取list 从后台获取sql数据
-                _this.$ajax.post('http://127.0.0.1:9000/business/admin/chapter/list',
+                _this.$ajax.post(process.env.VUE_APP_SERVER+'/business/admin/chapter/list',
                     {
                         // 设置页数 (前端传进来的参数)
                         page: page,
@@ -185,7 +185,7 @@
                 // loading显示
                 Loading.show();
                 // 获取list 从后台获取sql数据
-                _this.$ajax.post('http://127.0.0.1:9000/business/admin/chapter/save',
+                _this.$ajax.post(process.env.VUE_APP_SERVER+'/business/admin/chapter/save',
                        //参数
                        _this.chapter
                     ).then((response)=>{
@@ -207,7 +207,7 @@
                 let _this=this;
 
                 Confirm.show("删除大章后不可恢复,确认删除?!",function(){
-                    _this.$ajax.delete('http://127.0.0.1:9000/business/admin/chapter/delete/'+id).then((response)=>{
+                    _this.$ajax.delete(process.env.VUE_APP_SERVER+'/business/admin/chapter/delete/'+id).then((response)=>{
                         // loading显示
                         Loading.hide();
                         console.log("删除大章列表结果:",response);
