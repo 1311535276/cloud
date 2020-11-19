@@ -22,8 +22,8 @@ public class ServerGenerator {
     //控制层项目路径
     static String toControllerPath =MODULE+"\\src\\main\\java\\com\\accp\\"+MODULE+"\\controller\\admin\\";
 
-    static String generatorConfigPath ="server\\src\\main\\java\\com\\accp\\generator\\generatorConfig.xml";
-
+    static String generatorConfigPath ="server\\src\\main\\resources\\generator\\generatorConfig.xml";
+//                                        server\src\main\resources\generator\generatorConfig.xml
 
 
     public static void main(String[] args) throws Exception {

@@ -180,6 +180,19 @@
             // save方法:表单新增前端核心代码
             save(page){
                 let _this=this;
+                   //保存校验
+                if(1 != 1
+                    <#list fieldList as field>
+                    <#if !field.nullAble>
+                    || !Validator.require(_this.${domain}.${field.nameBigHump},"${field.nameCn}")
+                </#if>
+                <#if (field.length > 0)>
+               || !Validator.length(_this.${domain}.${field.nameBigHump}, "${field.nameCn}", 1, ${field.length})
+                </#if>
+                </#list>
+            ){
+                    return;
+                }
                 // loading显示
                 Loading.show();
                 // 获取list 从后台获取sql数据
