@@ -18,17 +18,29 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
-
+<#list typeSet as type>
+    <#if type=='Date'>
+import java.util.Date;
+    </#if>
+</#list>
 @Service
 public class ${Domain}Service {
 
     @Resource
     public ${Domain}Mapper ${domain}Mapper;
+    /**
+    *列表查询
+    */
     public void list(PageDto pageDto){
 //        分页 (第几页,每页第几条);
         PageHelper.startPage(pageDto.getPage(),pageDto.getSize());
         //new 实体类
         ${Domain}Example ${domain}Example = new ${Domain}Example();
+<#list fieldList as field>
+    <#if field.nameHump=='sort'>
+        ${domain}Example.setOrderByClause("sort asc");
+    </#if>
+</#list>
 //        ${domain}Example.createCriteria().andIdEqualTo("1");
 //        ${domain}Example.setOrderByClause("id desc");
         //查询
@@ -66,6 +78,17 @@ public class ${Domain}Service {
      * 新增
      */
     private void insert(${Domain}  ${domain} ){
+        Date now =new Date();
+        //循环mysql里面有没有时间这个字段,如果有的话就要insert||update;
+        //判断是否有时间(createdAt)这个字段
+        <#list fieldList as field>
+            <#if field.nameHump=='createdAt'>
+                ${domain}.setCreatedAt(now);
+            </#if>
+            <#if field.nameHump=='updatedAt'>
+                ${domain}.setUpdatedAt(now);
+            </#if>
+        </#list>
         ${domain}.setId(UuidUtil.getShortUuid());
 //        ${Domain} ${domain} = new ${Domain}();
 //        BeanUtils.copyProperties(${domain}Dto,${domain});
@@ -75,7 +98,14 @@ public class ${Domain}Service {
      *  修改
      */
     private void update(${Domain}  ${domain} ){
+        //修改时间
+        <#list fieldList as field>
+        <#if field.nameHump=='updatedAt'>
+            ${domain}.setUpdatedAt(new Date());
+        </#if>
+        </#list>
         ${domain}Mapper.updateByPrimaryKey(${domain});
+
     }
 
     /**

@@ -16,30 +16,36 @@
         <table id="simple-table" class="table  table-bordered table-hover">
             <thead>
             <tr>
-              <#list fieldList as field>
-                  <#if field.nameHump!="createdAt" && field.nameHump!="updatedAt">
-                      <th>${field.nameCn}</th>
-                  </#if>
-              </#list>
-                <th>操作</th>
-
+                                    <th>id</th>
+                      <th>标题</th>
+                      <th>课程</th>
+                      <th>大章</th>
+                      <th>视频</th>
+                      <th>时长</th>
+                      <th>收费</th>
+                      <th>顺序</th>
+                      <th>操作</th>
             </tr>
             </thead>
 
             <tbody>
-            <tr v-for="${domain} in ${domain}s">
-              <#list fieldList as field>
-                  <#if field.nameHump!="createdAt" && field.nameHump!="updateAt">
-                <td>{{${domain}.${field.nameHump}}}</td>
-                  </#if>
-              </#list>
+            <tr v-for="section in sections">
+                <td>{{section.id}}</td>
+                <td>{{section.title}}</td>
+                <td>{{section.courseId}}</td>
+                <td>{{section.chapterId}}</td>
+                <td>{{section.video}}</td>
+                <td>{{section.time}}</td>
+                <td>{{section.charge}}</td>
+                <td>{{section.sort}}</td>
+                <td>{{section.updatedAt}}</td>
 
                 <td>
                     <div class="hidden-sm hidden-xs btn-group">
-                        <button v-on:click="edit(${domain})" class="btn btn-xs btn-info">
+                        <button v-on:click="edit(section)" class="btn btn-xs btn-info">
                             <i class="ace-icon fa fa-pencil bigger-120"></i>
                         </button>
-                        <button v-on:click="del(${domain}.id)" class="btn btn-xs btn-danger">
+                        <button v-on:click="del(section.id)" class="btn btn-xs btn-danger">
                             <i class="ace-icon fa fa-trash-o bigger-120"></i>
                         </button>
                     </div>
@@ -91,16 +97,48 @@
                     </div>
                     <div class="modal-body">
                         <form class="form-horizontal">
-                          <#list fieldList as field>
-                              <#if field.name!="id" && field.nameHump!="createdAt" && field.nameHump!="updatedAt">
                             <div class="form-group">
-                            <label class="col-sm-2 control-label" >${field.nameCn}</label>
+                            <label class="col-sm-2 control-label" >标题</label>
                             <div class="col-sm-10">
-                              <input v-model="${domain}.${field.nameHump}" type="text" class="form-control">
+                              <input v-model="section.title" type="text" class="form-control">
                             </div>
                             </div>
-                            </#if>
-                          </#list>
+                            <div class="form-group">
+                            <label class="col-sm-2 control-label" >课程</label>
+                            <div class="col-sm-10">
+                              <input v-model="section.courseId" type="text" class="form-control">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                            <label class="col-sm-2 control-label" >大章</label>
+                            <div class="col-sm-10">
+                              <input v-model="section.chapterId" type="text" class="form-control">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                            <label class="col-sm-2 control-label" >视频</label>
+                            <div class="col-sm-10">
+                              <input v-model="section.video" type="text" class="form-control">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                            <label class="col-sm-2 control-label" >时长</label>
+                            <div class="col-sm-10">
+                              <input v-model="section.time" type="text" class="form-control">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                            <label class="col-sm-2 control-label" >收费</label>
+                            <div class="col-sm-10">
+                              <input v-model="section.charge" type="text" class="form-control">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                            <label class="col-sm-2 control-label" >顺序</label>
+                            <div class="col-sm-10">
+                              <input v-model="section.sort" type="text" class="form-control">
+                            </div>
+                            </div>
                         </form>
 
                     </div>
@@ -122,12 +160,12 @@
     export default {
         //引入外部文件二
         components: {Pagination},
-        name: "${domain}",
+        name: "section",
         data:function(){
             //数据绑定写在这里
             return {
-                ${domain}:{},
-                ${domain}s:[]
+                section:{},
+                sections:[]
             }
         },
         mounted: function () {
@@ -138,19 +176,19 @@
             //初始化第一页
             _this.list(1);
             //sidebar激活样式方法一
-            // this.$parent.activeSidebar("${module}-sidebar");
+            // this.$parent.activeSidebar("business-sidebar");
         },
         methods: {
             add(){
                 let _this=this;
-                _this.${domain}= {};
+                _this.section= {};
                 $("#forn-modal").modal("show");
                 // $(".modal").modal("hide");
 
             },
-            edit(${domain}){
+            edit(section){
                 let _this=this;
-                _this.${domain} =${domain};
+                _this.section =section;
                 $("#forn-modal").modal("show");
 
             },
@@ -159,7 +197,7 @@
                 // loading显示
                 Loading.show();
                 // 获取list 从后台获取sql数据
-                _this.$ajax.post(process.env.VUE_APP_SERVER+'/${module}/admin/${domain}/list',
+                _this.$ajax.post(process.env.VUE_APP_SERVER+'/business/admin/section/list',
                     {
                         // 设置页数 (前端传进来的参数)
                         page: page,
@@ -170,12 +208,12 @@
                     // loading隐藏
                     Loading.hide();
                     // 数据存储在response
-                    console.log("查询${tableNameCn}列表结果:",response);
+                    console.log("查询小节列表结果:",response);
                     // 就数据放进前端data(双面数据) 渲染数据
                     //获取到数据 存进data ,data点出list(记录)  渲染数据
                     // resp指的是ResponseDto
                   let resp= response.data;
-                    _this.${domain}s =resp.content.list;
+                    _this.sections =resp.content.list;
                     //获取到数据 存进data ,data点出total(总页数) 渲染数据
                     //前端获取到传来的 泛型数据:content,然后点出里面的参数
                     _this.$refs.pagination.render(page,resp.content.total);
@@ -186,30 +224,23 @@
                 let _this=this;
                    //保存校验
                 if(1 != 1
-                    <#list fieldList as field>
-                        <#if field.name!="id" && field.nameHump!="createdAt" && field.nameHump!="updatedAt" && field.nameHump!="sort">
-                    <#if !field.nullAble>
-                    || !Validator.require(_this.${domain}.${field.nameBigHump},"${field.nameCn}")
-                </#if>
-                <#if (field.length > 0)>
-               || !Validator.length(_this.${domain}.${field.nameBigHump}, "${field.nameCn}", 1, ${field.length})
-                </#if>
-                    </#if>
-                </#list>
+                    || !Validator.require(_this.section.title,"标题")
+               || !Validator.length(_this.section.title, "标题", 1, 50)
+               || !Validator.length(_this.section.video, "视频", 1, 200)
             ){
                     return;
                 }
                 // loading显示
                 Loading.show();
                 // 获取list 从后台获取sql数据
-                _this.$ajax.post(process.env.VUE_APP_SERVER+'/${module}/admin/${domain}/save',
+                _this.$ajax.post(process.env.VUE_APP_SERVER+'/business/admin/section/save',
                        //参数
-                       _this.${domain}
+                       _this.section
                     ).then((response)=>{
                     // loading隐藏
                     Loading.hide();
                     // 数据存储在response
-                    console.log("保存${tableNameCn}列表结果:",response);
+                    console.log("保存小节列表结果:",response);
                     // resp指的是ResponseDto
                     let resp= response.data;
                     if(resp.success){
@@ -223,11 +254,11 @@
             del(id){
                 let _this=this;
 
-                Confirm.show("删除${tableNameCn}后不可恢复,确认删除?!",function(){
-                    _this.$ajax.delete(process.env.VUE_APP_SERVER+'/${module}/admin/${domain}/delete/'+id).then((response)=>{
+                Confirm.show("删除小节后不可恢复,确认删除?!",function(){
+                    _this.$ajax.delete(process.env.VUE_APP_SERVER+'/business/admin/section/delete/'+id).then((response)=>{
                         // loading显示
                         Loading.hide();
-                        console.log("删除${tableNameCn}列表结果:",response);
+                        console.log("删除小节列表结果:",response);
                         let resp=response.data;
                         if(resp.success){
                             _this.list(1);

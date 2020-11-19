@@ -18,17 +18,21 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Date;
 @Service
 public class SectionService {
 
     @Resource
     public SectionMapper sectionMapper;
+    /**
+    *列表查询
+    */
     public void list(PageDto pageDto){
 //        分页 (第几页,每页第几条);
         PageHelper.startPage(pageDto.getPage(),pageDto.getSize());
         //new 实体类
         SectionExample sectionExample = new SectionExample();
+        sectionExample.setOrderByClause("sort asc");
 //        sectionExample.createCriteria().andIdEqualTo("1");
 //        sectionExample.setOrderByClause("id desc");
         //查询
@@ -66,6 +70,11 @@ public class SectionService {
      * 新增
      */
     private void insert(Section  section ){
+        Date now =new Date();
+        //循环mysql里面有没有时间这个字段,如果有的话就要insert||update;
+        //判断是否有时间(createdAt)这个字段
+                section.setCreatedAt(now);
+                section.setUpdatedAt(now);
         section.setId(UuidUtil.getShortUuid());
 //        Section section = new Section();
 //        BeanUtils.copyProperties(sectionDto,section);
@@ -75,7 +84,10 @@ public class SectionService {
      *  修改
      */
     private void update(Section  section ){
+        //修改时间
+            section.setUpdatedAt(new Date());
         sectionMapper.updateByPrimaryKey(section);
+
     }
 
     /**
