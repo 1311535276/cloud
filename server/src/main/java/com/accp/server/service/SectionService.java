@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Date;
 @Service
 public class SectionService {
-
+    private static final Logger LOG = LoggerFactory.getLogger(SectionService.class);
     @Resource
     public SectionMapper sectionMapper;
     /**
@@ -50,7 +50,7 @@ public class SectionService {
         }
         pageDto.setList(sectionDtoList);
     }
-    private static final Logger LOG = LoggerFactory.getLogger(SectionService.class);
+
     /**
      * save:增 改
      */

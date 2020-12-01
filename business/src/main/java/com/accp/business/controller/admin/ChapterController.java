@@ -14,7 +14,8 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/admin/chapter")
 public class ChapterController {
-
+//日志输出sql语句
+    private static final Logger LOG = LoggerFactory.getLogger(ChapterController.class);
     @Resource
     private ChapterService chapterService;
 
@@ -27,7 +28,7 @@ public class ChapterController {
     chapterService.list(pageDto);
     return responseDto;
     }
-    private static final Logger LOG = LoggerFactory.getLogger(ChapterController.class);
+
     /**
      * 增+修，id有值时更新，无值时新增
      */

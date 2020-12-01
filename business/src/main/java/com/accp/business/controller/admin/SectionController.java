@@ -15,6 +15,8 @@ import javax.annotation.Resource;
 @RequestMapping("/admin/section")
 public class SectionController {
 
+    private static final Logger LOG = LoggerFactory.getLogger(SectionController.class);
+
     @Resource
     private SectionService sectionService;
 public static final String BUSINESS_NAME="小节";
@@ -27,7 +29,7 @@ public static final String BUSINESS_NAME="小节";
     sectionService.list(pageDto);
     return responseDto;
     }
-    private static final Logger LOG = LoggerFactory.getLogger(SectionController.class);
+
     /**
      * 增+修，id有值时更新，无值时新增
      */

@@ -37,7 +37,8 @@
                 <td>{{section.chapterId}}</td>
                 <td>{{section.video}}</td>
                 <td>{{section.time}}</td>
-                <td>{{section.charge}}</td>
+                <!--<td>{{section.charge}}</td>-->
+                <td>{{CHARGE | optionKV(section.charge)}}</td>
                 <td>{{section.sort}}</td>
 
                 <td>

@@ -22,6 +22,7 @@ import java.util.List;
 @Service
 public class ChapterService {
 
+    private static final Logger LOG = LoggerFactory.getLogger(ChapterService.class);
     @Resource
     public ChapterMapper chapterMapper;
     public void list(PageDto pageDto){
@@ -46,7 +47,7 @@ public class ChapterService {
         }
         pageDto.setList(chapterDtoList);
     }
-    private static final Logger LOG = LoggerFactory.getLogger(ChapterService.class);
+
     /**
      * save:增 改
      */
