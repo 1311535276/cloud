@@ -4,6 +4,7 @@ import com.accp.server.domain.Section;
 import com.accp.server.domain.SectionExample;
 import com.accp.server.dto.SectionDto;
 import com.accp.server.dto.PageDto;
+import com.accp.server.enums.SectionChargeEnum;
 import com.accp.server.mapper.SectionMapper;
 import com.accp.server.util.CopyUtil;
 import com.accp.server.util.UuidUtil;
@@ -76,6 +77,8 @@ public class SectionService {
                 section.setCreatedAt(now);
                 section.setUpdatedAt(now);
         section.setId(UuidUtil.getShortUuid());
+        section.setCharge(SectionChargeEnum.CHARGE.getCode());
+
 //        Section section = new Section();
 //        BeanUtils.copyProperties(sectionDto,section);
         sectionMapper.insert(section);
