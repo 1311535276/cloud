@@ -69,7 +69,7 @@ create table `section` (
 ) engine=innodb default charset=utf8mb4 comment='小节';
 
 insert into `section` (id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at)
-values ('00000001', '测试小节01', '00000001', '00000000', '哇哈', 500, 'f', 1, now(), now());
+values ('00000003', '测试小节04', '00000001', '00000000', '哇哈', 500, 'f', 1, now(), now());
 
 show full columns from `section`
 
@@ -97,5 +97,6 @@ create table course (
 ) engine=innodb default charset=utf8mb4 comment='课程';
 
 insert into course (id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at)
-values ('00000001', '测试课程01', '这是一门测试课程', 7200, 19.9, '', 1, 'C', 'P', 100, 0, now(), now());
+values ('00000003', '测试课程03', '这是一门测试课程', 7200, 19.9, '', 1, 'C', 'P', 100, 0, now(), now());
 
+select * from course
