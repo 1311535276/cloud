@@ -122,7 +122,7 @@
     export default {
         //引入外部文件二
         components: {Pagination},
-        name: "${domain}",
+        name: "${module}-${domain}",
         data:function(){
             //数据绑定写在这里
             return {

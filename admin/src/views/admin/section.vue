@@ -163,7 +163,7 @@
     export default {
         //引入外部文件二
         components: {Pagination},
-        name: "section",
+        name: "business-section",
         data:function(){
             //数据绑定写在这里
             return {
