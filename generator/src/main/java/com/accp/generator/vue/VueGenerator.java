@@ -9,7 +9,7 @@ import org.dom4j.io.SAXReader;
 
 import java.io.File;
 import java.util.*;
-
+//前段vue生成器!
 public class VueGenerator {
     static String MODULE = "business";
     static String toVuePath = "admin\\src\\views\\admin\\";

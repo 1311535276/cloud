@@ -169,7 +169,7 @@
             return {
                 section:{},
                 sections:[],
-                SECTION_CHARGE: SECTION_CHARGE,
+                SECTION_CHARGE: SECTION_CHARGE
             }
         },
         mounted: function () {
