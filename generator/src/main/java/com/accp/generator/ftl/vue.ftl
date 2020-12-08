@@ -30,11 +30,7 @@
             <tr v-for="${domain} in ${domain}s">
               <#list fieldList as field>
                   <#if field.nameHump!="createdAt" && field.nameHump!="updatedAt">
-                      <#if field. enums>
-                          <td>{{${field.enumsConst}| optionKV(${domain}.${field.nameHump})}}</td>
-                      <#else>
-                          <td>{{${domain}.${field.nameHump}}}</td>
-                          </#if>
+                <td>{{${domain}.${field.nameHump}}}</td>
                   </#if>
               </#list>
 
@@ -97,24 +93,13 @@
                         <form class="form-horizontal">
                           <#list fieldList as field>
                               <#if field.name!="id" && field.nameHump!="createdAt" && field.nameHump!="updatedAt">
-                                  <#if field.enums>
                             <div class="form-group">
                             <label class="col-sm-2 control-label" >${field.nameCn}</label>
                             <div class="col-sm-10">
-                                <select v-model="${domain}.${field.nameHump}" class="form-control">
-                                    <option v-for="o in ${field.enumsConst}" v-bind:value="o.key">{{o.value}}</option>
-                                </select>
+                              <input v-model="${domain}.${field.nameHump}" type="text" class="form-control">
                             </div>
                             </div>
-                               <#else>
-                                <div class="form-group">
-                           <label class="col-sm-2 control-label">${field.nameCn}</label>
-                            <div class="col-sm-10">
-                              <input v-model="${domain}.${field.nameHump}" class="form-control">
-                           </div>
-                           </div>
-                         </#if>
-                              </#if>
+                            </#if>
                           </#list>
                         </form>
 
@@ -142,12 +127,7 @@
             //数据绑定写在这里
             return {
                 ${domain}:{},
-                ${domain}s:[],
-            <#list fieldList as field>
-            <#if field.enums>
-            ${field.enumsConst}: ${field.enumsConst},
-            </#if>
-            </#list>
+                ${domain}s:[]
             }
         },
         mounted: function () {
