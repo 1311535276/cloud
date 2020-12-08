@@ -1,6 +1,8 @@
 package com.accp.generator.util;
 
 
+import com.accp.generator.enums.EnumGenerator;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -84,6 +86,18 @@ public class DbUtil {
                     field.setLength(Integer.valueOf(lengthStr));
                 } else {
                     field.setLength(0);
+                }
+                if(comment.contains("枚举")){//如果我的注释里面 有枚举的字眼
+                    field.setEnums(true);
+
+                    //以课程登记为例: 从注释中的"枚举[CourseLeveLEnum]",得到COURSE_LEVEL
+                    int start =comment.indexOf("[");
+                    int end = comment.indexOf("]");
+                    String enumsName=comment.substring(start +1 ,end);
+                    String enumsConst = EnumGenerator.toUnderline(enumsName);
+                    field.setEnumsConst (enumsConst);
+                }else{
+                    field.setEnums(false);
                 }
                 fieldList.add(field);
             }
