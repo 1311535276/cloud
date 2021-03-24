@@ -75,7 +75,12 @@ private static final Logger LOG = LoggerFactory.getLogger(${Domain}Service.class
      * 新增
      */
     private void insert(${Domain}  ${domain} ){
-        Date now =new Date();
+        <#list typeSet as type>
+            <#if type =='Date'>
+                Date now =new Date();
+            </#if>
+        </#list>
+
         //循环mysql里面有没有时间这个字段,如果有的话就要insert||update;
         //判断是否有时间(createdAt)这个字段
         <#list fieldList as field>

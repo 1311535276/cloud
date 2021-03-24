@@ -3,6 +3,7 @@ package com.accp.server.service;
 import com.accp.server.domain.Chapter;
 import com.accp.server.domain.ChapterExample;
 import com.accp.server.dto.ChapterDto;
+import com.accp.server.dto.ChapterPageDto;
 import com.accp.server.dto.PageDto;
 import com.accp.server.mapper.ChapterMapper;
 import com.accp.server.util.CopyUtil;
@@ -25,19 +26,28 @@ public class ChapterService {
     private static final Logger LOG = LoggerFactory.getLogger(ChapterService.class);
     @Resource
     public ChapterMapper chapterMapper;
-    public void list(PageDto pageDto){
+
+    /**
+     * 列表查询
+     * @param
+     */
+    public void list(ChapterPageDto chapterPageDto){
 //        分页 (第几页,每页第几条);
-        PageHelper.startPage(pageDto.getPage(),pageDto.getSize());
+        PageHelper.startPage(chapterPageDto.getPage(),chapterPageDto.getSize());
         //new 实体类
         ChapterExample chapterExample = new ChapterExample();
+        ChapterExample.Criteria criteria = chapterExample.createCriteria();
+        if(!StringUtil.isEmpty(chapterPageDto.getCourseId())){
+            criteria.andCourseIdEqualTo(chapterPageDto.getCourseId());
+        }
+
 //        chapterExample.createCriteria().andIdEqualTo("1");
 //        chapterExample.setOrderByClause("id desc");
         //查询
         List<Chapter> chapterList=chapterMapper.selectByExample(chapterExample);
        //PageHelper内置的方法 pageinfo
         PageInfo<Chapter> pageInfo=new PageInfo<>(chapterList);
-        pageDto.setTotal(pageInfo.getTotal());
-
+        chapterPageDto.setTotal(pageInfo.getTotal());
         List<ChapterDto> chapterDtoList=new ArrayList<ChapterDto>();
         for (int i = 0,l =chapterList.size();i<l; i++) {
             Chapter chapter = chapterList.get(i);
@@ -45,7 +55,7 @@ public class ChapterService {
             BeanUtils.copyProperties(chapter,chapterDto);
             chapterDtoList.add(chapterDto);
         }
-        pageDto.setList(chapterDtoList);
+        chapterPageDto.setList(chapterDtoList);
     }
 
     /**

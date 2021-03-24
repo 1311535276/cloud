@@ -9,12 +9,14 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableEurekaServer
 @Component("com.accp")
 @MapperScan("com.accp.server.mapper")
 @ComponentScan("com.accp")
+@EnableTransactionManagement
 public class BusinessApplication {
 
 	private static final Logger LOG = LoggerFactory.getLogger(BusinessApplication.class);

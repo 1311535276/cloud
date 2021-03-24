@@ -16,11 +16,11 @@
         <table id="simple-table" class="table  table-bordered table-hover">
             <thead>
             <tr>
-              <#list fieldList as field>
-                  <#if field.nameHump!="createdAt" && field.nameHump!="updatedAt">
-                      <th>${field.nameCn}</th>
-                  </#if>
-              </#list>
+                <#list fieldList as field>
+                    <#if field.nameHump!="createdAt" && field.nameHump!="updatedAt">
+                        <th>${field.nameCn}</th>
+                    </#if>
+                </#list>
                 <th>操作</th>
 
             </tr>
@@ -28,11 +28,15 @@
 
             <tbody>
             <tr v-for="${domain} in ${domain}s">
-              <#list fieldList as field>
-                  <#if field.nameHump!="createdAt" && field.nameHump!="updatedAt">
-                <td>{{${domain}.${field.nameHump}}}</td>
-                  </#if>
-              </#list>
+                <#list fieldList as field>
+                    <#if field.nameHump!="createdAt" && field.nameHump!="updatedAt">
+                        <#if field. enums>
+                            <td>{{${field.enumsConst}| optionKV(${domain}.${field.nameHump})}}</td>
+                        <#else>
+                            <td>{{${domain}.${field.nameHump}}}</td>
+                        </#if>
+                    </#if>
+                </#list>
 
                 <td>
                     <div class="hidden-sm hidden-xs btn-group">
@@ -81,7 +85,7 @@
             </tr>
             </tbody>
         </table>
-<!--模态框-->
+        <!--模态框-->
         <div id="forn-modal" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -91,16 +95,27 @@
                     </div>
                     <div class="modal-body">
                         <form class="form-horizontal">
-                          <#list fieldList as field>
-                              <#if field.name!="id" && field.nameHump!="createdAt" && field.nameHump!="updatedAt">
-                            <div class="form-group">
-                            <label class="col-sm-2 control-label" >${field.nameCn}</label>
-                            <div class="col-sm-10">
-                              <input v-model="${domain}.${field.nameHump}" type="text" class="form-control">
-                            </div>
-                            </div>
-                            </#if>
-                          </#list>
+                            <#list fieldList as field>
+                                <#if field.name!="id" && field.nameHump!="createdAt" && field.nameHump!="updatedAt">
+                                    <#if field.enums>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" >${field.nameCn}</label>
+                                            <div class="col-sm-10">
+                                                <select v-model="${domain}.${field.nameHump}" class="form-control">
+                                                    <option v-for="o in ${field.enumsConst}" v-bind:value="o.key">{{o.value}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    <#else>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">${field.nameCn}</label>
+                                            <div class="col-sm-10">
+                                                <input v-model="${domain}.${field.nameHump}" class="form-control">
+                                            </div>
+                                        </div>
+                                    </#if>
+                                </#if>
+                            </#list>
                         </form>
 
                     </div>
@@ -126,9 +141,14 @@
         data:function(){
             //数据绑定写在这里
             return {
-                ${domain}:{},
-                ${domain}s:[]
-            }
+            ${domain}:{},
+            ${domain}s:[],
+            <#list fieldList as field>
+            <#if field.enums>
+            ${field.enumsConst}: ${field.enumsConst},
+            </#if>
+            </#list>
+        }
         },
         mounted: function () {
 
@@ -174,7 +194,7 @@
                     // 就数据放进前端data(双面数据) 渲染数据
                     //获取到数据 存进data ,data点出list(记录)  渲染数据
                     // resp指的是ResponseDto
-                  let resp= response.data;
+                    let resp= response.data;
                     _this.${domain}s =resp.content.list;
                     //获取到数据 存进data ,data点出total(总页数) 渲染数据
                     //前端获取到传来的 泛型数据:content,然后点出里面的参数
@@ -182,30 +202,30 @@
                 })
             },
             // save方法:表单新增前端核心代码
-            save(page){
+            save(){
                 let _this=this;
-                   //保存校验
+                //保存校验
                 if(1 != 1
                     <#list fieldList as field>
-                        <#if field.name!="id" && field.nameHump!="createdAt" && field.nameHump!="updatedAt" && field.nameHump!="sort">
+                    <#if field.name!="id" && field.nameHump!="createdAt" && field.nameHump!="updatedAt" && field.nameHump!="sort">
                     <#if !field.nullAble>
                     || !Validator.require(_this.${domain}.${field.nameBigHump},"${field.nameCn}")
-                </#if>
-                <#if (field.length > 0)>
-               || !Validator.length(_this.${domain}.${field.nameBigHump}, "${field.nameCn}", 1, ${field.length?c})
-                </#if>
                     </#if>
-                </#list>
-            ){
+                    <#if (field.length > 0)>
+                    || !Validator.length(_this.${domain}.${field.nameBigHump}, "${field.nameCn}", 1, ${field.length?c})
+                    </#if>
+                    </#if>
+                    </#list>
+                ){
                     return;
                 }
                 // loading显示
                 Loading.show();
                 // 获取list 从后台获取sql数据
                 _this.$ajax.post(process.env.VUE_APP_SERVER+'/${module}/admin/${domain}/save',
-                       //参数
-                       _this.${domain}
-                    ).then((response)=>{
+                    //参数
+                    _this.${domain}
+                ).then((response)=>{
                     // loading隐藏
                     Loading.hide();
                     // 数据存储在response
@@ -234,7 +254,7 @@
                             Toast.success("删除成功!")
                         }
                     })
-            });
+                });
 
             }
         }
