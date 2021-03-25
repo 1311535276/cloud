@@ -166,3 +166,4 @@ insert into `category` (id, parent, name, sort) values ('00000702', '00000700', 
 insert into `category` (id, parent, name, sort) values ('00000703', '00000700', 'mongodb', 703);
 
 select * from category
+insert into `category` (id, parent, name, sort) values ('00000703', '00000700', 'mongodb', 703);
