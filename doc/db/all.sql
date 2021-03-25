@@ -164,3 +164,5 @@ insert into `category` (id, parent, name, sort) values ('00000700', '00000000', 
 insert into `category` (id, parent, name, sort) values ('00000701', '00000700', 'mysql', 701);
 insert into `category` (id, parent, name, sort) values ('00000702', '00000700', 'redis', 702);
 insert into `category` (id, parent, name, sort) values ('00000703', '00000700', 'mongodb', 703);
+
+select * from category
