@@ -184,6 +184,7 @@
                 COURSE_CHARGE: COURSE_CHARGE,
                 COURSE_STATUS: COURSE_STATUS,
                 categorys: [],
+                tree: {},
             }
         },
         mounted: function () {
@@ -253,6 +254,15 @@
                 ) {
                     return;
                 }
+
+                let categorys = _this.tree.getCheckedNodes();
+
+                if (Tool.isEmpty(categorys)) {
+                    Toast.warning("請選擇分類 !")
+                    return;
+                }
+                console.log(categorys);
+                this.course.categorys = categorys;
                 // loading显示
                 Loading.show();
                 // 获取list 从后台获取sql数据
@@ -320,7 +330,7 @@
                 })
             },
             initTree() {
-                let  _this=this;
+                let _this = this;
                 var setting = {
                     check: {
                         enable: true
@@ -337,7 +347,9 @@
 
                 var zNodes = _this.categorys;
 
-                $.fn.zTree.init($("#tree"), setting, zNodes);
+                _this.tree = $.fn.zTree.init($("#tree"), setting, zNodes);
+                // tree.getCheckedNodes();
+
             }
         }
     }

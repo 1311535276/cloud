@@ -30,6 +30,9 @@ private static final Logger LOG = LoggerFactory.getLogger(CourseService.class);
 
     @Resource
     public MyCourseMapper myCourseMapper;
+
+    @Resource
+    private CourseCategoryService courseCategoryService;
     /**
     *列表查询
     */
@@ -66,11 +69,14 @@ private static final Logger LOG = LoggerFactory.getLogger(CourseService.class);
          //不为空id 就是修改 进入修改方法
         this.update(course);
      }
+
+     //批量保存方法
+        courseCategoryService.saveBatch(courseDto.getId(),courseDto.getCategorys());
     }
     /**
      * 新增
      */
-    private void insert(Course  course ){
+    private void insert(Course course){
         Date now =new Date();
         //循环mysql里面有没有时间这个字段,如果有的话就要insert||update;
         //判断是否有时间(createdAt)这个字段
