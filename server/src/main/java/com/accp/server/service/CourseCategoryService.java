@@ -16,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -91,7 +92,17 @@ private static final Logger LOG = LoggerFactory.getLogger(CourseCategoryService.
     courseCategoryMapper.deleteByPrimaryKey(id);
     }
 
-public void saveBatch (String courseId, List<CategoryDto> dtoList){
+
+    /**
+     * 根据某一课程，先湾空课程分类，再保存课程分类
+     * @param courseId
+     * @param dtoList
+     * 外层save增加了事务，saveBatch按理可以不加事务。
+     * 但是由于本身也是多个sql操作，且以后可能被多个地方调用，
+     * 为了防止外层save忘记加事务，所以在saveBatch加事务，以防万一。
+     */
+    @Transactional
+    public void saveBatch (String courseId, List<CategoryDto> dtoList){
       CourseCategoryExample example=new CourseCategoryExample();
     example.createCriteria().andCourseIdEqualTo(courseId);
       courseCategoryMapper.deleteByExample(example);
@@ -105,4 +116,14 @@ public void saveBatch (String courseId, List<CategoryDto> dtoList){
     insert(courseCategory);
     }
         }
+    /**
+     * 查找课程下所有分类
+     * @param courseId
+     */
+    public List<CourseCategoryDto> listByCourse(String courseId) {
+        CourseCategoryExample example = new CourseCategoryExample();
+        example.createCriteria().andCourseIdEqualTo(courseId);
+        List<CourseCategory> courseCategoryList = courseCategoryMapper.selectByExample(example);
+        return CopyUtil.copyList(courseCategoryList, CourseCategoryDto.class);
+    }
 }

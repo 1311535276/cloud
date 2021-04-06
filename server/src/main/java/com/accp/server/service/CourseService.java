@@ -15,6 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -57,7 +58,9 @@ private static final Logger LOG = LoggerFactory.getLogger(CourseService.class);
 
     /**
      * save:增 改
+     * 多张表操作 增加事务
      */
+    @Transactional
     public void save(CourseDto courseDto){
         Course course= CopyUtil.copy(courseDto,Course.class);
         //判断id是否为空 为空就新增
