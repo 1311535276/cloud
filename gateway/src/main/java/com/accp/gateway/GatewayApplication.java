@@ -29,7 +29,7 @@ public class GatewayApplication {
 
     /**
      * 配置跨域
-     * @return
+     * @return 啊 忘记return什么了 编译器警告我 随便写点 意思一下吧~
      */
     @Bean
     public CorsWebFilter corsFilter() {
