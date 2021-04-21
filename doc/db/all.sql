@@ -1,10 +1,10 @@
---select * from test
+#select * from test;
 
---insert into test(id, name) values (3,'测试2')
+# --insert into test(id, name) values (3,'测试2');
 
-    select t.id ,t.name from test t
+    select t.id ,t.name from test t;
 
-    select * from `chapter`
+    select * from `chapter`;
 
 -- 课程
 drop table if exists course;
@@ -71,11 +71,11 @@ create table `section` (
 insert into `section` (id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at)
 values ('00000003', '测试小节04', '00000001', '00000000', '哇哈', 500, 'f', 1, now(), now());
 
-show full columns from `section`
+show full columns from `section`;
 
-delete from `section` where id=00000001
+delete from `section` where id=00000001;
 
-select * from `section`
+select * from `section`;
 
 -- 课程
 drop table if exists course;
@@ -165,7 +165,8 @@ insert into `category` (id, parent, name, sort) values ('00000701', '00000700', 
 insert into `category` (id, parent, name, sort) values ('00000702', '00000700', 'redis', 702);
 insert into `category` (id, parent, name, sort) values ('00000703', '00000700', 'mongodb', 703);
 
-select * from category
+select * from category;
+
 insert into `category` (id, parent, name, sort) values ('00000703', '00000700', 'mongodb', 703);
 
 # 课程分类
@@ -176,3 +177,12 @@ create table `course_category` (
   `category_id` char(8) comment '分类|course.id',
   primary key (`id`)
 ) engine=innodb default charset=utf8mb4 comment='课程分类';
+
+-- 课程内容
+drop table if exists `course_content`;
+create table `course_content` (
+ `id` char(8) not null default '' comment '课程id',
+`content` mediumtext not null comment '课程内容',
+primary key (`id`)
+) engine=innodb default charset=utf8mb4 comment='课程内容';
+
