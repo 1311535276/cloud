@@ -1,9 +1,12 @@
 package com.accp.server.service;
 
 import com.accp.server.domain.Course;
+import com.accp.server.domain.CourseContent;
 import com.accp.server.domain.CourseExample;
+import com.accp.server.dto.CourseContentDto;
 import com.accp.server.dto.CourseDto;
 import com.accp.server.dto.PageDto;
+import com.accp.server.mapper.CourseContentMapper;
 import com.accp.server.mapper.CourseMapper;
 import com.accp.server.mapper.my.MyCourseMapper;
 import com.accp.server.util.CopyUtil;
@@ -34,6 +37,10 @@ private static final Logger LOG = LoggerFactory.getLogger(CourseService.class);
 
     @Resource
     private CourseCategoryService courseCategoryService;
+
+    @Resource
+    private CourseContentMapper courseContentMapper;
+
     /**
     *列表查询
     */
@@ -115,5 +122,30 @@ private static final Logger LOG = LoggerFactory.getLogger(CourseService.class);
         LOG.info("更新课程时长:{}",courseId);
        myCourseMapper.updateTime(courseId);
    }
+
+    /**
+     * 查找课程内容
+     * @param id
+     * @return
+     */
+   public CourseContentDto findContent(String id){
+       CourseContent content =courseContentMapper.selectByPrimaryKey(id);
+         if(content==null){
+      return null;
+  }
+  return CopyUtil.copy(content,CourseContentDto.class);
+   }
+
+   public int saveContent(CourseContentDto contentDto){
+       CourseContent content =CopyUtil.copy(contentDto,CourseContent.class);
+       int i=courseContentMapper.updateByPrimaryKeyWithBLOBs(content);
+       if(i==0)
+       {
+           i=courseContentMapper.insert(content);
+       }
+       return i;
+   }
+
+
 
 }

@@ -1,9 +1,6 @@
 package com.accp.business.controller.admin;
 
-import com.accp.server.dto.CourseCategoryDto;
-import com.accp.server.dto.CourseDto;
-import com.accp.server.dto.PageDto;
-import com.accp.server.dto.ResponseDto;
+import com.accp.server.dto.*;
 import com.accp.server.service.CourseCategoryService;
 import com.accp.server.service.CourseService;
 import org.slf4j.Logger;
@@ -85,4 +82,20 @@ public class CourseController {
         responseDto.setContent(dtoList);
         return responseDto;
     }
+
+    @GetMapping("/find-content/{id}")
+    public ResponseDto findContent(@PathVariable String id) {
+        ResponseDto responseDto = new ResponseDto();
+        CourseContentDto contentDto = courseService.findContent(id);
+        responseDto.setContent(contentDto);
+        return responseDto;
+    }
+
+    @PostMapping("/save-content")
+    public ResponseDto saveContent(@RequestBody CourseContentDto contentDto) {
+        ResponseDto responseDto = new ResponseDto();
+        courseService.saveContent(contentDto);
+        return responseDto;
+    }
+
 }
