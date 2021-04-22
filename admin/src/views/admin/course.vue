@@ -266,8 +266,8 @@
             }
         },
         mounted: function () {
-
             let _this = this;
+          Sessionśtorage. set(SESSION_KEY_COURSE, course);
             _this.$refs.pagination.size = 5;
             _this.allCategory();
             // 调用 list()方法
@@ -394,7 +394,7 @@
              */
             toChapter(course) {
                 let _this = this;
-                SessionStorage.set("course", course);
+                SessionStorage.set(SESSION_KEY_CHAPTER, course);
                 _this.$router.push("/business/chapter");
             },
 
