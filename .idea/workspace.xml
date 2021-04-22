@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="1·利用setInterval完成自动保存功能&#10;2·增加日期格式化方法&#10;3·7-5结束了">
+    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/course.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/CourseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/dto/CourseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/dto/CourseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/mapper/my/MyCourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/mapper/my/MyCourseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/CourseCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/CourseCategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/mapper/my/MyCourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/mapper/my/MyCourseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/dto/CourseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/dto/CourseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/mapper/my/MyCourseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/mapper/my/MyCourseMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/CourseCategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/CourseCategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/CourseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/mapper/my/MyCourseMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/chapter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/chapter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/section.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/section.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619093078014</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1.课程管理增加自定义排序&#10;2.修复了课程管理新增的bug&#10;3.修复了mapp没有映射到的bug(路径问题)&#10;4.修复了上次更新git没有更新核心文件(这次直接一次性更新)&#10;5.新增了排序的增删改查&#10;6.7-6">
+      <created>1619112224980</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1619112224980</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +280,8 @@
     <MESSAGE value="1，课程内容表设计与基本代码生成&#10;2,7-5" />
     <MESSAGE value="1，完成课程内容管理功能&#10;1.1新增富文本框,进行内容编辑,和查询&#10;2.7-5" />
     <MESSAGE value="1·利用setInterval完成自动保存功能&#10;2·增加日期格式化方法&#10;3·7-5结束了" />
-    <option name="LAST_COMMIT_MESSAGE" value="1·利用setInterval完成自动保存功能&#10;2·增加日期格式化方法&#10;3·7-5结束了" />
+    <MESSAGE value="1.课程管理增加自定义排序&#10;2.修复了课程管理新增的bug&#10;3.修复了mapp没有映射到的bug(路径问题)&#10;4.修复了上次更新git没有更新核心文件(这次直接一次性更新)&#10;5.新增了排序的增删改查&#10;6.7-6" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.课程管理增加自定义排序&#10;2.修复了课程管理新增的bug&#10;3.修复了mapp没有映射到的bug(路径问题)&#10;4.修复了上次更新git没有更新核心文件(这次直接一次性更新)&#10;5.新增了排序的增删改查&#10;6.7-6" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
