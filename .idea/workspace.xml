@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="">
+    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="1·利用setInterval完成自动保存功能&#10;2·增加日期格式化方法&#10;3·7-5结束了">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/views/admin/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/course.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/CourseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/dto/CourseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/dto/CourseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/mapper/my/MyCourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/mapper/my/MyCourseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/CourseCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/CourseCategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/mapper/my/MyCourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/mapper/my/MyCourseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/dto/CourseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/dto/CourseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/mapper/my/MyCourseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/mapper/my/MyCourseMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/CourseCategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/CourseCategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/CourseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/mapper/my/MyCourseMapper.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +59,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/src/views/admin/category.vue" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/src/main/resources/mapper/my" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -60,10 +72,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\newCodeProject\videoCloud\server\src\main\resources\mapper\my" />
       <recent name="E:\newCodeProject\videoCloud\admin\src" />
       <recent name="E:\newCodeProject\videoCloud\admin\src\views" />
       <recent name="E:\newCodeProject\videoCloud\admin\src\views\admin" />
       <recent name="E:\newCodeProject\videoCloud\server\src\main\java\com\accp\server\dto" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.accp.server.dto" />
+      <recent name="com.accp.server.mapper.my" />
+      <recent name="com.accp.server.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -73,7 +91,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="npm.serve-dev">
+  <component name="RunManager" selected="Spring Boot.BusinessApplication">
     <configuration name="GatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.accp.gateway.GatewayApplication" />
       <module name="gateway" />
@@ -235,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619089011672</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1·利用setInterval完成自动保存功能&#10;2·增加日期格式化方法&#10;3·7-5结束了">
+      <created>1619093078014</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619093078014</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +282,8 @@
     <MESSAGE value="添加进去新的设备,新的idea2021版本" />
     <MESSAGE value="1，课程内容表设计与基本代码生成&#10;2,7-5" />
     <MESSAGE value="1，完成课程内容管理功能&#10;1.1新增富文本框,进行内容编辑,和查询&#10;2.7-5" />
-    <option name="LAST_COMMIT_MESSAGE" value="1，完成课程内容管理功能&#10;1.1新增富文本框,进行内容编辑,和查询&#10;2.7-5" />
+    <MESSAGE value="1·利用setInterval完成自动保存功能&#10;2·增加日期格式化方法&#10;3·7-5结束了" />
+    <option name="LAST_COMMIT_MESSAGE" value="1·利用setInterval完成自动保存功能&#10;2·增加日期格式化方法&#10;3·7-5结束了" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

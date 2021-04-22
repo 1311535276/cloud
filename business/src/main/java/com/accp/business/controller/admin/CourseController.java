@@ -47,10 +47,12 @@ public class CourseController {
         ValidatorUtil.length(courseDto.getName(), "名称", 1, 50);
         ValidatorUtil.length(courseDto.getSummary(), "概述", 1, 2000);
         ValidatorUtil.length(courseDto.getImage(), "封面", 1, 100);
+
         //ResponseDto: 业务接口数据回调(是否接口调用成功等一系列处理)
         ResponseDto responseDto = new ResponseDto();
+
         //给course表的id 存储Uuid(特殊处理的id,64位8位数字符)
-        LOG.info("courseDto:{}", courseDto);
+        LOG.info("查看courseDto:{}", courseDto);
 
         courseService.save(courseDto);
         //存储结果: 可看底层代码
@@ -101,4 +103,11 @@ public class CourseController {
         return responseDto;
     }
 
+    @RequestMapping(value = "/sort")
+    public ResponseDto sort(@RequestBody SortDto sortDto) {
+        LOG.info("更新排序");
+        ResponseDto responseDto = new ResponseDto();
+        courseService.sort(sortDto);
+        return responseDto;
+    }
 }

@@ -104,6 +104,7 @@ private static final Logger LOG = LoggerFactory.getLogger(CourseCategoryService.
     @Transactional
     public void saveBatch (String courseId, List<CategoryDto> dtoList){
       CourseCategoryExample example=new CourseCategoryExample();
+      LOG.info("courseId是{}",courseId);
     example.createCriteria().andCourseIdEqualTo(courseId);
       courseCategoryMapper.deleteByExample(example);
 
