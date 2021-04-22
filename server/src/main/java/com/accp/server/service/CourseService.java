@@ -136,6 +136,9 @@ private static final Logger LOG = LoggerFactory.getLogger(CourseService.class);
   return CopyUtil.copy(content,CourseContentDto.class);
    }
 
+    /**
+     *保存课程内容，包含新增和修改
+     */
    public int saveContent(CourseContentDto contentDto){
        CourseContent content =CopyUtil.copy(contentDto,CourseContent.class);
        int i=courseContentMapper.updateByPrimaryKeyWithBLOBs(content);

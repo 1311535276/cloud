@@ -1,8 +1,10 @@
 package com.accp.business.controller.admin;
 
+import com.accp.business.config.BusinessApplication;
 import com.accp.server.dto.*;
 import com.accp.server.service.CourseCategoryService;
 import com.accp.server.service.CourseService;
+import com.mysql.jdbc.log.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +17,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/admin/course")
 public class CourseController {
+
+    private static final Logger LOG = LoggerFactory.getLogger(BusinessApplication.class);
 
     @Resource
     private CourseService courseService;
@@ -32,7 +36,6 @@ public class CourseController {
         return responseDto;
     }
 
-    private static final Logger LOG = LoggerFactory.getLogger(CourseController.class);
 
     /**
      * 增+修，id有值时更新，无值时新增

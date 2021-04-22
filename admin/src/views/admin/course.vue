@@ -49,7 +49,7 @@
                             <button v-on:click="toChapter(course)" class="btn btn-white btn-xs btn-info btn-round">
                                 大章
                             </button>&nbsp;
-                            <button v-on:click="toContent(course)" class="btn btn-white btn-xs btn-info btn-round">
+                            <button v-on:click="editContent(course)" class="btn btn-white btn-xs btn-info btn-round">
                                 内容
                             </button>&nbsp;
                             <button v-on:click="openSortModal(course)" class="btn btn-white btn-xs btn-info btn-round">
@@ -163,7 +163,29 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-
+      <div id="course-content-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-1g" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+              <h4 class="modal-title">内容编辑</h4>
+            </div>
+            <div class="modal-body">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <div class="col-1g-12">
+                    <div id="content"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button v-on:click="saveContent()" type="button" class="btn btn-primary">保存</button>
+            </div>
+          </div>
+          </div>
+          </div>
     </div>
 </template>
 
@@ -318,12 +340,62 @@
             /**
              * 点击【内容】
              */
-            // toContent(course) {
-            //     let _this = this;
-            //     SessionStorage.set(SESSION_KEY_COURSE, course);
-            //     _this.$router.push("/business/content");
-            // },
-            allCategory() {
+            toContent(course) {
+                let _this = this;
+                SessionStorage.set(SESSION_KEY_COURSE, course);
+                _this.$router.push("/business/content");
+            },
+          // 这里
+            editContent(course) {
+              let _this = this;
+              let id = course.id;
+              this.course = course;
+              $("#content").summernote({
+                focus: true,
+                heigit: 300
+              });
+              //先清空历史文本
+              $("#content").summernote('code', '');
+              Loading.show();
+              _this.$ajax.get(process.env.VUE_APP_SERVER + '/business/admin/course/find-content/' + id).then((response) => {
+                Loading.hide();
+                let resp = response.data;
+
+                if (resp.success) {
+                  if (resp.content) {
+                    $("#course-content-modal").modal({backdrop: ' static', keyboard: false});
+                    $("#content").summernote('code', resp.content.content);
+                  }
+                } else {
+                  Toast.warning(resp.message);
+                }
+              });
+            },
+          /**
+           * 保存内容
+           */
+          saveContent () {
+            let _this = this;
+            let content = $("#content").summernote("code");
+            _this.$ajax.post(process.env.VUE_APP_SERVER + '/business/admin/course/save-content', {
+              id: _this.course.id,
+              content: content
+            }).then((response)=>{
+              Loading.hide();
+              let resp = response.data;
+              if (resp.success) {
+                Toast.success("内容保存成功");
+                // let now = Tool.dateFormat("yyyy-MM-dd hh:mm:ss");
+                // let now = Tool.dateFormat("mm:ss");
+                // _this.saveContentLabel = "最后保存时间：" + now;
+              } else {
+                Toast.warning(resp.message);
+              }
+            });
+          },
+
+
+          allCategory() {
                 let _this = this;
                 Loading.show();
                 _this.$ajax.post(process.env.VUE_APP_SERVER + '/business/admin/category/all').then((response) => {

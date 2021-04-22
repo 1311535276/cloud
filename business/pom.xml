@@ -59,7 +59,15 @@
     <!--<groupId>org.springframework.boot</groupId>-->
     <!--<artifactId>spring-boot-devtools</artifactId>-->
     <!--</dependency>-->
-
+<!--        slf4j-api-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
     <dependency>
         <groupId>com.accp</groupId>
         <artifactId>server</artifactId>
