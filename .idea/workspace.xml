@@ -4,25 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="1，课程内容管理功能未完善(前端功能未完善,不可抗力行为)&#10;2,自动保存功能未完善,js日期格式化功能未完善&#10;3,点击编辑功能无法出现富文本编辑器,考虑将功能丢弃掉&#10;4,7-5">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/category.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/chapter.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/course.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/section.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/welcome.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/login.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/test/test.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/business/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/CourseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/CourseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/system/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/course.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619006646296</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1，完成课程内容管理功能&#10;1.1新增富文本框,进行内容编辑,和查询&#10;2.7-5">
+      <created>1619089011672</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619089011672</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +256,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加进去新的设备,新的idea2021版本" />
     <MESSAGE value="1，课程内容表设计与基本代码生成&#10;2,7-5" />
-    <option name="LAST_COMMIT_MESSAGE" value="1，课程内容表设计与基本代码生成&#10;2,7-5" />
+    <MESSAGE value="1，完成课程内容管理功能&#10;1.1新增富文本框,进行内容编辑,和查询&#10;2.7-5" />
+    <option name="LAST_COMMIT_MESSAGE" value="1，完成课程内容管理功能&#10;1.1新增富文本框,进行内容编辑,和查询&#10;2.7-5" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
