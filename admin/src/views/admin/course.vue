@@ -31,13 +31,23 @@
                 {{COURSE_STATUS | optionKV(course.status)}}
               </span>
                         </div>
-
                         <h3 class="search-title">
                             <a href="#" class="blue">{{course.name}}</a>
                         </h3>
+                          <!--讲师头像的显示前端代码-->
+                      <div v-for="teacher in teachers.filter(t=>{return t.id===course.teacherId})" class="profile-activity clearfix">
+                        <div>
+                          <img v-show="!teacher.image" class="pull-left" src="/ace/assets/images/avatars/avatar5.png">
+                          <img v-show="teacher.image" class="pull-left" v-bind:src="teacher.image">
+                          <a class="user" href="#"> {{teacher.name}} </a>
+                          <br>
+                          {{teacher.position}}
+                        </div>
+                      </div>
+
 
                         <p>
-                            <span class="blue bolder bigger-150">{{course.price}}&nbsp;<i class="fa fa-rmb"></i></span>&nbsp;
+                            <span class="blue bolder bigger-150"><i class="fa fa-rmb"></i>{{course.price}}&nbsp;</span>&nbsp;
                         </p>
                         <p>{{course.summary}}</p>
                         <p>
