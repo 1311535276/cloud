@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/public/static/js/session-storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/public/static/js/session-storage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/views/admin/chapter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/chapter.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/views/admin/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/course.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/section.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/section.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/ChapterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/ChapterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/ChapterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/ChapterController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BusinessApplication">
+  <component name="RunManager" selected="npm.serve-dev">
     <configuration name="GatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.accp.gateway.GatewayApplication" />
       <module name="gateway" />
@@ -92,17 +92,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -222,6 +211,7 @@
       <workItem from="1619001313530" duration="487000" />
       <workItem from="1619001818168" duration="1273000" />
       <workItem from="1619004909791" duration="7403000" />
+      <workItem from="1619141399117" duration="833000" />
     </task>
     <task id="LOCAL-00001" summary="添加进去新的设备,新的idea2021版本">
       <created>1618542353429</created>
@@ -265,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619112582003</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="1,sessionstoragelikey改成常量&#10;2,7-6">
+      <created>1619114275834</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619114275834</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +287,8 @@
     <MESSAGE value="1·利用setInterval完成自动保存功能&#10;2·增加日期格式化方法&#10;3·7-5结束了" />
     <MESSAGE value="1.课程管理增加自定义排序&#10;2.修复了课程管理新增的bug&#10;3.修复了mapp没有映射到的bug(路径问题)&#10;4.修复了上次更新git没有更新核心文件(这次直接一次性更新)&#10;5.新增了排序的增删改查&#10;6.7-6" />
     <MESSAGE value="1,home隐藏大章和小节&#10;2,7-6" />
-    <option name="LAST_COMMIT_MESSAGE" value="1,home隐藏大章和小节&#10;2,7-6" />
+    <MESSAGE value="1,sessionstoragelikey改成常量&#10;2,7-6" />
+    <option name="LAST_COMMIT_MESSAGE" value="1,sessionstoragelikey改成常量&#10;2,7-6" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

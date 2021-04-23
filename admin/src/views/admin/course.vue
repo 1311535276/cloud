@@ -267,8 +267,8 @@
         },
         mounted: function () {
             let _this = this;
-          Sessionśtorage. set(SESSION_KEY_COURSE, course);
-            _this.$refs.pagination.size = 5;
+          // SessionStorage.set(SESSION_KEY_COURSE, course);
+          _this.$refs.pagination.size = 5;
             _this.allCategory();
             // 调用 list()方法
             //初始化第一页

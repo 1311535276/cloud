@@ -32,6 +32,7 @@ public class ChapterController {
     ResponseDto responseDto=new ResponseDto();
     //存储结果: 可看底层代码
     responseDto.setContent(chapterPageDto);
+    LOG.info("chapterPageDto{}",chapterPageDto);
     ValidatorUtil.require(chapterPageDto.getCourseId(), "课程ID");
     chapterService.list(chapterPageDto);
     return responseDto;
