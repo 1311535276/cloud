@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="1,增加全局自定义样式style.css，表格内文字上下居中&#10;2,chapter有新bug 设置全局变量没有效果, 记录待解决">
+    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/course.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/domain/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/domain/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/domain/CourseExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/domain/CourseExample$Criteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/domain/CourseExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/domain/CourseExample$Criterion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/domain/CourseExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/domain/CourseExample$GeneratedCriteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/generator/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/mapper/CourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/mapper/CourseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/accp/system/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/accp/system/controller/TestController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,24 +52,24 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/public/static/image" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/file/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/admin/src/views/admin/category.vue" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\newCodeProject\videoCloud\file\src\main\resources" />
+      <recent name="E:\newCodeProject\videoCloud\file\src\main\java" />
+      <recent name="E:\newCodeProject\videoCloud\file\src\main\java\com\accp\file" />
       <recent name="E:\newCodeProject\videoCloud\admin\public\static\image" />
       <recent name="E:\newCodeProject\videoCloud\admin\public\static\image\课程封面" />
-      <recent name="E:\newCodeProject\videoCloud\admin\public\static\image\讲师头像" />
-      <recent name="E:\newCodeProject\videoCloud\admin\src\components" />
-      <recent name="E:\newCodeProject\videoCloud\admin\src\views\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\newCodeProject\videoCloud\admin\public\static\image" />
@@ -82,6 +81,12 @@
       <recent name="com.accp.server.service" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn -U idea:idea" />
+      <command value="mvn install" />
+    </option>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -89,7 +94,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BusinessApplication">
+  <component name="RunManager" selected="Spring Boot.GatewayApplication">
     <configuration name="ServerGenerator" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.accp.generator.server.ServerGenerator" />
       <module name="generator" />
@@ -167,6 +172,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FileApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="file" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.accp.file.config.FileApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="gateway" />
       <extension name="coverage">
@@ -206,13 +220,14 @@
       <item itemvalue="Spring Boot.systemApplication" />
       <item itemvalue="Spring Boot.GatewayApplication" />
       <item itemvalue="Spring Boot.EurekaApplication " />
+      <item itemvalue="Spring Boot.FileApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.serve-dev" />
-        <item itemvalue="Application.ServerGenerator" />
         <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="npm.serve-dev" />
         <item itemvalue="Spring Boot.EurekaApplication " />
+        <item itemvalue="Application.ServerGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +254,7 @@
       <workItem from="1619001313530" duration="487000" />
       <workItem from="1619001818168" duration="1273000" />
       <workItem from="1619004909791" duration="7403000" />
-      <workItem from="1619141399117" duration="11860000" />
+      <workItem from="1619141399117" duration="21016000" />
     </task>
     <task id="LOCAL-00001" summary="添加进去新的设备,新的idea2021版本">
       <created>1618542353429</created>
@@ -304,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619168650121</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="1.课程列表中显示讲师信息&#10;2.课程名称字体自适应&#10;3.7-7">
+      <created>1619169871443</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1619169871443</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +354,8 @@
     <MESSAGE value="1,sessionstoragelikey改成常量&#10;2,7-6" />
     <MESSAGE value="1,增加全局自定义样式style.css，表格内文字上下居中&#10;2,chapter有新bug 设置全局变量没有效果, 记录待解决" />
     <MESSAGE value="1,课程与讲师关联&#10;2,7-7讲师头像" />
-    <option name="LAST_COMMIT_MESSAGE" value="1,课程与讲师关联&#10;2,7-7讲师头像" />
+    <MESSAGE value="1.课程列表中显示讲师信息&#10;2.课程名称字体自适应&#10;3.7-7" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.课程列表中显示讲师信息&#10;2.课程名称字体自适应&#10;3.7-7" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

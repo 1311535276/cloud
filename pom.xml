@@ -6,6 +6,7 @@
 
     <groupId>com.accp</groupId>
     <artifactId>videoCloud</artifactId>
+<!--這段标注了此pom.xml是父类-->
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <!--子项目-->
@@ -16,6 +17,8 @@
         <module>server</module>
         <module>business</module>
         <module>generator</module>
+        <module>file</module>
+        <module>file</module>
     </modules>
     <!--设置项目是1.8jdk控制-->
     <properties>
@@ -67,6 +70,13 @@
                         <artifactId>slf4j-api</artifactId>
                         <version>1.7.25</version>
                     </dependency>
+
+                    <!-- 阿里云oss -->
+                    <dependency>
+                        <groupId>com.aliyun.oss</groupId>
+                        <artifactId>aliyun-sdk-oss</artifactId>
+                        <version>3.8.0</version>
+                    </dependency>
                 </dependencies>
             </plugin>
         </plugins>
@@ -100,10 +110,10 @@
                 <version>5.1.37</version>
             </dependency>
             <!-- 热部署DevTools -->
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-devtools</artifactId>-->
-<!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.springframework.boot</groupId>-->
+            <!--                <artifactId>spring-boot-devtools</artifactId>-->
+            <!--            </dependency>-->
 
             <!--spring cloud客户端jar包-->
             <!--将服务注册到注册中心,第一步:增加eureka-client依赖-->
