@@ -6,10 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/public/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/public/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/public/static/image/讲师头像/头像1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/public/static/image/讲师头像/头像1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/views/admin/chapter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/chapter.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/views/admin/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/course.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/ChapterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/ChapterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/ChapterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/ChapterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/TeacherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/domain/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/domain/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/domain/CourseExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/domain/CourseExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/generator/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/mapper/CourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/mapper/CourseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/TeacherService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,24 +61,27 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/src/main/resources/mapper/my" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/public/static/image/讲师头像" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/admin/src/views/admin/category.vue" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\newCodeProject\videoCloud\admin\public\static\image\讲师头像" />
+      <recent name="E:\newCodeProject\videoCloud\admin\src\components" />
+      <recent name="E:\newCodeProject\videoCloud\admin\src\views\admin" />
       <recent name="E:\newCodeProject\videoCloud\server\src\main\resources\mapper\my" />
       <recent name="E:\newCodeProject\videoCloud\admin\src" />
-      <recent name="E:\newCodeProject\videoCloud\admin\src\views" />
-      <recent name="E:\newCodeProject\videoCloud\admin\src\views\admin" />
-      <recent name="E:\newCodeProject\videoCloud\server\src\main\java\com\accp\server\dto" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\newCodeProject\videoCloud\admin\public\static\image\讲师头像" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.accp.server.dto" />
@@ -82,16 +96,36 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="npm.serve-dev">
-    <configuration name="GatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.accp.gateway.GatewayApplication" />
-      <module name="gateway" />
+  <component name="RunManager" selected="Spring Boot.BusinessApplication">
+    <configuration name="ServerGenerator" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.accp.generator.server.ServerGenerator" />
+      <module name="generator" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.accp.gateway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VueGenerator" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.accp.generator.vue.VueGenerator" />
+      <module name="generator" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,7 +205,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.GatewayApplication" />
+      <item itemvalue="Application.VueGenerator" />
+      <item itemvalue="Application.ServerGenerator" />
       <item itemvalue="Maven.mybatis-generator" />
       <item itemvalue="npm.serve-dev" />
       <item itemvalue="Spring Boot.BusinessApplication" />
@@ -182,9 +217,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.serve-dev" />
+        <item itemvalue="Application.ServerGenerator" />
         <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.EurekaApplication " />
-        <item itemvalue="Application.GatewayApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +246,7 @@
       <workItem from="1619001313530" duration="487000" />
       <workItem from="1619001818168" duration="1273000" />
       <workItem from="1619004909791" duration="7403000" />
-      <workItem from="1619141399117" duration="833000" />
+      <workItem from="1619141399117" duration="10734000" />
     </task>
     <task id="LOCAL-00001" summary="添加进去新的设备,新的idea2021版本">
       <created>1618542353429</created>
@@ -262,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619114275834</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1,增加全局自定义样式style.css，表格内文字上下居中&#10;2,chapter有新bug 设置全局变量没有效果, 记录待解决">
+      <created>1619143196431</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1619143196431</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +330,8 @@
     <MESSAGE value="1.课程管理增加自定义排序&#10;2.修复了课程管理新增的bug&#10;3.修复了mapp没有映射到的bug(路径问题)&#10;4.修复了上次更新git没有更新核心文件(这次直接一次性更新)&#10;5.新增了排序的增删改查&#10;6.7-6" />
     <MESSAGE value="1,home隐藏大章和小节&#10;2,7-6" />
     <MESSAGE value="1,sessionstoragelikey改成常量&#10;2,7-6" />
-    <option name="LAST_COMMIT_MESSAGE" value="1,sessionstoragelikey改成常量&#10;2,7-6" />
+    <MESSAGE value="1,增加全局自定义样式style.css，表格内文字上下居中&#10;2,chapter有新bug 设置全局变量没有效果, 记录待解决" />
+    <option name="LAST_COMMIT_MESSAGE" value="1,增加全局自定义样式style.css，表格内文字上下居中&#10;2,chapter有新bug 设置全局变量没有效果, 记录待解决" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

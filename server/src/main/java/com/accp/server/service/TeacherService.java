@@ -1,7 +1,10 @@
 package com.accp.server.service;
 
+import com.accp.server.domain.Category;
+import com.accp.server.domain.CategoryExample;
 import com.accp.server.domain.Teacher;
 import com.accp.server.domain.TeacherExample;
+import com.accp.server.dto.CategoryDto;
 import com.accp.server.dto.TeacherDto;
 import com.accp.server.dto.PageDto;
 import com.accp.server.mapper.TeacherMapper;
@@ -69,7 +72,7 @@ private static final Logger LOG = LoggerFactory.getLogger(TeacherService.class);
         //循环mysql里面有没有时间这个字段,如果有的话就要insert||update;
         //判断是否有时间(createdAt)这个字段
         teacher.setId(UuidUtil.getShortUuid());
-//        Teacher teacher = new Teacher();
+//       Teacher teacher = new Teacher();
 //        BeanUtils.copyProperties(teacherDto,teacher);
         teacherMapper.insert(teacher);
     }
@@ -89,4 +92,14 @@ private static final Logger LOG = LoggerFactory.getLogger(TeacherService.class);
     teacherMapper.deleteByPrimaryKey(id);
     }
 
+    /**
+     * 列表查询
+     */
+    public List<TeacherDto> all() {
+        TeacherExample teacherExample = new TeacherExample();
+        //查询
+        List<Teacher> teacherList = teacherMapper.selectByExample(teacherExample);
+        List<TeacherDto> teacherDtoList = CopyUtil.copyList(teacherList, TeacherDto.class);
+        return teacherDtoList;
+    }
 }

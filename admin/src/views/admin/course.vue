@@ -94,6 +94,15 @@
                                         <input v-model="course.name" class="form-control">
                                     </div>
                                 </div>
+                              <div class="form-group">
+                                <label class="col-sm-2 control-label">讲师</label>
+                                <div class="col-sm-10">
+                                  <select v-model="course.teacherId" class="form-control">
+                                    <option v-for="o in teachers" v-bind:value="o.id">{{o.name}}</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="form-group">
                                 <label class="col-sm-2 control-label">概述</label>
                                 <div class="col-sm-10">
                                     <input v-model="course.summary" class="form-control">
@@ -153,7 +162,9 @@
                                     <input v-model="course.sort" class="form-control" disabled>
                                 </div>
                             </div>
+                            </div>
                         </form>
+
 
                     </div>
                     <div class="modal-footer">
@@ -263,6 +274,7 @@
                 oldSort: 0,
                 newSort: 0
               },
+              teachers: [],
             }
         },
         mounted: function () {
@@ -270,7 +282,10 @@
           // SessionStorage.set(SESSION_KEY_COURSE, course);
           _this.$refs.pagination.size = 5;
             _this.allCategory();
-            // 调用 list()方法
+            //加载讲师
+          _this.allTeacher()
+
+          // 调用 list()方法
             //初始化第一页
             _this.list(1);
             //sidebar激活样式方法一
@@ -394,7 +409,7 @@
              */
             toChapter(course) {
                 let _this = this;
-                SessionStorage.set(SESSION_KEY_CHAPTER, course);
+                SessionStorage.set(SESSION_KEY_COURSE, course);
                 _this.$router.push("/business/chapter");
             },
 
@@ -413,19 +428,19 @@
               this.course = course;
               $("#content").summernote({
                 focus: true,
-                heigit: 300
+                height: 300
               });
               //先清空历史文本
               $("#content").summernote('code', '');
             _this.saveContentLabel="",
-              Loading.show();
+                Loading.show();
               _this.$ajax.get(process.env.VUE_APP_SERVER + '/business/admin/course/find-content/' + id).then((response) => {
                 Loading.hide();
                 let resp = response.data;
-
                 if (resp.success) {
+
                   if (resp.content) {
-                    $("#course-content-modal").modal({backdrop: ' static', keyboard: false});
+                    $("#course-content-modal").modal({backdrop: 'static', keyboard: false});
                     $("#content").summernote('code', resp.content.content);
                   }
                   // 定时自动保存
@@ -552,6 +567,17 @@
                 Toast.error("更新排序失败");
               }
             });
+          },
+          allTeacher() {
+            let _this = this;
+            Loading.show();
+            _this.$ajax.post(process.env.VUE_APP_SERVER + '/business/admin/teacher/all').then((response) => {
+              Loading.hide();
+              let resp = response.data;
+              _this.teachers = resp.content;
+
+              _this.initTree();
+            })
           },
         }
     }
