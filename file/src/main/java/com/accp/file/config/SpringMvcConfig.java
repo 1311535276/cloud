@@ -13,11 +13,11 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 
     private static final Logger LOG = LoggerFactory.getLogger(UploadController.class);
 
-//    @Value("${file.path}")
-//    private String FILE_PATH;
+    @Value("${file.path}")
+    private String FILE_PATH;
 @Override
 public void addResourceHandlers(ResourceHandlerRegistry registry) {
-    registry.addResourceHandler("/f/**").addResourceLocations("file:E:/newCodeProject/videoCloud/file1/");
+    registry.addResourceHandler("/f/**").addResourceLocations("file:"+FILE_PATH);
 //       http://127.0.0.1:9003/file/f/teacher/Gojh6nDp_6.jpg               ("file:D:/file/imooc/course");
 //                                                                           E:\newCodeProject\videoCloud\file1\teacher
 }

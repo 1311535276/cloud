@@ -15,7 +15,7 @@
         <pagination ref="pagination" v-bind:list="list" v-bind:itemCount="8"></pagination>
 
         <div class="row">
-            <div v-for="course in courses" class="col-md-4">
+            <div v-for="course in courses" class="col-md-3">
                 <div class="thumbnail search-thumbnail">
                     <img v-show="!course.image" class="media-object" src="/static/image/demo-course.jpg"/>
                     <img v-show="course.image" class="media-object" v-bind:src="course.image"/>
@@ -290,7 +290,7 @@
         mounted: function () {
             let _this = this;
           // SessionStorage.set(SESSION_KEY_COURSE, course);
-          _this.$refs.pagination.size = 5;
+          _this.$refs.pagination.size = 4;
             _this.allCategory();
             //加载讲师
           _this.allTeacher()

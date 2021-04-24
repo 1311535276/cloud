@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="1，增加file模块，用于文件上传和存储&#10;2,8-1">
+    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/business.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/course.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/src/main/java/com/accp/file/config/SpringMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/java/com/accp/file/config/SpringMvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/FileApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/FileApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/generator.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,9 +237,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.serve-dev" />
         <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.EurekaApplication " />
-        <item itemvalue="npm.serve-dev" />
         <item itemvalue="Application.ServerGenerator" />
       </list>
     </recent_temporary>
@@ -266,7 +268,7 @@
       <workItem from="1619001818168" duration="1273000" />
       <workItem from="1619004909791" duration="7403000" />
       <workItem from="1619141399117" duration="30670000" />
-      <workItem from="1619259852777" duration="7092000" />
+      <workItem from="1619259852777" duration="9461000" />
     </task>
     <task id="LOCAL-00001" summary="添加进去新的设备,新的idea2021版本">
       <created>1618542353429</created>
@@ -352,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619261653598</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="1，文件上传功能开发：增加springboot静态资源配置，配置文件访问路径">
+      <created>1619291684991</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1619291684991</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +392,8 @@
     <MESSAGE value="1.课程列表中显示讲师信息&#10;2.课程名称字体自适应&#10;3.7-7" />
     <MESSAGE value="1，增加file模块，用于文件上传和存储&#10;2,8-1" />
     <MESSAGE value="1.文件上传功能开发：springboot+vue基本的文件上传功能，上传讲师头像&#10;2.修复了 jdbc:url未指定的bug;原因是server没有application.properties,&#10;3.修复了maven是官方镜像的bug,改为了本地maven,采用阿里云的镜像&#10;4.添加了一个日志输出类,但是效果不咋地,经常报错,已注释掉这个类&#10;5.修改了全部子项目jdk采用本地1.8 版本改为1.8" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.文件上传功能开发：springboot+vue基本的文件上传功能，上传讲师头像&#10;2.修复了 jdbc:url未指定的bug;原因是server没有application.properties,&#10;3.修复了maven是官方镜像的bug,改为了本地maven,采用阿里云的镜像&#10;4.添加了一个日志输出类,但是效果不咋地,经常报错,已注释掉这个类&#10;5.修改了全部子项目jdk采用本地1.8 版本改为1.8" />
+    <MESSAGE value="1，文件上传功能开发：增加springboot静态资源配置，配置文件访问路径" />
+    <option name="LAST_COMMIT_MESSAGE" value="1，文件上传功能开发：增加springboot静态资源配置，配置文件访问路径" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
