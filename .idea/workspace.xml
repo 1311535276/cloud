@@ -5,24 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="1，增加file模块，用于文件上传和存储&#10;2,8-1">
-      <change afterPath="$PROJECT_DIR$/system/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/business/business.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/business/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/file/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/FileApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/FileApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/generator.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/enums/EnumGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/enums/EnumGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/enums/EnumGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/enums/EnumGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/config/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/system.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/accp/system/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/system/target/classes/com/accp/system/controller/TestController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,11 +87,11 @@
       <recent name="E:\newCodeProject\videoCloud\admin\public\static\image\讲师头像" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.accp.file.config" />
       <recent name="com.accp.server.config" />
       <recent name="com.accp.file.controller.admin" />
       <recent name="com.accp.server.dto" />
       <recent name="com.accp.server.mapper.my" />
-      <recent name="com.accp.server.service" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -137,6 +124,17 @@
     <configuration name="VueGenerator" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.accp.generator.vue.VueGenerator" />
       <module name="generator" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -229,17 +227,17 @@
       <item itemvalue="Application.ServerGenerator" />
       <item itemvalue="Maven.mybatis-generator" />
       <item itemvalue="npm.serve-dev" />
-      <item itemvalue="Spring Boot.BusinessApplication" />
       <item itemvalue="Spring Boot.systemApplication" />
       <item itemvalue="Spring Boot.FileApplication" />
+      <item itemvalue="Spring Boot.BusinessApplication" />
       <item itemvalue="Spring Boot.GatewayApplication" />
       <item itemvalue="Spring Boot.EurekaApplication " />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.serve-dev" />
         <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.EurekaApplication " />
+        <item itemvalue="npm.serve-dev" />
         <item itemvalue="Application.ServerGenerator" />
       </list>
     </recent_temporary>
@@ -268,7 +266,7 @@
       <workItem from="1619001818168" duration="1273000" />
       <workItem from="1619004909791" duration="7403000" />
       <workItem from="1619141399117" duration="30670000" />
-      <workItem from="1619259852777" duration="1418000" />
+      <workItem from="1619259852777" duration="7092000" />
     </task>
     <task id="LOCAL-00001" summary="添加进去新的设备,新的idea2021版本">
       <created>1618542353429</created>
@@ -347,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619205928185</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="1.文件上传功能开发：springboot+vue基本的文件上传功能，上传讲师头像&#10;2.修复了 jdbc:url未指定的bug;原因是server没有application.properties,&#10;3.修复了maven是官方镜像的bug,改为了本地maven,采用阿里云的镜像&#10;4.添加了一个日志输出类,但是效果不咋地,经常报错,已注释掉这个类&#10;5.修改了全部子项目jdk采用本地1.8 版本改为1.8">
+      <created>1619261653598</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1619261653598</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +382,8 @@
     <MESSAGE value="1,课程与讲师关联&#10;2,7-7讲师头像" />
     <MESSAGE value="1.课程列表中显示讲师信息&#10;2.课程名称字体自适应&#10;3.7-7" />
     <MESSAGE value="1，增加file模块，用于文件上传和存储&#10;2,8-1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1，增加file模块，用于文件上传和存储&#10;2,8-1" />
+    <MESSAGE value="1.文件上传功能开发：springboot+vue基本的文件上传功能，上传讲师头像&#10;2.修复了 jdbc:url未指定的bug;原因是server没有application.properties,&#10;3.修复了maven是官方镜像的bug,改为了本地maven,采用阿里云的镜像&#10;4.添加了一个日志输出类,但是效果不咋地,经常报错,已注释掉这个类&#10;5.修改了全部子项目jdk采用本地1.8 版本改为1.8" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.文件上传功能开发：springboot+vue基本的文件上传功能，上传讲师头像&#10;2.修复了 jdbc:url未指定的bug;原因是server没有application.properties,&#10;3.修复了maven是官方镜像的bug,改为了本地maven,采用阿里云的镜像&#10;4.添加了一个日志输出类,但是效果不咋地,经常报错,已注释掉这个类&#10;5.修改了全部子项目jdk采用本地1.8 版本改为1.8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

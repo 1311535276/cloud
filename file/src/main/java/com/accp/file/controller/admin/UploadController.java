@@ -28,7 +28,8 @@ public class UploadController {
         //保存文件到本地
         String fileName = file.getOriginalFilename();
         String key = UuidUtil.getShortUuid();
-        String fullPath ="E:/file/newCodeProject/teacher/"+ key +"_"+ fileName;
+        String fullPath ="E:/newCodeProject/videoCloud/file1/teacher/"+ key +"_"+ fileName;
+//        E:\newCodeProject\videoCloud\file1\teacher
         File dest = new File(fullPath);
         //transferTo才是写入 把传进来的资源:file给写进去 路径:dest的路径
         file.transferTo(dest);
