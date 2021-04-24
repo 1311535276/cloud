@@ -90,6 +90,7 @@
 <!--                        v-bind:suffixs="['jpg', 'jpeg', 'png']"-->
 <!--                        v-bind:use="FILE_USE.TEACHER.key"-->
 <!--                        v-bind:after-upload="afterUpload"></big-file>-->
+                  <input type="file" v-on:change="uploadImage()" id="file-upload-input"/>
                   <div v-show="teacher.image" class="row">
                     <div class="col-md-4">
                       <img v-bind:src="teacher.image" class="img-responsive">
@@ -237,12 +238,22 @@
           })
         });
       },
-
       afterUpload(resp) {
         let _this = this;
         let image = resp.content.path;
         _this.teacher.image = image;
-      }
+      },
+      uploadImage(){
+        let _this = this;
+        let formData = new window.FormData();
+        //key："file"必须controller参数名一致
+    formData.append('file',document.querySelector('#file-upload-input').files[0]);
+    Loading.show();
+    _this.$ajax.post(process.env.VUE_APP_SERVER +'/file/admin/upload',formData).then((response)=>{
+    Loading.hide();
+    let resp = response.data;
+  });
+  }
     }
   }
 </script>
