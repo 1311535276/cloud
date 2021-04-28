@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="1.文件上传功能开发：讲师头像显示优化,课程显示优化;&#10;2.文件上传功能开发：文件上传实时显示与保存&#10;3.Maven多环境配置，将开发环境和生产环境配置成不同的值(配置在application.yml上了)&#10;4.8-2">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/SpringMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/SpringMvcConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/accp/system/controller/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/accp/system/controller/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/accp/system/controller/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/system/target/classes/com/accp/system/controller/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/AjXs5iOi_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/B7fIpLq9_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/BqYtql9w_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/FCr80h9x_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/Gojh6nDp_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/YYi11YSJ_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/uOqzLhxI_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/wEUfsr5m_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/x30yh45l_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/xtKKhyIn_6.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +144,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -280,7 +294,7 @@
       <workItem from="1619315535171" duration="7219000" />
       <workItem from="1619401823666" duration="6438000" />
       <workItem from="1619434124829" duration="755000" />
-      <workItem from="1619574771558" duration="739000" />
+      <workItem from="1619574771558" duration="3403000" />
     </task>
     <task id="LOCAL-00001" summary="添加进去新的设备,新的idea2021版本">
       <created>1618542353429</created>
@@ -380,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619294150987</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="1.文件上传功能开发：使用单独的文件上传按钢&#10;2.8-3">
+      <created>1619575644038</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1619575644039</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +434,8 @@
     <MESSAGE value="1.文件上传功能开发：springboot+vue基本的文件上传功能，上传讲师头像&#10;2.修复了 jdbc:url未指定的bug;原因是server没有application.properties,&#10;3.修复了maven是官方镜像的bug,改为了本地maven,采用阿里云的镜像&#10;4.添加了一个日志输出类,但是效果不咋地,经常报错,已注释掉这个类&#10;5.修改了全部子项目jdk采用本地1.8 版本改为1.8" />
     <MESSAGE value="1，文件上传功能开发：增加springboot静态资源配置，配置文件访问路径" />
     <MESSAGE value="1.文件上传功能开发：讲师头像显示优化,课程显示优化;&#10;2.文件上传功能开发：文件上传实时显示与保存&#10;3.Maven多环境配置，将开发环境和生产环境配置成不同的值(配置在application.yml上了)&#10;4.8-2" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.文件上传功能开发：讲师头像显示优化,课程显示优化;&#10;2.文件上传功能开发：文件上传实时显示与保存&#10;3.Maven多环境配置，将开发环境和生产环境配置成不同的值(配置在application.yml上了)&#10;4.8-2" />
+    <MESSAGE value="1.文件上传功能开发：使用单独的文件上传按钢&#10;2.8-3" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.文件上传功能开发：使用单独的文件上传按钢&#10;2.8-3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
