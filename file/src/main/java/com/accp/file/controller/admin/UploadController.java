@@ -27,7 +27,8 @@ public class UploadController {
 
     @RequestMapping("/upload")
     public ResponseDto upload(@RequestParam MultipartFile file) throws IOException {
-        LOG.info("上传文件开始:{}",file);
+
+        LOG.info("上传文件开始:{}",file);//输出list等一系列集合 要用到通配符{}
         LOG.info(file.getOriginalFilename());
         LOG.info(String.valueOf(file.getSize()));
 

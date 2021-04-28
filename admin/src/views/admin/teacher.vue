@@ -31,7 +31,7 @@
               <a href="javascript:;" class="user-title-label dropdown-toggle" data-toggle="dropdown">
                 <i class="ace-icon fa fa-circle light-green"></i>
                 &nbsp;
-                <span class="white">{{ teacher.position }}</span>
+                <span class="white">{{teacher.position}}</span>
               </a>
             </div>
           </div>
@@ -93,7 +93,11 @@
                   <!--  v-bind:suffixs="['jpg', 'jpeg', 'png']"-->
                   <!--v-bind:use="FILE_USE.TEACHER.key"-->
                   <!-- v-bind:after-upload="afterUpload"></big-file>-->
-                  <input type="file" v-on:change="uploadImage()" id="file-upload-input"/>
+                  <button type="button" v-on:click="selectImage()" class="btn btn-white btn-default btn-round">
+                    <i class="ace-icon fa fa-upload"></i>
+                    上传头像
+                  </button>
+                  <input type="file" v-on:change="uploadImage()" id="file-upload-input" class="hidden"/>
                   <!--  图片显示-->
                   <div v-show="teacher.image" class="row">
                     <div class="col-md-4">
@@ -262,7 +266,10 @@ export default {
         // 再把image赋值给前端teacher的image变量里
         _this.teacher.image = image;
       });
-    }
+    },
+    selectImage(){
+      $('#file-upload-input').trigger("click");
+    },
   }
 }
 </script>

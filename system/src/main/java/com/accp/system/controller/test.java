@@ -1,5 +1,9 @@
 package com.accp.system.controller;
 
+import com.mysql.jdbc.log.Log;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Scanner;
 
 public class test{
@@ -14,20 +18,19 @@ public class test{
                 System.out.println("重复语句是:"+i+args[i]);
                 ++b;
             }
-
-
-
-
       }
-
         }
         return "";
     }
+    private static final Logger LOG = LoggerFactory.getLogger(System.class);
+
     public static void main(String [] args){
 //        test.show("helloo");
         Scanner input=new Scanner(System.in);
         System.out.print("请输入语句:");
         test.show(input.next());
+        LOG.info("6");
+
 
     }
 }

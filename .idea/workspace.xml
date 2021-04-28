@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="">
+    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="1.文件上传功能开发：讲师头像显示优化,课程显示优化;&#10;2.文件上传功能开发：文件上传实时显示与保存&#10;3.Maven多环境配置，将开发环境和生产环境配置成不同的值(配置在application.yml上了)&#10;4.8-2">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/course.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/src/main/java/com/accp/file/config/SpringMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/java/com/accp/file/config/SpringMvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/SpringMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/SpringMvcConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/accp/system/controller/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/accp/system/controller/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/target/classes/com/accp/system/controller/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/system/target/classes/com/accp/system/controller/test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +73,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.ignored.files" />
     <property name="ts.external.directory.path" value="E:\JetBrains\IntelliJ IDEA 2021.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/admin/src/views/admin/category.vue" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -109,7 +111,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.FileApplication">
+  <component name="RunManager" selected="npm.serve-dev">
     <configuration name="ServerGenerator" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.accp.generator.server.ServerGenerator" />
       <module name="generator" />
@@ -130,13 +132,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.accp.system.controller.test" />
+      <module name="system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.accp.system.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,7 +180,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaApplication " type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+    <configuration name="EurekaApplication " type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="eureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.accp.eureka.EurekaApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -194,7 +198,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway" />
       <extension name="coverage">
         <pattern>
@@ -203,6 +207,8 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.accp.gateway.GatewayApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -210,6 +216,8 @@
     <configuration name="systemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="system" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.accp.system.config.systemApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -227,19 +235,19 @@
     <list>
       <item itemvalue="Application.VueGenerator" />
       <item itemvalue="Application.ServerGenerator" />
+      <item itemvalue="Application.test" />
       <item itemvalue="Maven.mybatis-generator" />
       <item itemvalue="npm.serve-dev" />
+      <item itemvalue="Spring Boot.EurekaApplication " />
+      <item itemvalue="Spring Boot.GatewayApplication" />
       <item itemvalue="Spring Boot.systemApplication" />
       <item itemvalue="Spring Boot.FileApplication" />
       <item itemvalue="Spring Boot.BusinessApplication" />
-      <item itemvalue="Spring Boot.GatewayApplication" />
-      <item itemvalue="Spring Boot.EurekaApplication " />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.serve-dev" />
-        <item itemvalue="Spring Boot.GatewayApplication" />
-        <item itemvalue="Spring Boot.EurekaApplication " />
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.ServerGenerator" />
       </list>
     </recent_temporary>
@@ -268,7 +276,11 @@
       <workItem from="1619001818168" duration="1273000" />
       <workItem from="1619004909791" duration="7403000" />
       <workItem from="1619141399117" duration="30670000" />
-      <workItem from="1619259852777" duration="9461000" />
+      <workItem from="1619259852777" duration="10462000" />
+      <workItem from="1619315535171" duration="7219000" />
+      <workItem from="1619401823666" duration="6438000" />
+      <workItem from="1619434124829" duration="755000" />
+      <workItem from="1619574771558" duration="739000" />
     </task>
     <task id="LOCAL-00001" summary="添加进去新的设备,新的idea2021版本">
       <created>1618542353429</created>
@@ -361,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619291684991</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="1.文件上传功能开发：讲师头像显示优化,课程显示优化;&#10;2.文件上传功能开发：文件上传实时显示与保存&#10;3.Maven多环境配置，将开发环境和生产环境配置成不同的值(配置在application.yml上了)&#10;4.8-2">
+      <created>1619294150986</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1619294150987</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +412,8 @@
     <MESSAGE value="1，增加file模块，用于文件上传和存储&#10;2,8-1" />
     <MESSAGE value="1.文件上传功能开发：springboot+vue基本的文件上传功能，上传讲师头像&#10;2.修复了 jdbc:url未指定的bug;原因是server没有application.properties,&#10;3.修复了maven是官方镜像的bug,改为了本地maven,采用阿里云的镜像&#10;4.添加了一个日志输出类,但是效果不咋地,经常报错,已注释掉这个类&#10;5.修改了全部子项目jdk采用本地1.8 版本改为1.8" />
     <MESSAGE value="1，文件上传功能开发：增加springboot静态资源配置，配置文件访问路径" />
-    <option name="LAST_COMMIT_MESSAGE" value="1，文件上传功能开发：增加springboot静态资源配置，配置文件访问路径" />
+    <MESSAGE value="1.文件上传功能开发：讲师头像显示优化,课程显示优化;&#10;2.文件上传功能开发：文件上传实时显示与保存&#10;3.Maven多环境配置，将开发环境和生产环境配置成不同的值(配置在application.yml上了)&#10;4.8-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.文件上传功能开发：讲师头像显示优化,课程显示优化;&#10;2.文件上传功能开发：文件上传实时显示与保存&#10;3.Maven多环境配置，将开发环境和生产环境配置成不同的值(配置在application.yml上了)&#10;4.8-2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
