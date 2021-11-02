@@ -72,6 +72,12 @@
             <groupId>com.accp</groupId>
             <artifactId>server</artifactId>
         </dependency>
+        <!-- mybatis分页插件pagehelper2 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>5.1.8</version>
+        </dependency>
     </dependencies>
 
 </project>

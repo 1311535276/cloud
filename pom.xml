@@ -121,11 +121,11 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>5.1.37</version>
             </dependency>
-            <!-- 热部署DevTools -->
-            <!--            <dependency>-->
-            <!--                <groupId>org.springframework.boot</groupId>-->
-            <!--                <artifactId>spring-boot-devtools</artifactId>-->
-            <!--            </dependency>-->
+            <!-- 热部署DevTools
+                     <dependency>
+                        <groupId>org.springframework.boot</groupId>
+                           <artifactId>spring-boot-devtools</artifactId>
+                       </dependency>-->
 
             <!--spring cloud客户端jar包-->
             <!--将服务注册到注册中心,第一步:增加eureka-client依赖-->
@@ -146,10 +146,22 @@
             <!-- mybatis分页插件pagehelper -->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
-                <!--<artifactId>pagehelper</artifactId>-->
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
                 <version>1.2.10</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>mybatis-spring-boot-starter</artifactId>
+                        <groupId>org.mybatis.spring.boot</groupId>
+                    </exclusion>
+                </exclusions>
             </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>5.1.8</version>
+            </dependency>
+
+
 
             <!--2020年11月9日17:32:33-->
             <!--freemarker(模板引擎jar包)-->

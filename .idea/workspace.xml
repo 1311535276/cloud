@@ -5,18 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/course.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/AjXs5iOi_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/B7fIpLq9_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/BqYtql9w_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/FCr80h9x_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/Gojh6nDp_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/YYi11YSJ_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/uOqzLhxI_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/wEUfsr5m_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/x30yh45l_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/xtKKhyIn_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/business.iml" beforeDir="false" afterPath="$PROJECT_DIR$/business/business.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/business/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/TeacherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/FileApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/FileApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/SpringMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/SpringMvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/Baz76U2d_gpE2NFKU_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/CFm2jmVp_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/ZRFgbglb_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/gpE2NFKU_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1/teacher/xvuxt9D2_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/gateway.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/config/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/mapper/my/MyCourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/mapper/my/MyCourseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springcloudthree.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +47,17 @@
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="f5864f55-5439-4bf5-9939-e08da80fcd1b" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/views/admin/category.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/generator/src/main/java/com/accp/generator/ftl/vue.ftl" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CategoryController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/file/src/main/java/com/accp/file/config/SpringMvcConfig.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/views/admin/teacher.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/main.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/router.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/views/admin/chapter.vue" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -144,17 +166,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -295,6 +306,12 @@
       <workItem from="1619401823666" duration="6438000" />
       <workItem from="1619434124829" duration="755000" />
       <workItem from="1619574771558" duration="3403000" />
+      <workItem from="1634001641216" duration="8302000" />
+      <workItem from="1634091143080" duration="1266000" />
+      <workItem from="1634200591725" duration="30000" />
+      <workItem from="1634205956415" duration="2297000" />
+      <workItem from="1634806628101" duration="2000" />
+      <workItem from="1635733651682" duration="6471000" />
     </task>
     <task id="LOCAL-00001" summary="添加进去新的设备,新的idea2021版本">
       <created>1618542353429</created>

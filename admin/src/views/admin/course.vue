@@ -493,7 +493,9 @@
           allCategory() {
                 let _this = this;
                 Loading.show();
-                _this.$ajax.post(process.env.VUE_APP_SERVER + '/business/admin/category/all').then((response) => {
+                _this.$ajax.post
+                (process.env.VUE_APP_SERVER + '/business/admin/category/all')
+                    .then((response) => {
                     Loading.hide();
                     let resp = response.data;
                     _this.categorys = resp.content;
