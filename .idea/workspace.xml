@@ -5,29 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/course.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/business.iml" beforeDir="false" afterPath="$PROJECT_DIR$/business/business.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/business/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/FileApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/FileApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/SpringMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/SpringMvcConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/Baz76U2d_gpE2NFKU_9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/CFm2jmVp_8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/ZRFgbglb_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/gpE2NFKU_9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1/teacher/xvuxt9D2_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/gateway.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/server/ServerGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/server/ServerGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/vue/VueGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/vue/VueGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/config/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/mapper/my/MyCourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/mapper/my/MyCourseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springcloudthree.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/generator/generatorConfig.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +19,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -88,7 +78,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/vue" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -105,11 +95,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\newCodeProject\videoCloud\generator\src\main\java\com\accp\generator\vue" />
+      <recent name="E:\newCodeProject\videoCloud\admin\src\views\admin" />
       <recent name="E:\newCodeProject\videoCloud\server\src\main\resources" />
       <recent name="E:\newCodeProject\videoCloud\file\src\main\resources" />
       <recent name="E:\newCodeProject\videoCloud\file\src\main\java" />
-      <recent name="E:\newCodeProject\videoCloud\file\src\main\java\com\accp\file" />
-      <recent name="E:\newCodeProject\videoCloud\admin\public\static\image" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\newCodeProject\videoCloud\admin\public\static\image" />
@@ -135,8 +125,26 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="excludedTypes">
+      <set>
+        <option value="HttpClient.HttpRequestRunConfigurationType" />
+      </set>
+    </option>
   </component>
   <component name="RunManager" selected="npm.serve-dev">
+    <configuration name="EnumGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.accp.generator.enums.EnumGenerator" />
+      <module name="generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.accp.generator.enums.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServerGenerator" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.accp.generator.server.ServerGenerator" />
       <module name="generator" />
@@ -169,6 +177,20 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="generated-requests#16" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="16" runType="Run single request">
+      <method v="2" />
     </configuration>
     <configuration name="mybatis-generator" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -268,12 +290,16 @@
       <item itemvalue="Spring Boot.systemApplication" />
       <item itemvalue="Spring Boot.FileApplication" />
       <item itemvalue="Spring Boot.BusinessApplication" />
+      <item itemvalue="Application.EnumGenerator" />
+      <item itemvalue="HTTP Request.generated-requests#16" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.serve-dev" />
-        <item itemvalue="Application.test" />
+        <item itemvalue="HTTP Request.generated-requests#16" />
         <item itemvalue="Application.ServerGenerator" />
+        <item itemvalue="Application.EnumGenerator" />
+        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -311,7 +337,8 @@
       <workItem from="1634200591725" duration="30000" />
       <workItem from="1634205956415" duration="2297000" />
       <workItem from="1634806628101" duration="2000" />
-      <workItem from="1635733651682" duration="6471000" />
+      <workItem from="1635733651682" duration="8078000" />
+      <workItem from="1635995584176" duration="14465000" />
     </task>
     <task id="LOCAL-00001" summary="添加进去新的设备,新的idea2021版本">
       <created>1618542353429</created>
@@ -418,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619575644039</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="1.文件上传功能开发：制作文件上传公共组件(File.vue)&#10;2.修复不能连续上传同一个文件的BUG,(清空v-bind:id的值.val();)&#10;3.8-4">
+      <created>1635821799149</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1635821799149</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,7 +486,9 @@
     <MESSAGE value="1，文件上传功能开发：增加springboot静态资源配置，配置文件访问路径" />
     <MESSAGE value="1.文件上传功能开发：讲师头像显示优化,课程显示优化;&#10;2.文件上传功能开发：文件上传实时显示与保存&#10;3.Maven多环境配置，将开发环境和生产环境配置成不同的值(配置在application.yml上了)&#10;4.8-2" />
     <MESSAGE value="1.文件上传功能开发：使用单独的文件上传按钢&#10;2.8-3" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.文件上传功能开发：使用单独的文件上传按钢&#10;2.8-3" />
+    <MESSAGE value="1.文件上传功能开发：制作文件上传公共组件(File.vue)&#10;2.修复不能连续上传同一个文件的BUG,(清空v-bind:id的值.val();)" />
+    <MESSAGE value="1.文件上传功能开发：制作文件上传公共组件(File.vue)&#10;2.修复不能连续上传同一个文件的BUG,(清空v-bind:id的值.val();)&#10;3.8-4" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.文件上传功能开发：制作文件上传公共组件(File.vue)&#10;2.修复不能连续上传同一个文件的BUG,(清空v-bind:id的值.val();)&#10;3.8-4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

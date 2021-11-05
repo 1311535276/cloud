@@ -60,9 +60,9 @@
             <artifactId>aspectjweaver</artifactId>
         </dependency>
         <!--应该是阿里巴巴的 json-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>com.alibaba</groupId>-->
+        <!--<artifactId>fastjson</artifactId>-->
+        <!--</dependency>-->
     </dependencies>
 </project>
