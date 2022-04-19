@@ -250,7 +250,7 @@ export default {
     afterUpload(resp) {
       let _this = this;
       //resp是后台return回来的数据 resp.content则是图片的地址!!
-      let image = resp.content;
+      let image = resp.content.path;
       // 再把image赋值给前端teacher的image变量里
       _this.teacher.image = image;
     },

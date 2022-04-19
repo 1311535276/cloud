@@ -84,11 +84,13 @@ public class UploadController {
     fileDto.setSuffix(suffix);
     fileDto.setUse(use);
     fileService.save(fileDto);
-
     ResponseDto responseDto = new ResponseDto();
     //输出给前端 把图片(文件)资源地址
     //responseDto.setContent(FILE_DOMAIN + "teacher/" + key + "_" + fileName);
-    responseDto.setContent(FILE_DOMAIN + path);
+    //返回前端全路径
+    fileDto. setPath(FILE_DOMAIN + path);
+    responseDto. setContent(fileDto);
+    //responseDto.setContent(FILE_DOMAIN + path);
     return responseDto;
   }
 }
