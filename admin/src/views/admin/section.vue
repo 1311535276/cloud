@@ -128,7 +128,7 @@
                   <!--视频显示-->
                   <div v-show="section.video" class="row">
                     <div class="col-md-9">
-                      <video v-bind:src="section.video" controls="controls"></video>
+                      <video v-bind:src="section.video" controls="controls" id="video"></video>
                     </div>
                   </div>
                   <!--原本的代码-->
@@ -299,12 +299,28 @@ export default {
         })
       });
     },
+    /**
+     * 显示图片or视频
+     * */
     afterUpload(resp) {
       let _this = this;
       //resp是后台return回来的数据 resp.content则是图片的地址!!
       let video = resp.content.path;
       // 再把image赋值给前端teacher的image变量里
       _this.section.video = video;
+      _this.getTime();
+    },
+    /**
+     * 获取时长
+     */
+    getTime() {
+      let _this = this;
+      setTimeout(function () {
+        //原生document获取id
+        let ele = document.getElementById("video");
+        //原生带有duration这个方法,是获取视频的时长,再传入10,进行10进制
+        _this.section.time = parseInt(ele.duration, 10);
+      }, 1000);
     },
   }
 }
