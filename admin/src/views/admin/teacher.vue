@@ -100,7 +100,7 @@
                   <!--  图片显示-->
                   <div v-show="teacher.image" class="row">
                     <div class="col-md-4">
-                      <img v-bind:src="teacher.image" class="img-responsive">
+                      <img v-bind:src="teacher.image" class="img-responsive"/>
                     </div>
                   </div>
                 </div>

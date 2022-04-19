@@ -65,7 +65,7 @@ private static final Logger LOG = LoggerFactory.getLogger(FileService.class);
     /**
      * 新增
      */
-    private void insert(File  file){
+    private void insert(File  file ){
                 Date now =new Date();
 
         //循环mysql里面有没有时间这个字段,如果有的话就要insert||update;

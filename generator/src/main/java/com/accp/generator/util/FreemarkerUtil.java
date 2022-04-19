@@ -4,6 +4,8 @@ import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapper;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -12,6 +14,7 @@ import java.io.IOException;
 import java.util.Map;
 
 public class FreemarkerUtil {
+    private static final Logger LOG = LoggerFactory.getLogger(FreemarkerUtil.class);
 
     static String ftlPath = "generator\\src\\main\\java\\com\\accp\\generator\\ftl\\";
     /**
@@ -24,6 +27,7 @@ public class FreemarkerUtil {
         //读取模板
         Configuration cfg = new Configuration(Configuration.VERSION_2_3_29);
         //读取模板所在的路径
+        LOG.info("dx:"+ftlPath);
         cfg.setDirectoryForTemplateLoading(new File(ftlPath));
         cfg.setObjectWrapper(new DefaultObjectWrapper(Configuration.VERSION_2_3_29));
         //读取模板具体所在的 就是哪一个模板

@@ -20,6 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -95,7 +96,6 @@ public class CourseService {
         } else {
             this.update(course);
         }
-
         // 批量保存课程分类
         courseCategoryService.saveBatch(course.getId(), courseDto.getCategorys());
     }

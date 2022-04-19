@@ -18,7 +18,6 @@
         <module>business</module>
         <module>generator</module>
         <module>file</module>
-        <module>file</module>
     </modules>
     <!--设置项目是1.8jdk控制-->
     <properties>
@@ -57,7 +56,9 @@
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <version>5.1.37</version>
+                        <!--<version>5.1.37</version>-->
+                        <scope>runtime</scope>
+                        <version>8.0.11</version>
                     </dependency>
                     <dependency>
                         <groupId>org.slf4j</groupId>
@@ -119,7 +120,8 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.37</version>
+                <scope>runtime</scope>
+                <version>8.0.11</version>
             </dependency>
             <!-- 热部署DevTools
                      <dependency>
@@ -188,6 +190,12 @@
                 <groupId>com.accp</groupId>
                 <artifactId>server</artifactId>
                 <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <!--loobok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <optional>true</optional>
             </dependency>
         </dependencies>
     </dependencyManagement>

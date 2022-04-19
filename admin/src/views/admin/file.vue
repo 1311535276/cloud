@@ -1,10 +1,10 @@
 <template>
   <div>
     <p>
-      <button v-on:click="add()" class="btn btn-white btn-default btn-round">
-        <i class="ace-icon fa fa-edit"></i>
-        新增
-      </button>
+      <!--<button v-on:click="add()" class="btn btn-white btn-default btn-round">-->
+      <!--  <i class="ace-icon fa fa-edit"></i>-->
+      <!--  新增-->
+      <!--</button>-->
       &nbsp;
       <button v-on:click="list(1)" class="btn btn-white btn-default btn-round">
         <i class="ace-icon fa fa-refresh"></i>

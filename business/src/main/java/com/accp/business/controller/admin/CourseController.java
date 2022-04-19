@@ -4,7 +4,7 @@ import com.accp.business.config.BusinessApplication;
 import com.accp.server.dto.*;
 import com.accp.server.service.CourseCategoryService;
 import com.accp.server.service.CourseService;
-import com.mysql.jdbc.log.Log;
+//import com.mysql.jdbc.log.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;

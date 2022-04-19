@@ -1,22 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="">
+    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="1.文件上传功能开发:文件表设计与基本代码生成&#10;2.8-5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/server/ServerGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/server/ServerGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/vue/VueGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/vue/VueGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/business.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/business/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/CategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka/src/main/java/com/accp/eureka/EurekaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/src/main/java/com/accp/eureka/EurekaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/file.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/file/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/src/main/java/com/accp/file/config/FileApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/java/com/accp/file/config/FileApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/util/DbUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/util/DbUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/util/FreemarkerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/util/FreemarkerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/server/ServerGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/server/ServerGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/util/DbUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/util/DbUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/util/FreemarkerUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/util/FreemarkerUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/vue/VueGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/vue/VueGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/generator/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/config/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/config/LogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/dto/FileDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/dto/FileDtoBF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/FileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/config/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/CourseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/config/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/generator/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/accp/system/config/systemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/accp/system/config/SystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/accp/system/controller/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/accp/system/controller/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/target/classes/com/accp/system/config/systemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/system/target/classes/com/accp/system/config/systemApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/target/classes/com/accp/system/controller/TestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/target/classes/com/accp/system/controller/test.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -39,24 +82,35 @@
     <option name="defaultAccountId" value="f5864f55-5439-4bf5-9939-e08da80fcd1b" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/admin/src/views/admin/category.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/views/admin/chapter.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/views/admin/teacher.vue" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/generator/src/main/java/com/accp/generator/ftl/vue.ftl" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CategoryController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/file/src/main/java/com/accp/file/config/SpringMvcConfig.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/admin/src/views/admin/teacher.vue" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/admin/src/main.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/views/admin/category.vue" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/admin/src/router.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/admin/src/views/admin/chapter.vue" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="E:\apache-maven-3.8.1\src\MyRepository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.8.1" />
-        <option name="userSettingsFile" value="E:\apache-maven-3.8.1\apache-maven\src\conf\settings.xml" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../maven/apache-maven-3.8.1" />
+        <option name="userSettingsFile" value="E:\maven\apache-maven-3.8.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="#JAVA_HOME" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="#JAVA_HOME" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="2" />
   </component>
   <component name="ProjectId" id="1rAIgADSl9R7r5ZIJIYAmBgB8AH" />
   <component name="ProjectLevelVcsManager">
@@ -78,7 +132,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/vue" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/server/src/main/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/src/main/java/com/accp/server/test" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -88,35 +145,51 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.ignored.files" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="ts.external.directory.path" value="E:\JetBrains\IntelliJ IDEA 2021.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/admin/src/views/admin/category.vue" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.accp.business.config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\newCodeProject\videoCloud\server\src\main\java\com\accp\server\test" />
+      <recent name="E:\newCodeProject\videoCloud\doc\db" />
       <recent name="E:\newCodeProject\videoCloud\generator\src\main\java\com\accp\generator\vue" />
       <recent name="E:\newCodeProject\videoCloud\admin\src\views\admin" />
       <recent name="E:\newCodeProject\videoCloud\server\src\main\resources" />
-      <recent name="E:\newCodeProject\videoCloud\file\src\main\resources" />
-      <recent name="E:\newCodeProject\videoCloud\file\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\newCodeProject\videoCloud\server\src\main" />
       <recent name="E:\newCodeProject\videoCloud\admin\public\static\image" />
       <recent name="E:\newCodeProject\videoCloud\admin\public\static\image\讲师头像" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.accp.server.dto" />
+      <recent name="com.accp.server.util" />
       <recent name="com.accp.file.config" />
       <recent name="com.accp.server.config" />
       <recent name="com.accp.file.controller.admin" />
-      <recent name="com.accp.server.dto" />
-      <recent name="com.accp.server.mapper.my" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn -U idea:idea" />
       <command value="mvn install" />
+      <command value="mvn -U idea:idea" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -132,19 +205,6 @@
     </option>
   </component>
   <component name="RunManager" selected="npm.serve-dev">
-    <configuration name="EnumGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.accp.generator.enums.EnumGenerator" />
-      <module name="generator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.accp.generator.enums.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ServerGenerator" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.accp.generator.server.ServerGenerator" />
       <module name="generator" />
@@ -158,9 +218,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VueGenerator" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.accp.generator.vue.VueGenerator" />
       <module name="generator" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.accp.business.config.test" />
+      <module name="business" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.accp.business.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -188,9 +274,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="generated-requests#16" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="16" runType="Run single request">
-      <method v="2" />
     </configuration>
     <configuration name="mybatis-generator" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -260,9 +343,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="systemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="SystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="system" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.accp.system.config.systemApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.accp.system.config.SystemApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
@@ -282,24 +365,24 @@
     <list>
       <item itemvalue="Application.VueGenerator" />
       <item itemvalue="Application.ServerGenerator" />
+      <item itemvalue="Application.test (1)" />
       <item itemvalue="Application.test" />
+      <item itemvalue="Application.Test" />
       <item itemvalue="Maven.mybatis-generator" />
       <item itemvalue="npm.serve-dev" />
-      <item itemvalue="Spring Boot.EurekaApplication " />
-      <item itemvalue="Spring Boot.GatewayApplication" />
-      <item itemvalue="Spring Boot.systemApplication" />
-      <item itemvalue="Spring Boot.FileApplication" />
       <item itemvalue="Spring Boot.BusinessApplication" />
-      <item itemvalue="Application.EnumGenerator" />
-      <item itemvalue="HTTP Request.generated-requests#16" />
+      <item itemvalue="Spring Boot.EurekaApplication " />
+      <item itemvalue="Spring Boot.FileApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.SystemApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.serve-dev" />
-        <item itemvalue="HTTP Request.generated-requests#16" />
-        <item itemvalue="Application.ServerGenerator" />
-        <item itemvalue="Application.EnumGenerator" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.test" />
+        <item itemvalue="Application.ServerGenerator" />
+        <item itemvalue="Application.test (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -339,6 +422,57 @@
       <workItem from="1634806628101" duration="2000" />
       <workItem from="1635733651682" duration="8078000" />
       <workItem from="1635995584176" duration="14465000" />
+      <workItem from="1636514518935" duration="6734000" />
+      <workItem from="1636962821835" duration="1000" />
+      <workItem from="1637028653453" duration="593000" />
+      <workItem from="1637630308203" duration="1267000" />
+      <workItem from="1638263783008" duration="72000" />
+      <workItem from="1638264881812" duration="624000" />
+      <workItem from="1640587128003" duration="25000" />
+      <workItem from="1642387347400" duration="1340000" />
+      <workItem from="1642400487702" duration="102000" />
+      <workItem from="1642400610043" duration="2264000" />
+      <workItem from="1642734352064" duration="3282000" />
+      <workItem from="1643006403154" duration="3800000" />
+      <workItem from="1643075256531" duration="1833000" />
+      <workItem from="1643078210403" duration="25000" />
+      <workItem from="1644542075452" duration="2751000" />
+      <workItem from="1644551428584" duration="12476000" />
+      <workItem from="1644644411629" duration="1029000" />
+      <workItem from="1646010342630" duration="1314000" />
+      <workItem from="1646032360293" duration="1346000" />
+      <workItem from="1646099094949" duration="1677000" />
+      <workItem from="1646635590155" duration="5868000" />
+      <workItem from="1646719428614" duration="601000" />
+      <workItem from="1646809213213" duration="177000" />
+      <workItem from="1646813961184" duration="268000" />
+      <workItem from="1646814262783" duration="596000" />
+      <workItem from="1647242428870" duration="754000" />
+      <workItem from="1647243197962" duration="248000" />
+      <workItem from="1647245678005" duration="1675000" />
+      <workItem from="1647247378808" duration="4420000" />
+      <workItem from="1647304204822" duration="7868000" />
+      <workItem from="1647391291329" duration="286000" />
+      <workItem from="1647391612570" duration="7336000" />
+      <workItem from="1647476963747" duration="594000" />
+      <workItem from="1647478173788" duration="592000" />
+      <workItem from="1647524878670" duration="594000" />
+      <workItem from="1647527005746" duration="1940000" />
+      <workItem from="1647564387291" duration="26000" />
+      <workItem from="1647564454590" duration="74000" />
+      <workItem from="1647564569960" duration="6344000" />
+      <workItem from="1647781681385" duration="59000" />
+      <workItem from="1647781779189" duration="593000" />
+      <workItem from="1647822484941" duration="19000" />
+      <workItem from="1647822541717" duration="273000" />
+      <workItem from="1647822851834" duration="590000" />
+      <workItem from="1647908577228" duration="8000" />
+      <workItem from="1647908619975" duration="596000" />
+      <workItem from="1648427835814" duration="10152000" />
+      <workItem from="1648525896762" duration="2269000" />
+      <workItem from="1650265267281" duration="6609000" />
+      <workItem from="1650328827888" duration="1300000" />
+      <workItem from="1650330195760" duration="3134000" />
     </task>
     <task id="LOCAL-00001" summary="添加进去新的设备,新的idea2021版本">
       <created>1618542353429</created>
@@ -497,6 +631,17 @@
           <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/test/Test.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/admin/src/views/admin/teacher.vue</url>
+          <line>102</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
