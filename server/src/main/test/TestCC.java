@@ -29,4 +29,9 @@ public class TestCC {
     listString.forEach(b -> System.out.println(b));
     //Collectors.groupingBy(categoryDto);
   }
+  @Test
+  void xx(){
+
+  }
+
 }

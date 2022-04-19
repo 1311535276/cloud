@@ -44,18 +44,31 @@ public class UploadController {
   private FileService fileService;
 
   @RequestMapping("/upload")
-  public ResponseDto upload(@RequestParam MultipartFile file) throws IOException {
+  public ResponseDto upload(@RequestParam MultipartFile file, String use) throws IOException {
     //输出list等一系列集合 要用到通配符{}
-    LOG.info("上传文件开始:{}", file);
+    //LOG.info("上传文件开始:{}", file);
+    LOG.info("上传文件开始");
     LOG.info(file.getOriginalFilename());
     LOG.info(String.valueOf(file.getSize()));
 
-    //保存文件到本地
+    // 保存文件到本地
+    FileUseEnum useEnum = FileUseEnum.getByCode(use);
     String key = UuidUtil.getShortUuid();
     String fileName = file.getOriginalFilename();
     //  E:\newCodeProject\videoCloud\file1\teacher
-    String suffix=fileName.substring(fileName.lastIndexOf(".")+1);
-    String path="teacher/"+key+"."+suffix;
+    String suffix = fileName.substring(fileName.lastIndexOf(".") + 1);
+
+    //如果文件夹不存在则创建
+    //判断枚举类型 T是teacher C是课程
+    String dir = useEnum.name().toLowerCase();
+    File fullDir = new File(FILE_PATH + dir);
+    if (!fullDir.exists()) {
+      fullDir.mkdir();
+    }
+
+    //String path="teacher/"+key+"."+suffix;
+    String path = dir + File.separator + key + "." + suffix;
+
     //String fullPath = FILE_PATH + "teacher/" + key + "_" + fileName;
     String fullPath = FILE_PATH + path;
     File dest = new File(fullPath);
@@ -64,17 +77,18 @@ public class UploadController {
     //输出全路径
     LOG.info(dest.getAbsolutePath());
     LOG.info("保存文件记录开始");
-    FileDto fileDto=new FileDto();
+    FileDto fileDto = new FileDto();
     fileDto.setPath(path);
     fileDto.setName(fileName);
     fileDto.setSize(Math.toIntExact(file.getSize()));
-    fileDto.setUse("");
+    fileDto.setSuffix(suffix);
+    fileDto.setUse(use);
     fileService.save(fileDto);
 
     ResponseDto responseDto = new ResponseDto();
     //输出给前端 把图片(文件)资源地址
     //responseDto.setContent(FILE_DOMAIN + "teacher/" + key + "_" + fileName);
-    responseDto.setContent(FILE_DOMAIN +path);
+    responseDto.setContent(FILE_DOMAIN + path);
     return responseDto;
   }
 }

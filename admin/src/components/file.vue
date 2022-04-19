@@ -24,6 +24,9 @@ export default {
     suffixs:{
       default:[]
     },
+    use: {
+      default: ""
+    },
     afterUpload: {
       type: Function,
       default: null
@@ -66,7 +69,9 @@ export default {
         return;
       }
       //key："file"必须controller参数名一致
-      formData.append('file', document.querySelector('#file-upload-input').files[0]);
+      // formData.append('file', document.querySelector('#file-upload-input').files[0]);
+      formData.append('file', file);
+      formData.append('use', _this.use);
       Loading.show();
       _this.$ajax.post(process.env.VUE_APP_SERVER + '/file/admin/upload', formData).then((response) => {
         Loading.hide();
@@ -89,7 +94,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

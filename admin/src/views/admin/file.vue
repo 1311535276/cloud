@@ -37,89 +37,88 @@
       </tbody>
     </table>
     <!--模态框-->
-    <div id="forn-modal" class="modal fade" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">表单</h4>
-          </div>
-          <div class="modal-body">
-            <form class="form-horizontal">
-              <div class="form-group">
-                <label class="col-sm-2 control-label">相对路径</label>
-                <div class="col-sm-10">
-                  <input v-model="file.path" class="form-control">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label">文件名</label>
-                <div class="col-sm-10">
-                  <input v-model="file.name" class="form-control">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label">后缀</label>
-                <div class="col-sm-10">
-                  <input v-model="file.suffix" class="form-control">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label">大小</label>
-                <div class="col-sm-10">
-                  <input v-model="file.size" class="form-control">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label">用途</label>
-                <div class="col-sm-10">
-                  <select v-model="file.use" class="form-control">
-                    <option v-for="o in FILE_USE" v-bind:value="o.key">{{ o.value }}</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label">已上传分片</label>
-                <div class="col-sm-10">
-                  <input v-model="file.shardIndex" class="form-control">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label">分片大小</label>
-                <div class="col-sm-10">
-                  <input v-model="file.shardSize" class="form-control">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label">分片总数</label>
-                <div class="col-sm-10">
-                  <input v-model="file.shardTotal" class="form-control">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label">文件标识</label>
-                <div class="col-sm-10">
-                  <input v-model="file.key" class="form-control">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label">vod</label>
-                <div class="col-sm-10">
-                  <input v-model="file.vod" class="form-control">
-                </div>
-              </div>
-            </form>
+    <!--<div id="forn-modal" class="modal fade" tabindex="-1" role="dialog">-->
+    <!--  <div class="modal-dialog" role="document">-->
+    <!--    <div class="modal-content">-->
+    <!--      <div class="modal-header">-->
+    <!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span-->
+    <!--            aria-hidden="true">&times;</span></button>-->
+    <!--        <h4 class="modal-title">表单</h4>-->
+    <!--      </div>-->
+    <!--      <div class="modal-body">-->
+    <!--        <form class="form-horizontal">-->
+    <!--          <div class="form-group">-->
+    <!--            <label class="col-sm-2 control-label">相对路径</label>-->
+    <!--            <div class="col-sm-10">-->
+    <!--              <input v-model="file.path" class="form-control">-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="form-group">-->
+    <!--            <label class="col-sm-2 control-label">文件名</label>-->
+    <!--            <div class="col-sm-10">-->
+    <!--              <input v-model="file.name" class="form-control">-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="form-group">-->
+    <!--            <label class="col-sm-2 control-label">后缀</label>-->
+    <!--            <div class="col-sm-10">-->
+    <!--              <input v-model="file.suffix" class="form-control">-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="form-group">-->
+    <!--            <label class="col-sm-2 control-label">大小</label>-->
+    <!--            <div class="col-sm-10">-->
+    <!--              <input v-model="file.size" class="form-control">-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="form-group">-->
+    <!--            <label class="col-sm-2 control-label">用途</label>-->
+    <!--            <div class="col-sm-10">-->
+    <!--              <select v-model="file.use" class="form-control">-->
+    <!--                <option v-for="o in FILE_USE" v-bind:value="o.key">{{ o.value }}</option>-->
+    <!--              </select>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="form-group">-->
+    <!--            <label class="col-sm-2 control-label">已上传分片</label>-->
+    <!--            <div class="col-sm-10">-->
+    <!--              <input v-model="file.shardIndex" class="form-control">-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="form-group">-->
+    <!--            <label class="col-sm-2 control-label">分片大小</label>-->
+    <!--            <div class="col-sm-10">-->
+    <!--              <input v-model="file.shardSize" class="form-control">-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="form-group">-->
+    <!--            <label class="col-sm-2 control-label">分片总数</label>-->
+    <!--            <div class="col-sm-10">-->
+    <!--              <input v-model="file.shardTotal" class="form-control">-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="form-group">-->
+    <!--            <label class="col-sm-2 control-label">文件标识</label>-->
+    <!--            <div class="col-sm-10">-->
+    <!--              <input v-model="file.key" class="form-control">-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="form-group">-->
+    <!--            <label class="col-sm-2 control-label">vod</label>-->
+    <!--            <div class="col-sm-10">-->
+    <!--              <input v-model="file.vod" class="form-control">-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </form>-->
 
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-            <button type="button" class="btn btn-primary" v-on:click="save()">保存</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
+    <!--      </div>-->
+    <!--      <div class="modal-footer">-->
+    <!--        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+    <!--        <button type="button" class="btn btn-primary" v-on:click="save()">保存</button>-->
+    <!--      </div>-->
+    <!--    </div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+    <!--  </div>&lt;!&ndash; /.modal-dialog &ndash;&gt;-->
+    <!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
   </div>
 </template>
 

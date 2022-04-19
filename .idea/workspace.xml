@@ -7,45 +7,23 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="1.文件上传功能开发:文件表设计与基本代码生成&#10;2.8-5">
+    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="1.文件上传功能开发：去掉文件管理的新增、修改、删除功能&#10;2.8-6">
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/dto/FileDtoBF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/public/static/js/enums.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/public/static/js/enums.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/file.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/file.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/filter/filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/filter/filter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/course.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/file.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/file.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/business.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/business/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/CategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka/src/main/java/com/accp/eureka/EurekaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/src/main/java/com/accp/eureka/EurekaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/file.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/file/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/src/main/java/com/accp/file/config/FileApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/java/com/accp/file/config/FileApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/FileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/FileApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/config/FileApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/gateway.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/util/DbUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/util/DbUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/util/FreemarkerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/generator/src/main/java/com/accp/generator/util/FreemarkerUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/server/ServerGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/server/ServerGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/util/DbUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/util/DbUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/util/FreemarkerUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/util/FreemarkerUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/vue/VueGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/vue/VueGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/config/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/config/LogAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/dto/FileDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/dto/FileDtoBF.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/service/FileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/config/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/service/CourseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/config/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/generator/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/accp/system/config/systemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/accp/system/config/SystemApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/accp/system/controller/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/accp/system/controller/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/accp/system/config/systemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/system/target/classes/com/accp/system/config/systemApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/accp/system/controller/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/accp/system/controller/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/accp/server/enums/FileUseEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/accp/server/enums/FileUseEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/TestCC.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/test/TestCC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +36,7 @@
         <option value="AnnotationType" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -77,9 +56,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="f5864f55-5439-4bf5-9939-e08da80fcd1b" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/admin/src/views/admin/chapter.vue" root0="FORCE_HIGHLIGHTING" />
@@ -129,6 +105,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
@@ -145,7 +122,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="E:\JetBrains\IntelliJ IDEA 2021.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/admin/src/views/admin/category.vue" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -204,7 +181,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="npm.serve-dev">
+  <component name="RunManager" selected="Spring Boot.FileApplication">
     <configuration name="ServerGenerator" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.accp.generator.server.ServerGenerator" />
       <module name="generator" />
@@ -472,7 +449,7 @@
       <workItem from="1648525896762" duration="2269000" />
       <workItem from="1650265267281" duration="6609000" />
       <workItem from="1650328827888" duration="1300000" />
-      <workItem from="1650330195760" duration="3134000" />
+      <workItem from="1650330195760" duration="9366000" />
     </task>
     <task id="LOCAL-00001" summary="添加进去新的设备,新的idea2021版本">
       <created>1618542353429</created>
@@ -586,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635821799149</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="1.文件上传功能开发：去掉文件管理的新增、修改、删除功能&#10;2.8-6">
+      <created>1650333610832</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1650333610832</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -622,7 +606,8 @@
     <MESSAGE value="1.文件上传功能开发：使用单独的文件上传按钢&#10;2.8-3" />
     <MESSAGE value="1.文件上传功能开发：制作文件上传公共组件(File.vue)&#10;2.修复不能连续上传同一个文件的BUG,(清空v-bind:id的值.val();)" />
     <MESSAGE value="1.文件上传功能开发：制作文件上传公共组件(File.vue)&#10;2.修复不能连续上传同一个文件的BUG,(清空v-bind:id的值.val();)&#10;3.8-4" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.文件上传功能开发：制作文件上传公共组件(File.vue)&#10;2.修复不能连续上传同一个文件的BUG,(清空v-bind:id的值.val();)&#10;3.8-4" />
+    <MESSAGE value="1.文件上传功能开发：去掉文件管理的新增、修改、删除功能&#10;2.8-6" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.文件上传功能开发：去掉文件管理的新增、修改、删除功能&#10;2.8-6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -636,11 +621,15 @@
           <line>46</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/admin/src/views/admin/teacher.vue</url>
-          <line>102</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="5" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/com/accp/server/service/FileService.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
