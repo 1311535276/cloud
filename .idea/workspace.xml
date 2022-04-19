@@ -7,13 +7,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="1，文件上传功能开发：去掉文件管理的新增、修改、删除功能&#10;2，文件上传功能开发：文件按用途分类保存&#10;3,修复文件上传后缀名参数没储存&#10;4,bug还未修复,用途在前端无法显示,后端已存储&#10;2.8-7">
+    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="1，文件上传功能开发：文件上传成功后返回值的处理&#10;2.已修复用途无法显示的bug;在file.vue文件增加了   FILE_USE: FILE_USE,就搞定了">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/file.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/file.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/teacher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/enums/FileUseEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/enums/FileUseEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/course.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/section.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/section.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -439,7 +437,7 @@
       <workItem from="1648525896762" duration="2269000" />
       <workItem from="1650265267281" duration="6609000" />
       <workItem from="1650328827888" duration="1300000" />
-      <workItem from="1650330195760" duration="10411000" />
+      <workItem from="1650330195760" duration="13841000" />
     </task>
     <task id="LOCAL-00001" summary="添加进去新的设备,新的idea2021版本">
       <created>1618542353429</created>
@@ -567,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650339835642</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="1，文件上传功能开发：文件上传成功后返回值的处理&#10;2.已修复用途无法显示的bug;在file.vue文件增加了   FILE_USE: FILE_USE,就搞定了">
+      <created>1650340806078</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1650340806078</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +610,8 @@
     <MESSAGE value="1.文件上传功能开发：制作文件上传公共组件(File.vue)&#10;2.修复不能连续上传同一个文件的BUG,(清空v-bind:id的值.val();)&#10;3.8-4" />
     <MESSAGE value="1.文件上传功能开发：去掉文件管理的新增、修改、删除功能&#10;2.8-6" />
     <MESSAGE value="1，文件上传功能开发：去掉文件管理的新增、修改、删除功能&#10;2，文件上传功能开发：文件按用途分类保存&#10;3,修复文件上传后缀名参数没储存&#10;4,bug还未修复,用途在前端无法显示,后端已存储&#10;2.8-7" />
-    <option name="LAST_COMMIT_MESSAGE" value="1，文件上传功能开发：去掉文件管理的新增、修改、删除功能&#10;2，文件上传功能开发：文件按用途分类保存&#10;3,修复文件上传后缀名参数没储存&#10;4,bug还未修复,用途在前端无法显示,后端已存储&#10;2.8-7" />
+    <MESSAGE value="1，文件上传功能开发：文件上传成功后返回值的处理&#10;2.已修复用途无法显示的bug;在file.vue文件增加了   FILE_USE: FILE_USE,就搞定了" />
+    <option name="LAST_COMMIT_MESSAGE" value="1，文件上传功能开发：文件上传成功后返回值的处理&#10;2.已修复用途无法显示的bug;在file.vue文件增加了   FILE_USE: FILE_USE,就搞定了" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
