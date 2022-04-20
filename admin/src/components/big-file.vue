@@ -2,11 +2,11 @@
   <div>
     <button type="button" v-on:click="selectFile()" class="btn btn-white btn-default btn-round">
       <i class="ace-icon fa fa-upload"></i>
-      {{text}}
+      {{ text }}
     </button>
     <!--class="hidden"  这段隐藏了相关信息来的(去掉hidden就可以了)-->
     <!--<input type="file" v-on:change="uploadFile()" v-bind:id="inputId+'-input'"  ref="file"/>-->
-    <input class="hidden" type="file" v-on:change="uploadFile()" v-bind:id="inputId+'-input'"  ref="file"/>
+    <input class="hidden" type="file" v-on:change="uploadFile()" v-bind:id="inputId+'-input'" ref="file"/>
 
   </div>
 </template>
@@ -15,14 +15,14 @@
 export default {
   name: 'big-file',
   props: {
-    text:{
+    text: {
       default: "上传大文件"
     },
-    inputId:{
+    inputId: {
       default: "file-upload"
     },
-    suffixs:{
-      default:[]
+    suffixs: {
+      default: []
     },
     use: {
       default: ""
@@ -33,15 +33,39 @@ export default {
     },
   },
   data: function () {
-    return {
-
-    }
+    return {}
   },
   methods: {
+    //上传文件的方法操作
     uploadFile() {
       let _this = this;
       let formData = new window.FormData();
+      //截取上传的文件
       let file = _this.$refs.file.files[0];
+      console.log(JSON.stringify(file));
+      /*
+        name: "test.mp4"
+        lastModified: 1901173357457
+        lastModifiedDate: Tue May 27 2099 14:49:17 GMT+0800 (中国标准时间) {}
+        webkitRelativePath: ""
+        size: 37415970
+        type: "video/mp4"
+      */
+
+      // let key = hex_md5(file.name + file.size + file.type);
+      //转这么多进制是为了让数据变得小一点,从而数据库占的内存少一点
+      // 生成文件标识，标识多次上传的是不是同一个文件
+      let key = hex_md5(file);
+      let key10 = parseInt(key, 16);
+      let key62 = Tool._10to62(key10);
+      console.log(key, key10, key62);
+      // console.log(hex_md5(Array()));
+      /*
+        d41d8cd98f00b204e9800998ecf8427e
+        2.8194976848941264e+38
+        6sfSqfOwzmik4A4icMYuUe
+       */
+
       //判断文件格式
       //定义我需要的文件后缀
       // ["jpg", "jpeg", "png"];
@@ -62,20 +86,21 @@ export default {
         }
       }
       //判断文件格式
-      if(!validateSuffix) {
+      if (!validateSuffix) {
         Toast.warning("文件格式不正确！只支持上传：" + suffixs.join(","));
         console.log("文件格式不正确！只支持上传：" + suffixs.join(","));
         $("#" + _this.inputId + "-input").val("");
         return;
       }
       /**
-       *       文件分片
+       *文件分片
        */
-      // let shardSize = 50 * 1024;    //以50KB为一个分片
-      // let shardSize = _this.shardSize;
+          // let shardSize = 50 * 1024;    //以50KB为一个分片
+          // let shardSize = _this.shardSize;
       let shardSize = 10 * 1024 * 1024;    //以10MB为一个分片
-      let shardIndex = 0;		//分片索引，1表示第1个分片
-      let start=shardIndex * shardSize;
+      let shardIndex = 6;		//分片索引，1表示第1个分片
+      //当前端传进来是1的时候 要减一 程序要从0开始
+      let start = (shardIndex - 1) * shardSize;
       let end = Math.min(file.size, start + shardSize); //当前分片结束位置
       let fileShard = file.slice(start, end); //从文件中截取当前的分片数据
       let size = file.size;
@@ -92,6 +117,7 @@ export default {
       formData.append('name', file.name);
       formData.append('suffix', suffix);
       formData.append('size', size);
+      formData.append('key', key62);
 
       Loading.show();
       _this.$ajax.post(process.env.VUE_APP_SERVER + '/file/admin/upload', formData).then((response) => {
@@ -107,7 +133,7 @@ export default {
         // _this.teacher.image = image;
       });
     },
-    selectFile () {
+    selectFile() {
       let _this = this;
       $("#" + _this.inputId + "-input").trigger("click");
     },

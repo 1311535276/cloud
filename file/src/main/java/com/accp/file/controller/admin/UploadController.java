@@ -7,6 +7,7 @@ import com.accp.server.service.FileService;
 import com.accp.server.util.Base64ToMultipartFile;
 import com.accp.server.util.UuidUtil;
 import com.alibaba.fastjson.JSON;
+import io.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,6 +24,7 @@ import java.io.IOException;
 /**
  * @author Mr.黄
  */
+@Api(tags = "上传业务控制器")
 @RequestMapping("/admin")
 @RestController
 public class UploadController {
@@ -50,14 +52,15 @@ public class UploadController {
                             Integer size,
                             Integer shardIndex,
                             Integer shardSize,
-                            Integer shardTotal) throws IOException {
+                            Integer shardTotal,
+                            String key) throws IOException {
     //输出list等一系列集合 要用到通配符{}
     //LOG.info("上传文件开始:{}", file);
     LOG.info("上传文件开始");
 
     // 保存文件到本地
     FileUseEnum useEnum = FileUseEnum.getByCode(use);
-    String key = UuidUtil.getShortUuid();
+    //String key = UuidUtil.getShortUuid();
     //String fileName = file.getOriginalFilename();
     //  E:\newCodeProject\videoCloud\file1\teacher
     //String suffix = fileName.substring(fileName.lastIndexOf(".") + 1);
@@ -104,6 +107,9 @@ public class UploadController {
     return responseDto;
   }
 
+  /**
+   * 合并分片
+   */
   @GetMapping("/merge")
   public void merge(FileDto fileDto) throws Exception {
     LOG.info("合并分片开始");

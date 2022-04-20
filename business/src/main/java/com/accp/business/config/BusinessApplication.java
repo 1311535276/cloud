@@ -10,7 +10,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+/**
+ * @author Mr.黄
+ */
+@EnableSwagger2
 @SpringBootApplication
 @EnableEurekaServer
 @Component("com.accp")

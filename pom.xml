@@ -210,6 +210,15 @@
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger.version}</version>
             </dependency>
+            <!--   通过使用spring boot配置处理器jar，
+       您可以从用@ConfigurationProperties注释的项轻松生成自己的配置元数据文件。
+       jar包含一个Java注释处理器，在编译项目时调用它。要使用处理器，
+       请包含对spring boot配置处理器的依赖。-->
+            <!--<dependency>-->
+            <!--    <groupId>org.springframework.boot</groupId>-->
+            <!--    <artifactId>spring-boot-configuration-processor</artifactId>-->
+            <!--    <version>2.3.12.RELEASE</version>-->
+            <!--</dependency>-->
         </dependencies>
     </dependencyManagement>
 

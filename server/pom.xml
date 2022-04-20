@@ -11,7 +11,8 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <swagger.version>2.9.2</swagger.version>
+        <springfox-swagger.version>2.9.2</springfox-swagger.version>
+        <!--<swagger-annotations.version>1.5.13</swagger-annotations.version>-->
     </properties>
     <artifactId>server</artifactId>
     <dependencies>
