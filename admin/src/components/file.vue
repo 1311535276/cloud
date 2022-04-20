@@ -88,8 +88,9 @@ export default {
         // _this.teacher.image = image;
       });
     },
-    selectFile(){
-      $('#file-upload-input').trigger("click");
+    selectFile () {
+      let _this = this;
+      $("#" + _this.inputId + "-input").trigger("click");
     },
   }
 }

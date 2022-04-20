@@ -60,8 +60,9 @@
               <button v-on:click="toChapter(course)" class="btn btn-white btn-xs btn-info btn-round">
                 大章
               </button>&nbsp;
-              <button v-on:click="editContent(course)" class="btn btn-white btn-xs btn-info btn-round">
-                内容
+              <!--<button v-on:click="editContent(course)" class="btn btn-white btn-xs btn-info btn-round">-->
+              <button v-on:click="toContent(course)" class="btn btn-white btn-xs btn-info btn-round">
+              内容
               </button>&nbsp;
               <button v-on:click="openSortModal(course)" class="btn btn-white btn-xs btn-info btn-round">
                 排序
@@ -78,7 +79,7 @@
       </div>
     </div>
     <!--模态框-->
-    <div id="forn-modal" class="modal fade" tabindex="-1" role="dialog">
+      <div id="forn-modal" class="modal fade" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -99,7 +100,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">封面</label>
                 <div class="col-sm-10">
-                  <file v-bind:id="'image-upload'"
+                  <file v-bind:input-id="'image-upload'"
                         v-bind:text="'上传封面'"
                         v-bind:suffixs="['jpg', 'jpeg', 'png']"
                         v-bind:use="FILE_USE.COURSE.key"
@@ -194,10 +195,11 @@
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+    </div>
+    <!-- /.modal -->
 
 
-    <div id="course-content-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div id="course-content-modal" class="modal fade" tabindex="-1" role="dialog" style="overflow:auto;">
       <div class="modal-dialog modal-1g" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -445,6 +447,7 @@ export default {
       _this.$router.push("/business/content");
     },
     // 这里 打开内容编辑
+    //废弃了 放到content.vue里
     editContent(course) {
       let _this = this;
       let id = course.id;
