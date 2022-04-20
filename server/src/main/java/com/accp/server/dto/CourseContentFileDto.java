@@ -2,7 +2,6 @@ package com.accp.server.dto;
 
 
 public class CourseContentFileDto {
-
     /**
      * ID
      */

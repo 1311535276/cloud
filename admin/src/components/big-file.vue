@@ -74,16 +74,25 @@ export default {
       // let shardSize = 50 * 1024;    //以50KB为一个分片
       // let shardSize = _this.shardSize;
       let shardSize = 10 * 1024 * 1024;    //以10MB为一个分片
-      let shardIndex = 1;		//分片索引，1表示第1个分片
+      let shardIndex = 0;		//分片索引，1表示第1个分片
       let start=shardIndex * shardSize;
       let end = Math.min(file.size, start + shardSize); //当前分片结束位置
       let fileShard = file.slice(start, end); //从文件中截取当前的分片数据
+      let size = file.size;
+      let shardTotal = Math.ceil(size / shardSize); //总片数
 
       //key："file"必须controller参数名一致
       // formData.append('file', document.querySelector('#file-upload-input').files[0]);
       // formData.append('file', file);
-      formData.append('file', fileShard);
+      formData.append('shard', fileShard);
+      formData.append('shardIndex', shardIndex);
+      formData.append('shardSize', shardSize);
+      formData.append('shardTotal', shardTotal);
       formData.append('use', _this.use);
+      formData.append('name', file.name);
+      formData.append('suffix', suffix);
+      formData.append('size', size);
+
       Loading.show();
       _this.$ajax.post(process.env.VUE_APP_SERVER + '/file/admin/upload', formData).then((response) => {
         Loading.hide();
