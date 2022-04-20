@@ -119,12 +119,12 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">视频</label>
                 <div class="col-sm-10">
-                  <file v-bind:input-id="'video-upload'"
-                        v-bind:text="'上传视频'"
+                  <big-file v-bind:input-id="'video-upload'"
+                        v-bind:text="'上传大视频'"
                         v-bind:suffixs="['mp4']"
                         v-bind:use="FILE_USE.COURSE.key"
                         v-bind:after-upload="afterUpload">
-                  </file>
+                  </big-file>
                   <!--视频显示-->
                   <div v-show="section.video" class="row">
                     <div class="col-md-9">
@@ -172,11 +172,15 @@
 <script>
 //引入外部文件一
 import Pagination from "../../components/pagination"
-import File from "../../components/file";
+//file组件废弃掉 改为bigfile
+// import File from "../../components/file";
+import BigFile from "../../components/big-file";
+
 
 export default {
   //引入外部文件二
-  components: {Pagination, File},
+  // components: {Pagination, File, BigFile},
+  components: {Pagination, BigFile},
   name: "business-section",
   data: function () {
     //数据绑定写在这里
