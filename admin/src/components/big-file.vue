@@ -27,6 +27,10 @@ export default {
     use: {
       default: ""
     },
+    shardSize: {
+      default: 10 * 1024 * 1024
+      // 10 * 1024 * 1024
+    },
     afterUpload: {
       type: Function,
       default: null
@@ -58,7 +62,7 @@ export default {
       let key = hex_md5(file);
       let key10 = parseInt(key, 16);
       let key62 = Tool._10to62(key10);
-      console.log(key, key10, key62);
+      // console.log(key, key10, key62);
       // console.log(hex_md5(Array()));
       /*
         d41d8cd98f00b204e9800998ecf8427e
@@ -95,9 +99,10 @@ export default {
       /**
        *文件分片
        */
-          // let shardSize = 50 * 1024;    //以50KB为一个分片
-          // let shardSize = _this.shardSize;
-      let shardSize = 10 * 1024 * 1024;    //以10MB为一个分片
+      // let shardSize = 50 * 1024;    //以50KB为一个分片
+      // let shardSize = _this.shardSize;
+      // let shardSize = 10 * 1024 * 1024;    //以10MB为一个分片
+      let shardSize = _this.shardSize;
       let shardIndex = 1;		//分片索引，1表示第1个分片
       let size = file.size;
       let shardTotal = Math.ceil(size / shardSize); //总片数
@@ -128,7 +133,7 @@ export default {
       _this.upload(param);
     },
     upload: function (param) {
-      let _this=this;
+      let _this = this;
       let shardIndex = param.shardIndex;
       let shardTotal = param.shardTotal;
       let shardSize = param.shardSize;
@@ -154,8 +159,10 @@ export default {
             _this.upload(param);
           } else {
             _this.afterUpload(resp);
+            //上传全部完成 才会清空inputId
+            $("#" + _this.inputId + "-input").val("");
           }
-          $("#" + _this.inputId + "-input").val("");
+
           // console.log("上传文件地址:", image);
           // 再把image赋值给前端teacher的image变量里
           // _this.teacher.image = image;
@@ -163,15 +170,15 @@ export default {
       };
       fileReader.readAsDataURL(fileShard);
     },
-    getFileShard: function (shardIndex, shardSize) {
+    getFileShard(shardIndex, shardSize) {
       let _this = this;
       let file = _this.$refs.file.files[0];
-      //当前端传进来是1的时候 要减一 程序要从0开始
-      let start = (shardIndex - 1) * shardSize;
+      let start = (shardIndex - 1) * shardSize;	//当前分片起始位置
       let end = Math.min(file.size, start + shardSize); //当前分片结束位置
       let fileShard = file.slice(start, end); //从文件中截取当前的分片数据
       return fileShard;
     },
+
     selectFile() {
       let _this = this;
       $("#" + _this.inputId + "-input").trigger("click");

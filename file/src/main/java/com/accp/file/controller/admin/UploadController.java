@@ -54,7 +54,7 @@ public class UploadController {
                              Integer shardTotal,
                              String key) throws IOException {**/
   @RequestMapping("/upload")
-  public ResponseDto upload(@RequestBody FileDto fileDto) throws IOException {
+  public ResponseDto upload(@RequestBody FileDto fileDto) throws Exception {
     //输出list等一系列集合 要用到通配符{}
     //LOG.info("上传文件开始:{}", file);
     LOG.info("上传文件开始");
@@ -64,8 +64,8 @@ public class UploadController {
     String shardBase64 = fileDto.getShard();
     final MultipartFile shard = Base64ToMultipartFile.base64ToMultipart(shardBase64);
     // 保存文件到本地
+    //赋值枚举类型 T是teacher C是课程
     FileUseEnum useEnum = FileUseEnum.getByCode(use);
-    //String key = UuidUtil.getShortUuid();
     //String fileName = file.getOriginalFilename();
     //  E:\newCodeProject\videoCloud\file1\teacher
     //String suffix = fileName.substring(fileName.lastIndexOf(".") + 1);
@@ -78,19 +78,30 @@ public class UploadController {
       fullDir.mkdir();
     }
 
-    //String path="teacher/"+key+"."+suffix;
     //String path = dir + File.separator + key + "." + suffix+"."+fileDto.getShardIndex();
     //当字符串拼接个数太多时，不要使用+，而是使用StringBuffer
-    String path = new StringBuffer(dir).append(File.separator).append(key).
-            append(".").append(suffix).append(".").append(fileDto.getShardIndex()).toString();
-    //String fullPath = FILE_PATH + "teacher/" + key + "_" + fileName;
-    String fullPath = FILE_PATH + path;
+    String path = new StringBuffer(dir)
+            .append(File.separator)
+            .append(key).
+            append(".")
+            .append(suffix)
+            //.append(".")
+            //.append(fileDto.getShardIndex())
+            .toString();
+    String localPath = new StringBuffer(path)
+            .append(".")
+            .append(fileDto.getShardIndex())
+            .toString(); // course\6sfSqfOwzmik4A4icMYuUe.mp4.1
+    //程序跑要加个 .1
+    String fullPath = FILE_PATH + localPath;
+    //String fullPath = FILE_PATH + path;
     File dest = new File(fullPath);
     //transferTo才是写入 把传进来的资源:file给写进去 路径:dest的路径
     shard.transferTo(dest);
-    //输出全路径
+    //输出全路径 输出绝对路径
     LOG.info(dest.getAbsolutePath());
     LOG.info("保存文件记录开始");
+    //返回给前端要去除 .1
     fileDto.setPath(path);
     //新增 4行
     fileService.save(fileDto);
@@ -101,18 +112,25 @@ public class UploadController {
     fileDto.setPath(FILE_DOMAIN + path);
     responseDto.setContent(fileDto);
     //responseDto.setContent(FILE_DOMAIN + path);
+    /**
+     * 判断分片是否上传完成后
+     * 完成后可进行合并
+     */
+    if (fileDto.getShardIndex().equals(fileDto.getShardTotal())) {
+      this.merge(fileDto);
+    }
     return responseDto;
   }
 
   /**
    * 合并分片
    */
-  @GetMapping("/merge")
   public void merge(FileDto fileDto) throws Exception {
     LOG.info("合并分片开始");
-    //http://127.0.0.1:9000/file/f/course\6sfSqfOwzmik4A4icMYuUe.mp4
+    //http://127.0.0.1:9000/file/f/file1\6sfSqfOwzmik4A4icMYuUe.mp4
     String path = fileDto.getPath();
     //course\6sfSqfOwzmik4A4icMYuUe.mp4
+    //替换空字符串
     path = path.replace(FILE_DOMAIN, "");
     Integer shardTotal = fileDto.getShardTotal();
     File newFile = new File(FILE_PATH + path);
