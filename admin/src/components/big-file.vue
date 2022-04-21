@@ -69,7 +69,6 @@ export default {
         2.8194976848941264e+38
         6sfSqfOwzmik4A4icMYuUe
        */
-
       //判断文件格式
       //定义我需要的文件后缀
       // ["jpg", "jpeg", "png"];
@@ -130,8 +129,45 @@ export default {
         'size': file.size,
         'key': key62
       };
-      _this.upload(param);
+      // _this.upload(param);
+      _this.check(param);
     },
+
+    /**
+     * 检查文件状态，是否已上传过？传到第几个分片？
+     */
+    check (param) {
+      let _this = this;
+      _this.$ajax.get(process.env.VUE_APP_SERVER + '/file/admin/check/' + param.key).then((response)=>{
+        let resp = response.data;
+        if (resp.success) {
+          let obj = resp.content;
+          //如果没有值,那就是找不到文件 从第一个开始上传
+          if (!obj) {
+            param.shardIndex = 1;
+            console.log("没有找到文件记录，从分片1开始上传");
+            _this.upload(param);
+            //如果有, 就从数据库的shardIndex 开始上传
+          } else if (obj.shardIndex === obj.shardTotal) {
+            // 已上传分片 = 分片总数，说明已全部上传完，不需要再上传
+            Toast.success("文件极速秒传成功！");
+            _this.afterUpload(resp);
+            $("#" + _this.inputId + "-input").val("");
+          }  else {
+            param.shardIndex = obj.shardIndex + 1;
+            console.log("找到文件记录，从分片" + param.shardIndex + "开始上传");
+            _this.upload(param);
+          }
+        } else {
+          Toast.warning("文件上传失败");
+          $("#" + _this.inputId + "-input").val("");
+        }
+      })
+    },
+    /**
+     * 上传文件方法
+     * 将分片数据转成base64进行上传
+     */
     upload: function (param) {
       let _this = this;
       let shardIndex = param.shardIndex;
@@ -155,6 +191,10 @@ export default {
           if (shardIndex < shardTotal) {
             // 上传下一个分片
             param.shardIndex = param.shardIndex + 1;
+            // if (param. shardIndex ==3){
+            //   //上传到第三个的时候, 就退出程序 这是用来测试的
+            //   return;
+            // }
             //开始递归
             _this.upload(param);
           } else {
@@ -162,7 +202,6 @@ export default {
             //上传全部完成 才会清空inputId
             $("#" + _this.inputId + "-input").val("");
           }
-
           // console.log("上传文件地址:", image);
           // 再把image赋值给前端teacher的image变量里
           // _this.teacher.image = image;

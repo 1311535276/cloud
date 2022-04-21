@@ -5,12 +5,16 @@ import com.accp.server.dto.ResponseDto;
 import com.accp.server.enums.FileUseEnum;
 import com.accp.server.service.FileService;
 import com.accp.server.util.Base64ToMultipartFile;
+import com.accp.server.util.VodUtil;
+import com.aliyuncs.vod.model.v20170321.GetMezzanineInfoResponse;
 import com.accp.server.util.UuidUtil;
 import com.alibaba.fastjson.JSON;
+import com.aliyuncs.DefaultAcsClient;
 import io.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -177,5 +181,27 @@ public class UploadController {
       LOG.info("删除{}，{}", filePath, result ? "成功" : "失败");
     }
     LOG.info("删除分片结束");
+  }
+
+  /**
+   * 判断分片上传到哪一步了 是否上次未上传完
+   * 检查上传分片
+   * @param key
+   * @return
+   * @throws Exception
+   * @author hws
+   */
+  @GetMapping("/check/{key}")
+  public ResponseDto check(@PathVariable String key) throws Exception {
+    LOG.info("检查上传分片开始：{}", key);
+    ResponseDto responseDto = new ResponseDto();
+    FileDto fileDto = fileService.findByKey(key);
+    //从数据库能查到记录
+    if(fileDto!=null){
+      //再把路径重新赋值传给前端
+      fileDto.setPath(FILE_DOMAIN+fileDto.getPath());
+    }
+    responseDto.setContent(fileDto);
+    return responseDto;
   }
 }
