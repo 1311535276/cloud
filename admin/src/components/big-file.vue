@@ -98,11 +98,7 @@ export default {
           // let shardSize = 50 * 1024;    //以50KB为一个分片
           // let shardSize = _this.shardSize;
       let shardSize = 10 * 1024 * 1024;    //以10MB为一个分片
-      let shardIndex = 6;		//分片索引，1表示第1个分片
-      //当前端传进来是1的时候 要减一 程序要从0开始
-      let start = (shardIndex - 1) * shardSize;
-      let end = Math.min(file.size, start + shardSize); //当前分片结束位置
-      let fileShard = file.slice(start, end); //从文件中截取当前的分片数据
+      let shardIndex = 1;		//分片索引，1表示第1个分片
       let size = file.size;
       let shardTotal = Math.ceil(size / shardSize); //总片数
 
@@ -118,25 +114,32 @@ export default {
       // formData.append('suffix', suffix);
       // formData.append('size', size);
       // formData.append('key', key62);
-
+      let param = {
+        // 'shard': base64,
+        'shardIndex': shardIndex,
+        'shardSize': shardSize,
+        'shardTotal': shardTotal,
+        'use': _this.use,
+        'name': file.name,
+        'suffix': suffix,
+        'size': file.size,
+        'key': key62
+      };
+      _this.upload(param);
+    },
+    upload: function (param) {
+      let _this=this;
+      let shardIndex = param.shardIndex;
+      let shardTotal = param.shardTotal;
+      let shardSize = param.shardSize;
+      let fileShard = _this.getFileShard(shardIndex, shardSize);
       // 将图片转为base64进行传输
       let fileReader = new FileReader();
       // Progress.show(parseInt((shardIndex - 1) * 100 / shardTotal));
       fileReader.onload = function (e) {
         let base64 = e.target.result;
         // console.log("base64:", base64);
-        // param.shard = base64;
-        let param = {
-          'shard':base64,
-          'shardIndex': shardIndex,
-          'shardSize': shardSize,
-          'shardTotal': shardTotal,
-          'use': _this.use,
-          'name': file.name,
-          'suffix': suffix,
-          'size': file.size,
-          'key': key62
-        };
+        param.shard = base64;
         Loading.show();
         _this.$ajax.post(process.env.VUE_APP_SERVER + '/file/admin/upload', param).then((response) => {
           Loading.hide();
@@ -144,7 +147,14 @@ export default {
           //resp是后台return回来的数据
           console.log("上传文件成功:", resp);
           // console.log("image:", image);
-          _this.afterUpload(resp);
+          if (shardIndex < shardTotal) {
+            // 上传下一个分片
+            param.shardIndex = param.shardIndex + 1;
+            //开始递归
+            _this.upload(param);
+          } else {
+            _this.afterUpload(resp);
+          }
           $("#" + _this.inputId + "-input").val("");
           // console.log("上传文件地址:", image);
           // 再把image赋值给前端teacher的image变量里
@@ -152,6 +162,15 @@ export default {
         });
       };
       fileReader.readAsDataURL(fileShard);
+    },
+    getFileShard: function (shardIndex, shardSize) {
+      let _this = this;
+      let file = _this.$refs.file.files[0];
+      //当前端传进来是1的时候 要减一 程序要从0开始
+      let start = (shardIndex - 1) * shardSize;
+      let end = Math.min(file.size, start + shardSize); //当前分片结束位置
+      let fileShard = file.slice(start, end); //从文件中截取当前的分片数据
+      return fileShard;
     },
     selectFile() {
       let _this = this;
