@@ -44,6 +44,7 @@ public class UploadController {
 
   @Resource
   private FileService fileService;
+
   /*public ResponseDto upload(@RequestParam MultipartFile shard, String use,
                              String name,
                              String suffix,
@@ -78,8 +79,10 @@ public class UploadController {
     }
 
     //String path="teacher/"+key+"."+suffix;
-    String path = dir + File.separator + key + "." + suffix;
-
+    //String path = dir + File.separator + key + "." + suffix+"."+fileDto.getShardIndex();
+    //当字符串拼接个数太多时，不要使用+，而是使用StringBuffer
+    String path = new StringBuffer(dir).append(File.separator).append(key).
+            append(".").append(suffix).append(".").append(fileDto.getShardIndex()).toString();
     //String fullPath = FILE_PATH + "teacher/" + key + "_" + fileName;
     String fullPath = FILE_PATH + path;
     File dest = new File(fullPath);
