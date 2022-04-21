@@ -109,29 +109,49 @@ export default {
       //key："file"必须controller参数名一致
       // formData.append('file', document.querySelector('#file-upload-input').files[0]);
       // formData.append('file', file);
-      formData.append('shard', fileShard);
-      formData.append('shardIndex', shardIndex);
-      formData.append('shardSize', shardSize);
-      formData.append('shardTotal', shardTotal);
-      formData.append('use', _this.use);
-      formData.append('name', file.name);
-      formData.append('suffix', suffix);
-      formData.append('size', size);
-      formData.append('key', key62);
+      // formData.append('shard', fileShard);
+      // formData.append('shardIndex', shardIndex);
+      // formData.append('shardSize', shardSize);
+      // formData.append('shardTotal', shardTotal);
+      // formData.append('use', _this.use);
+      // formData.append('name', file.name);
+      // formData.append('suffix', suffix);
+      // formData.append('size', size);
+      // formData.append('key', key62);
 
-      Loading.show();
-      _this.$ajax.post(process.env.VUE_APP_SERVER + '/file/admin/upload', formData).then((response) => {
-        Loading.hide();
-        let resp = response.data;
-        //resp是后台return回来的数据
-        console.log("上传文件成功:", resp);
-        // console.log("image:", image);
-        _this.afterUpload(resp);
-        $("#" + _this.inputId + "-input").val("");
-        // console.log("上传文件地址:", image);
-        // 再把image赋值给前端teacher的image变量里
-        // _this.teacher.image = image;
-      });
+      // 将图片转为base64进行传输
+      let fileReader = new FileReader();
+      // Progress.show(parseInt((shardIndex - 1) * 100 / shardTotal));
+      fileReader.onload = function (e) {
+        let base64 = e.target.result;
+        console.log("base64:", base64);
+        // param.shard = base64;
+        let param = {
+          'shard':base64,
+          'shardIndex': shardIndex,
+          'shardSize': shardSize,
+          'shardTotal': shardTotal,
+          'use': _this.use,
+          'name': file.name,
+          'suffix': suffix,
+          'size': file.size,
+          'key': key62
+        };
+        Loading.show();
+        _this.$ajax.post(process.env.VUE_APP_SERVER + '/file/admin/upload', param).then((response) => {
+          Loading.hide();
+          let resp = response.data;
+          //resp是后台return回来的数据
+          console.log("上传文件成功:", resp);
+          // console.log("image:", image);
+          _this.afterUpload(resp);
+          $("#" + _this.inputId + "-input").val("");
+          // console.log("上传文件地址:", image);
+          // 再把image赋值给前端teacher的image变量里
+          // _this.teacher.image = image;
+        });
+      };
+      fileReader.readAsDataURL(fileShard);
     },
     selectFile() {
       let _this = this;

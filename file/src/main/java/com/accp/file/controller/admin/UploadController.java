@@ -44,20 +44,24 @@ public class UploadController {
 
   @Resource
   private FileService fileService;
-
+  /*public ResponseDto upload(@RequestParam MultipartFile shard, String use,
+                             String name,
+                             String suffix,
+                             Integer size,
+                             Integer shardIndex,
+                             Integer shardSize,
+                             Integer shardTotal,
+                             String key) throws IOException {**/
   @RequestMapping("/upload")
-  public ResponseDto upload(@RequestParam MultipartFile shard, String use,
-                            String name,
-                            String suffix,
-                            Integer size,
-                            Integer shardIndex,
-                            Integer shardSize,
-                            Integer shardTotal,
-                            String key) throws IOException {
+  public ResponseDto upload(@RequestBody FileDto fileDto) throws IOException {
     //输出list等一系列集合 要用到通配符{}
     //LOG.info("上传文件开始:{}", file);
     LOG.info("上传文件开始");
-
+    String use = fileDto.getUse();
+    String key = fileDto.getKey();
+    String suffix = fileDto.getSuffix();
+    String shardBase64 = fileDto.getShard();
+    final MultipartFile shard = Base64ToMultipartFile.base64ToMultipart(shardBase64);
     // 保存文件到本地
     FileUseEnum useEnum = FileUseEnum.getByCode(use);
     //String key = UuidUtil.getShortUuid();
@@ -84,18 +88,8 @@ public class UploadController {
     //输出全路径
     LOG.info(dest.getAbsolutePath());
     LOG.info("保存文件记录开始");
-    FileDto fileDto = new FileDto();
     fileDto.setPath(path);
-    fileDto.setName(name);
-    //fileDto.setSize(Math.toIntExact(file.getSize()));
-    fileDto.setSize(size);
-    fileDto.setSuffix(suffix);
-    fileDto.setUse(use);
     //新增 4行
-    fileDto.setShardIndex(shardIndex);
-    fileDto.setShardSize(shardSize);
-    fileDto.setShardTotal(shardTotal);
-    fileDto.setKey(key);
     fileService.save(fileDto);
     ResponseDto responseDto = new ResponseDto();
     //输出给前端 把图片(文件)资源地址
