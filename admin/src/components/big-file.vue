@@ -168,7 +168,7 @@ export default {
      * 上传文件方法
      * 将分片数据转成base64进行上传
      */
-    upload: function (param) {
+    upload(param) {
       let _this = this;
       let shardIndex = param.shardIndex;
       let shardTotal = param.shardTotal;
@@ -176,18 +176,23 @@ export default {
       let fileShard = _this.getFileShard(shardIndex, shardSize);
       // 将图片转为base64进行传输
       let fileReader = new FileReader();
-      // Progress.show(parseInt((shardIndex - 1) * 100 / shardTotal));
+      //遮罩
+      Progress.show(parseInt((shardIndex - 1) * 100 / shardTotal));
       fileReader.onload = function (e) {
         let base64 = e.target.result;
         // console.log("base64:", base64);
         param.shard = base64;
-        Loading.show();
+        // Loading.show();
+        //有了进度条 就不需要 转圈圈的操作了↓↓↓是进度条
+        Progress.show();
         _this.$ajax.post(process.env.VUE_APP_SERVER + '/file/admin/upload', param).then((response) => {
           Loading.hide();
           let resp = response.data;
           //resp是后台return回来的数据
           console.log("上传文件成功:", resp);
           // console.log("image:", image);
+          //遮罩
+          Progress.show(parseInt(shardIndex * 100 / shardTotal));
           if (shardIndex < shardTotal) {
             // 上传下一个分片
             param.shardIndex = param.shardIndex + 1;
@@ -198,6 +203,7 @@ export default {
             //开始递归
             _this.upload(param);
           } else {
+            Progress.hide();
             _this.afterUpload(resp);
             //上传全部完成 才会清空inputId
             $("#" + _this.inputId + "-input").val("");
