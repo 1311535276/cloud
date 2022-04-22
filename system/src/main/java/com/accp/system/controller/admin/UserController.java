@@ -7,13 +7,18 @@ import com.accp.server.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
 import com.accp.server.util.ValidatorUtil;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.nio.charset.StandardCharsets;
 
 
+/**
+ * @author Mr.黄
+ */
 @RestController
 @RequestMapping("/admin/user")
 public class UserController {
@@ -39,6 +44,10 @@ public class UserController {
    */
   @PostMapping("/save")
   public ResponseDto save(@RequestBody UserDto userDto) {
+    /**
+     * 后端MD5加密
+     */
+    userDto.setPassword(DigestUtils.md5DigestAsHex(userDto.getPassword().getBytes()));
     //保存校验
     ValidatorUtil.require(userDto.getLoginName(), "登陆名");
     ValidatorUtil.length(userDto.getLoginName(), "登陆名", 1, 50);

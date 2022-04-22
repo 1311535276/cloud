@@ -200,6 +200,9 @@ export default {
       ) {
         return;
       }
+      //前端密码进行明文MD5加密
+      _this.user.password=hex_md5(_this.user.password+KEY);
+
       // loading显示
       Loading.show();
       // 获取list 从后台获取sql数据
