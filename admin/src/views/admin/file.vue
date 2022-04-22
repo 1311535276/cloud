@@ -220,12 +220,13 @@ export default {
           $("#forn-modal").modal("hide");
           _this.list(1);
           Toast.success("保存成功!")
-        }
+        }else {
+        Toast.warning(resp.message);
+      }
       })
     },
     del(id) {
       let _this = this;
-
       Confirm.show("删除文件后不可恢复,确认删除?!", function () {
         _this.$ajax.delete(process.env.VUE_APP_SERVER + '/file/admin/file/delete/' + id).then((response) => {
           // loading显示

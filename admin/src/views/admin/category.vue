@@ -322,6 +322,8 @@
                         $("#forn-modal").modal("hide");
                         _this.all();
                         Toast.success("保存成功!")
+                    }else {
+                      Toast.warning(resp.message);
                     }
                 })
             },
