@@ -555,6 +555,8 @@ export default {
     // console.log("admin");
     //sidebar激活样式方法二
     _this.activeSidebar(this.$route.name.replace("/", "-") + "-sidebar");
+    //查询加载 ace.js 不然菜单会失效
+    $.getScript('/ace/assets/js/ace.min.js');
   },
   watch: {
     $route: {
