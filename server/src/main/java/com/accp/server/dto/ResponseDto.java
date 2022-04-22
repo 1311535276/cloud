@@ -1,6 +1,16 @@
 package com.accp.server.dto;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpServletRequest;
+
 public class ResponseDto<T> {
+
+    private static final Logger LOG = LoggerFactory.getLogger(ResponseDto.class);
 
     /**
      * 业务上的成功或失败
@@ -63,5 +73,20 @@ public class ResponseDto<T> {
         sb.append(", content=").append(content);
         sb.append('}');
         return sb.toString();
+    }
+    /**
+     *全局异常扑获的处理
+     */
+    @ExceptionHandler(value = Exception.class)
+    @ResponseBody
+    public Object exceptionHandle(Exception e, HttpServletRequest request) {
+        LOG.info(e.getMessage(), e);
+        String errorMsg = e.getMessage();
+        if (e instanceof DataIntegrityViolationException){
+            errorMsg = "其他地方已使用,无法操作";
+            //setMessage(errorMsg);
+            return errorMsg;
+        }
+        return errorMsg;
     }
 }

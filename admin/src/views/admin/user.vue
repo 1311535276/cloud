@@ -16,34 +16,28 @@
         <table id="simple-table" class="table  table-bordered table-hover">
             <thead>
             <tr>
-                <#list fieldList as field>
-                    <#if field.nameHump!="createdAt" && field.nameHump!="updatedAt">
-                        <th>${field.nameCn}</th>
-                    </#if>
-                </#list>
+                                        <th>id</th>
+                        <th>登陆名</th>
+                        <th>昵称</th>
+                        <th>密码</th>
                 <th>操作</th>
 
             </tr>
             </thead>
 
             <tbody>
-            <tr v-for="${domain} in ${domain}s">
-                <#list fieldList as field>
-                    <#if field.nameHump!="createdAt" && field.nameHump!="updatedAt">
-                        <#if field. enums>
-                            <td>{{${field.enumsConst}| optionKV(${domain}.${field.nameHump})}}</td>
-                        <#else>
-                            <td>{{${domain}.${field.nameHump}}}</td>
-                        </#if>
-                    </#if>
-                </#list>
+            <tr v-for="user in users">
+                            <td>{{user.id}}</td>
+                            <td>{{user.loginName}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.password}}</td>
 
                 <td>
                     <div class="hidden-sm hidden-xs btn-group">
-                        <button v-on:click="edit(${domain})" class="btn btn-xs btn-info">
+                        <button v-on:click="edit(user)" class="btn btn-xs btn-info">
                             <i class="ace-icon fa fa-pencil bigger-120"></i>
                         </button>
-                        <button v-on:click="del(${domain}.id)" class="btn btn-xs btn-danger">
+                        <button v-on:click="del(user.id)" class="btn btn-xs btn-danger">
                             <i class="ace-icon fa fa-trash-o bigger-120"></i>
                         </button>
                     </div>
@@ -95,27 +89,24 @@
                     </div>
                     <div class="modal-body">
                         <form class="form-horizontal">
-                            <#list fieldList as field>
-                                <#if field.name!="id" && field.nameHump!="createdAt" && field.nameHump!="updatedAt">
-                                    <#if field.enums>
                                         <div class="form-group">
-                                            <label class="col-sm-2 control-label" >${field.nameCn}</label>
+                                            <label class="col-sm-2 control-label">登陆名</label>
                                             <div class="col-sm-10">
-                                                <select v-model="${domain}.${field.nameHump}" class="form-control">
-                                                    <option v-for="o in ${field.enumsConst}" v-bind:value="o.key">{{o.value}}</option>
-                                                </select>
+                                                <input v-model="user.loginName" class="form-control">
                                             </div>
                                         </div>
-                                    <#else>
                                         <div class="form-group">
-                                            <label class="col-sm-2 control-label">${field.nameCn}</label>
+                                            <label class="col-sm-2 control-label">昵称</label>
                                             <div class="col-sm-10">
-                                                <input v-model="${domain}.${field.nameHump}" class="form-control">
+                                                <input v-model="user.name" class="form-control">
                                             </div>
                                         </div>
-                                    </#if>
-                                </#if>
-                            </#list>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">密码</label>
+                                            <div class="col-sm-10">
+                                                <input v-model="user.password" class="form-control">
+                                            </div>
+                                        </div>
                         </form>
 
                     </div>
@@ -137,17 +128,12 @@
     export default {
         //引入外部文件二
         components: {Pagination},
-        name: "${module}-${domain}",
+        name: "system-user",
         data:function(){
             //数据绑定写在这里
             return {
-            ${domain}:{},
-            ${domain}s:[],
-            <#list fieldList as field>
-            <#if field.enums>
-            ${field.enumsConst}: ${field.enumsConst},
-            </#if>
-            </#list>
+            user:{},
+            users:[],
         }
         },
         mounted: function () {
@@ -158,19 +144,19 @@
             //初始化第一页
             _this.list(1);
             //sidebar激活样式方法一
-            // this.$parent.activeSidebar("${module}-sidebar");
+            // this.$parent.activeSidebar("system-sidebar");
         },
         methods: {
             add(){
                 let _this=this;
-                _this.${domain}= {};
+                _this.user= {};
                 $("#forn-modal").modal("show");
                 // $(".modal").modal("hide");
 
             },
-            edit(${domain}){
+            edit(user){
                 let _this=this;
-                _this.${domain} =${domain};
+                _this.user =user;
                 $("#forn-modal").modal("show");
 
             },
@@ -179,7 +165,7 @@
                 // loading显示
                 Loading.show();
                 // 获取list 从后台获取sql数据
-                _this.$ajax.post(process.env.VUE_APP_SERVER+'/${module}/admin/${domain}/list',
+                _this.$ajax.post(process.env.VUE_APP_SERVER+'/system/admin/user/list',
                     {
                         // 设置页数 (前端传进来的参数)
                         page: page,
@@ -190,12 +176,12 @@
                     // loading隐藏
                     Loading.hide();
                     // 数据存储在response
-                    console.log("查询${tableNameCn}列表结果:",response);
+                    console.log("查询用户列表结果:",response);
                     // 就数据放进前端data(双面数据) 渲染数据
                     //获取到数据 存进data ,data点出list(记录)  渲染数据
                     // resp指的是ResponseDto
                     let resp= response.data;
-                    _this.${domain}s =resp.content.list;
+                    _this.users =resp.content.list;
                     //获取到数据 存进data ,data点出total(总页数) 渲染数据
                     //前端获取到传来的 泛型数据:content,然后点出里面的参数
                     _this.$refs.pagination.render(page,resp.content.total);
@@ -206,30 +192,24 @@
                 let _this=this;
                 //保存校验
                 if(1 != 1
-                    <#list fieldList as field>
-                    <#if field.name!="id" && field.nameHump!="createdAt" && field.nameHump!="updatedAt" && field.nameHump!="sort">
-                    <#if !field.nullAble>
-                    || !Validator.require(_this.${domain}.${field.nameHump},"${field.nameCn}")
-                    </#if>
-                    <#if (field.length > 0)>
-                    || !Validator.length(_this.${domain}.${field.nameHump}, "${field.nameCn}", 1, ${field.length?c})
-                    </#if>
-                    </#if>
-                    </#list>
+                    || !Validator.require(_this.user.loginName,"登陆名")
+                    || !Validator.length(_this.user.loginName, "登陆名", 1, 50)
+                    || !Validator.length(_this.user.name, "昵称", 1, 50)
+                    || !Validator.require(_this.user.password,"密码")
                 ){
                     return;
                 }
                 // loading显示
                 Loading.show();
                 // 获取list 从后台获取sql数据
-                _this.$ajax.post(process.env.VUE_APP_SERVER+'/${module}/admin/${domain}/save',
+                _this.$ajax.post(process.env.VUE_APP_SERVER+'/system/admin/user/save',
                     //参数
-                    _this.${domain}
+                    _this.user
                 ).then((response)=>{
                     // loading隐藏
                     Loading.hide();
                     // 数据存储在response
-                    console.log("保存${tableNameCn}列表结果:",response);
+                    console.log("保存用户列表结果:",response);
                     // resp指的是ResponseDto
                     let resp= response.data;
                     if(resp.success){
@@ -243,11 +223,11 @@
             del(id){
                 let _this=this;
 
-                Confirm.show("删除${tableNameCn}后不可恢复,确认删除?!",function(){
-                    _this.$ajax.delete(process.env.VUE_APP_SERVER+'/${module}/admin/${domain}/delete/'+id).then((response)=>{
+                Confirm.show("删除用户后不可恢复,确认删除?!",function(){
+                    _this.$ajax.delete(process.env.VUE_APP_SERVER+'/system/admin/user/delete/'+id).then((response)=>{
                         // loading显示
                         Loading.hide();
-                        console.log("删除${tableNameCn}列表结果:",response);
+                        console.log("删除用户列表结果:",response);
                         let resp=response.data;
                         if(resp.success){
                             _this.list(1);

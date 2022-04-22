@@ -21,7 +21,8 @@ import java.util.*;
 public class ServerGenerator {
   private static final Logger LOG = LoggerFactory.getLogger(ServerGenerator.class);
   //static String MODULE="business";
-  static String MODULE = "File";
+  static String MODULE="system";
+  //static String MODULE = "File";
   //数据层项目路径(Dto)
   static String toDtoPath = "server\\src\\main\\java\\com\\accp\\server\\dto\\";
   //业务层项目路径
@@ -34,7 +35,7 @@ public class ServerGenerator {
   /**
    *数据库表详情生成
    */
-  static String sqlDetails = "src\\main\\java\\com\\accp\\doc\\content\\";
+  //static String sqlDetails = "src\\main\\java\\com\\accp\\doc\\content\\";
 
   public static void main(String[] args) throws Exception {
     String module = MODULE;
@@ -82,9 +83,9 @@ public class ServerGenerator {
     FreemarkerUtil.initConfig("controller.ftl");
     FreemarkerUtil.generator(toControllerPath + Domain + "Controller.java", map);
     //数据表详情生成器
-    FreemarkerUtil.initConfig("sqlDetails.ftl");
-    LOG.info("sqlDetails生成路径:" + sqlDetails);
-    FreemarkerUtil.generator(sqlDetails + Domain + "表详情.sql", map);
+    //FreemarkerUtil.initConfig("sqlDetails.ftl");
+    //LOG.info("sqlDetails生成路径:" + sqlDetails);
+    //FreemarkerUtil.generator(sqlDetails + Domain + "表详情.sql", map);
   }
 
   /**
