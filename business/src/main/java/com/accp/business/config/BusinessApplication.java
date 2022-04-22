@@ -15,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * @author Mr.黄
  */
-@EnableSwagger2
+//@EnableSwagger2
 @SpringBootApplication
 @EnableEurekaServer
 @Component("com.accp")

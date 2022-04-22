@@ -55,7 +55,7 @@
             </tbody>
         </table>
 <!--模态框-->
-        <div id="forn-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div id="form-modal" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -127,13 +127,13 @@
             add(){
                 let _this=this;
                 _this.chapter= {};
-                $("#forn-modal").modal("show");
+                $("#form-modal").modal("show");
                 // $(".modal").modal("hide");
             },
             edit(chapter){
                 let _this=this;
                 _this.chapter =chapter;
-                $("#forn-modal").modal("show");
+                $("#form-modal").modal("show");
 
             },
             // 列表查询
@@ -189,7 +189,7 @@
                     let resp= response.data;
                     if(resp.success){
                         //如果保存成功的话:resp.success 就关闭模态框 并且刷新页面到第一页使他更新数据
-                        $("#forn-modal").modal("hide");
+                        $("#form-modal").modal("hide");
                         _this.list(1);
                         Toast.success("保存成功!")
                     }else {

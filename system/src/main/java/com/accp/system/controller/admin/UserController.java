@@ -77,21 +77,15 @@ public class UserController {
     userService.delete(id);
     return responseDto;
   }
-  ///**
-  // *全局异常扑获的处理
-  // */
-  //@ExceptionHandler(value = Exception.class)
-  //@ResponseBody
-  //public ResponseDto exceptionHandle(Exception e, HttpServletRequest request) {
-  //  ResponseDto responseDto=new ResponseDto();
-  //  LOG.info(e.getMessage(), e);
-  //  String errorMsg = e.getMessage();
-  //  if (e instanceof DataIntegrityViolationException){
-  //    errorMsg = "其他地方已使用,无法操作";
-  //    responseDto.setSuccess(false);
-  //    responseDto.setMessage(errorMsg);
-  //    return responseDto;
-  //  }
-  //  return responseDto;
-  //}
+  /**
+   * 重置密码
+   */
+  @PostMapping("/save-password")
+  public ResponseDto savePassword(@RequestBody UserDto userDto) {
+    userDto.setPassword(DigestUtils.md5DigestAsHex(userDto.getPassword().getBytes()));
+    ResponseDto responseDto = new ResponseDto();
+    userService.savePassword(userDto);
+    responseDto.setContent(userDto);
+    return responseDto;
+  }
 }
