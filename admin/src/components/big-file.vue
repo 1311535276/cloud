@@ -56,10 +56,10 @@ export default {
         type: "video/mp4"
       */
 
-      // let key = hex_md5(file.name + file.size + file.type);
       //转这么多进制是为了让数据变得小一点,从而数据库占的内存少一点
+      // let key = hex_md5(file);
       // 生成文件标识，标识多次上传的是不是同一个文件
-      let key = hex_md5(file);
+      let key = hex_md5(file.name + file.size + file.type);
       let key10 = parseInt(key, 16);
       let key62 = Tool._10to62(key10);
       // console.log(key, key10, key62);
