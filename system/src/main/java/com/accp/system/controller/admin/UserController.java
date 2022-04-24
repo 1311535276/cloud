@@ -1,12 +1,10 @@
 package com.accp.system.controller.admin;
 
-import com.accp.server.dto.LoginUserDto;
-import com.accp.server.dto.UserDto;
-import com.accp.server.dto.PageDto;
-import com.accp.server.dto.ResponseDto;
+import com.accp.server.dto.*;
 import com.accp.server.service.UserService;
 import com.accp.server.util.UuidUtil;
 import com.alibaba.fastjson.JSON;
+import com.netflix.ribbon.proxy.annotation.Http;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -82,6 +80,7 @@ public class UserController {
     userService.delete(id);
     return responseDto;
   }
+
   /**
    * 重置密码
    */
@@ -102,8 +101,9 @@ public class UserController {
     LOG.info("用户登录开始");
     userDto.setPassword(DigestUtils.md5DigestAsHex(userDto.getPassword().getBytes()));
     ResponseDto responseDto = new ResponseDto();
-    LoginUserDto loginlogin = userService.login(userDto);
-    responseDto.setContent(loginlogin);
+    LoginUserDto loginUserDto = userService.login(userDto);
+    request.getSession().setAttribute(Constants.LOGIN_USER,loginUserDto);
+    responseDto.setContent(loginUserDto);
     return responseDto;
   }
 
@@ -111,11 +111,11 @@ public class UserController {
    * 退出登录
    */
   @GetMapping("/logout/{token}")
-  public ResponseDto logout(@PathVariable String token) {
+  public ResponseDto logout(@PathVariable String token, HttpServletRequest request) {
     ResponseDto responseDto = new ResponseDto();
-//        request.getSession().removeAttribute(Constants.LOGIN_USER);
-//    redisTemplate.delete(token);
-//    LOG.info("从redis中删除token:{}", token);
+    request.getSession().removeAttribute(Constants.LOGIN_USER);
+    //redisTemplate.delete(token);
+    //LOG.info("从redis中删除token:{}", token);
     return responseDto;
   }
 }

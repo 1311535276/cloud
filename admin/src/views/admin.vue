@@ -303,7 +303,7 @@
                 <li>
                   <a href="#">
                     <i class="ace-icon fa fa-cog"></i>
-                    Settings
+                    设置
                   </a>
                 </li>
 
@@ -317,9 +317,9 @@
                 <li class="divider"></li>
 
                 <li>
-                  <a href="#">
+                  <a v-on:click="logout()" href="#">
                     <i class="ace-icon fa fa-power-off"></i>
-                    Logout
+                    退出登录
                   </a>
                 </li>
               </ul>
@@ -444,23 +444,23 @@
                 <b class="arrow"></b>
               </li>
 
-              <!--<li class="active" id="business-chapter-sidebar">-->
-              <!--      <router-link to="/business/chapter">-->
-              <!--          <i class="menu-icon fa fa-caret-right"></i>-->
-              <!--          大章管理-->
-              <!--      </router-link>-->
+              <!--<li class="active" id="business-chapter-sidebar">
+                    <router-link to="/business/chapter">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        大章管理
+                    </router-link>
 
-              <!--      <b class="arrow"></b>-->
-              <!--  </li>-->
+                    <b class="arrow"></b>
+                </li>
 
-              <!--  <li class="active" id="business-section-sidebar">-->
-              <!--      <router-link to="/business/section">-->
-              <!--          <i class="menu-icon fa fa-caret-right"></i>-->
-              <!--          小节管理-->
-              <!--      </router-link>-->
+                <li class="active" id="business-section-sidebar">
+                    <router-link to="/business/section">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        小节管理
+                    </router-link>
 
-              <!--      <b class="arrow"></b>-->
-              <!--  </li>-->
+                    <b class="arrow"></b>
+                </li>-->
 
             </ul>
           </li>
@@ -490,8 +490,7 @@
         </ul><!-- /.nav-list -->
 
         <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-          <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state"
-             data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+          <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
         </div>
       </div>
 
@@ -598,7 +597,21 @@ export default {
         parentLi.siblings().find("li").removeClass("active");
         parentLi.addClass("open active");
       }
-    }
+    },
+    logout () {
+      let _this = this;
+      Loading.show();
+      _this.$ajax.get(process.env.VUE_APP_SERVER + '/system/admin/user/logout/' + _this.loginUser.token).then((response)=>{
+        Loading.hide();
+        let resp = response.data;
+        if (resp.success) {
+          // Tool.setLoginUser(null);
+          _this.$router.push("/login")
+        } else {
+          Toast.warning(resp.message)
+        }
+      });
+    },
 
 
   }
