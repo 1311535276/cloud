@@ -96,6 +96,9 @@ Tool = {
    * 获取登录用户信息
    */
   getLoginUser: function () {
+    //如果SESSION_KEY_LOGIN_USER是null的话,用null.loginName是会报错的,
+    // 所以加了个|| {}
+    //因为{}.loginName 前端是不会报错的
     return SessionStorage.get(SESSION_KEY_LOGIN_USER) || {};
   },
 

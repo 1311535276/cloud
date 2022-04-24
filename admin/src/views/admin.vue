@@ -17,7 +17,7 @@
           <a href="index.html" class="navbar-brand">
             <small>
               <i class="fa fa-leaf"></i>
-              在线视频课程
+              在线视频
             </small>
           </a>
         </div>
@@ -289,11 +289,11 @@
 
             <li class="light-blue dropdown-modal">
               <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                <img class="nav-user-photo" src="../../public/ace/assets/images/avatars/user.jpg"
+                <img class="nav-user-photo" src="../../public/ace/assets/images/avatars/user1.png"
                      alt="Jason's Photo"/>
                 <span class="user-info">
-									<small>Welcome,</small>
-									Jason
+									<small>{{loginUser.name}},</small>
+									{{loginUser.id}}
 								</span>
 
                 <i class="ace-icon fa fa-caret-down"></i>
@@ -371,7 +371,7 @@
           <li class="" id="welcome-sidebar">
             <router-link to="/welcome">
               <i class="menu-icon fa fa-tachometer"></i>
-              <span class="menu-text"> 欢迎 </span>
+              <span class="menu-text"> 欢迎: {{loginUser.name}} </span>
             </router-link>
 
             <b class="arrow"></b>
@@ -548,6 +548,11 @@
 
 export default {
   name: 'admin',
+  data:function(){
+    return{
+      loginUser:{},
+    }
+  },
   mounted: function () {
     let _this = this;
     $('body').removeClass('login-layout light-login');
@@ -557,6 +562,9 @@ export default {
     _this.activeSidebar(this.$route.name.replace("/", "-") + "-sidebar");
     //查询加载 ace.js 不然菜单会失效
     $.getScript('/ace/assets/js/ace.min.js');
+    //第一次加载时 获取当前会话
+   // _this.loginUser= SessionStorage.get("USER")
+   _this.loginUser= Tool.getLoginUser();
   },
   watch: {
     $route: {

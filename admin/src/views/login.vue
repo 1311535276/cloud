@@ -124,8 +124,11 @@
           let resp = response.data;
           if (resp.success) {
             console.log("登录成功：", resp.content);
+            //保存登录会话
+            // SessionStorage.set("USER",resp.content)
             let loginUser = resp.content;
-            // Tool.setLoginUser(resp.content);
+            //通用方法保存会话信息, 方法在tool.js里
+            Tool.setLoginUser(resp.content);
             _this.$router.push("/welcome")
           } else {
             Toast.warning(resp.message);
