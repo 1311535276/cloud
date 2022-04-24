@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="GROUP_BY_SEVERITY" value="true" />
-  </component>
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="ALL" />
+    <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="1，文件上传功能开发：文件上传成功后返回值的处理&#10;2.已修复用途无法显示的bug;在file.vue文件增加了   FILE_USE: FILE_USE,就搞定了">
+    <list default="true" id="6ba66134-90f5-47d7-869b-599969b9a8b4" name="Default Changelist" comment="1.用户管理与登录：增加退出登录功能，清空前后端的会话缓存&#10;2.11-4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/course.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/admin/section.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/views/admin/section.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/file/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/config/BusinessApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/CategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/ChapterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/CourseCategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/CourseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/SectionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/target/classes/com/accp/business/controller/admin/TeacherController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/file/target/classes/com/accp/file/controller/admin/UploadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/target/classes/com/accp/gateway/GatewayApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/classes/com/accp/gateway/GatewayApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/server/ServerGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/generator/target/classes/com/accp/generator/server/ServerGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/config/LogAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/config/LogAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/dto/ResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/dto/ResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/accp/server/exception/ValidatorException.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/accp/server/exception/ValidatorException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/server-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/server-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/server-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/server-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/system/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/system/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,10 +35,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -46,44 +57,41 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/admin/src/views/admin/chapter.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/main.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/admin/src/views/admin/teacher.vue" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/generator/src/main/java/com/accp/generator/ftl/vue.ftl" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/file/src/main/java/com/accp/file/controller/admin/UploadController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/views/admin/category.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/generator/src/main/java/com/accp/generator/ftl/vue.ftl" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/business/src/main/java/com/accp/business/controller/admin/CategoryController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/file/src/main/java/com/accp/file/config/SpringMvcConfig.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/admin/src/main.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/admin/src/views/admin/category.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/admin/src/views/admin/chapter.vue" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/admin/src/router.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="E:\apache-maven-3.8.1\src\MyRepository" />
+        <option name="localRepository" value="E:\maven\apache-maven-3.8.1\src\MyRepository" />
         <option name="mavenHome" value="$PROJECT_DIR$/../../maven/apache-maven-3.8.1" />
         <option name="userSettingsFile" value="E:\maven\apache-maven-3.8.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="jdkForImporter" value="#JAVA_HOME" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
       </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenRunner">
-    <option name="jreName" value="#JAVA_HOME" />
+    <option name="jreName" value="1.8" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="2" />
-  </component>
-  <component name="ProjectId" id="1rAIgADSl9R7r5ZIJIYAmBgB8AH" />
+  <component name="ProjectId" id="282q5vOYbDnRZP2p1JSwTrP56Sj" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -92,69 +100,46 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/server/src/main/test" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/src/main/java/com/accp/server/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/public/ace/assets/images/avatars" />
     <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="E:\JetBrains\IntelliJ IDEA 2021.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/admin/src/views/admin/category.vue" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.accp.business.config" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\newCodeProject\videoCloud\server\src\main\java\com\accp\server\test" />
-      <recent name="E:\newCodeProject\videoCloud\doc\db" />
-      <recent name="E:\newCodeProject\videoCloud\generator\src\main\java\com\accp\generator\vue" />
-      <recent name="E:\newCodeProject\videoCloud\admin\src\views\admin" />
-      <recent name="E:\newCodeProject\videoCloud\server\src\main\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\newCodeProject\videoCloud\server\src\main" />
-      <recent name="E:\newCodeProject\videoCloud\admin\public\static\image" />
-      <recent name="E:\newCodeProject\videoCloud\admin\public\static\image\讲师头像" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="" />
+      <recent name="E:\newCodeProject\videoCloud\admin\public\ace\assets\images\avatars" />
+      <recent name="E:\newCodeProject\videoCloud\server\src\main\resources\mapper\my" />
+      <recent name="E:\newCodeProject\videoCloud\admin\public\ace\assets\js" />
+      <recent name="E:\newCodeProject\videoCloud\business\src\main\resources" />
+      <recent name="E:\newCodeProject\videoCloud\file1" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.accp.server.dto" />
-      <recent name="com.accp.server.util" />
-      <recent name="com.accp.file.config" />
-      <recent name="com.accp.server.config" />
-      <recent name="com.accp.file.controller.admin" />
+      <recent name="com.accp.system.controller" />
+      <recent name="com.accp.server.mapper.my" />
+      <recent name="com.accp.server.exception" />
+      <recent name="com.accp.server.config.aop" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn install" />
       <command value="mvn -U idea:idea" />
+      <command value="mvn clean" />
+      <command value="mvn install" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -163,19 +148,27 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="excludedTypes">
-      <set>
-        <option value="HttpClient.HttpRequestRunConfigurationType" />
-      </set>
-    </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.FileApplication">
-    <configuration name="ServerGenerator" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="Spring Boot.SystemApplication">
+    <configuration name="DeadLock2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.accp.server.test.DeadLock2" />
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.accp.server.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.accp.generator.server.ServerGenerator" />
       <module name="generator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.accp.gateway.*" />
+          <option name="PATTERN" value="com.accp.generator.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -183,45 +176,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <module name="server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VueGenerator" type="Application" factoryName="Application">
+    <configuration name="VueGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.accp.generator.vue.VueGenerator" />
       <module name="generator" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.accp.business.config.test" />
-      <module name="business" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.accp.business.config.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.accp.system.controller.test" />
-      <module name="system" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.accp.system.controller.*" />
+          <option name="PATTERN" value="com.accp.generator.vue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -266,7 +226,7 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="BusinessApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="BusinessApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="business" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.accp.business.config.BusinessApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -275,7 +235,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaApplication " type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="eureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.accp.eureka.EurekaApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -284,7 +244,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="FileApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="file" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.accp.file.config.FileApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -293,14 +253,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="GatewayApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gateway" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.accp.gateway.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.accp.gateway.GatewayApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SHORTEN_COMMAND_LINE" value="NONE" />
@@ -311,6 +265,15 @@
     <configuration name="SystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="system" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.accp.system.config.SystemApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="business" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.accp.business.config.BusinessApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
@@ -328,249 +291,171 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.VueGenerator" />
-      <item itemvalue="Application.ServerGenerator" />
-      <item itemvalue="Application.test (1)" />
-      <item itemvalue="Application.test" />
-      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.DeadLock2" />
       <item itemvalue="Maven.mybatis-generator" />
       <item itemvalue="npm.serve-dev" />
       <item itemvalue="Spring Boot.BusinessApplication" />
-      <item itemvalue="Spring Boot.EurekaApplication " />
       <item itemvalue="Spring Boot.FileApplication" />
-      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.EurekaApplication" />
       <item itemvalue="Spring Boot.SystemApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication (1)" />
+      <item itemvalue="Application.ServerGenerator" />
+      <item itemvalue="Application.VueGenerator" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.serve-dev" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.test" />
+        <item itemvalue="Application.VueGenerator" />
         <item itemvalue="Application.ServerGenerator" />
-        <item itemvalue="Application.test (1)" />
+        <item itemvalue="Spring Boot.FileApplication" />
+        <item itemvalue="Application.DeadLock2" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1a86a7c9-75fc-4c95-91c3-305bb1f1d787" name="Default Changelist" comment="" />
-      <created>1618412576512</created>
+      <changelist id="6ba66134-90f5-47d7-869b-599969b9a8b4" name="Default Changelist" comment="" />
+      <created>1650424849307</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1618412576512</updated>
-      <workItem from="1618412577994" duration="2557000" />
-      <workItem from="1618415186336" duration="4428000" />
-      <workItem from="1618424860519" duration="915000" />
-      <workItem from="1618458011254" duration="3605000" />
-      <workItem from="1618541410570" duration="2159000" />
-      <workItem from="1618559351594" duration="785000" />
-      <workItem from="1618766525754" duration="598000" />
-      <workItem from="1618815424883" duration="1489000" />
-      <workItem from="1618836583101" duration="4176000" />
-      <workItem from="1618849707626" duration="174000" />
-      <workItem from="1618900477701" duration="799000" />
-      <workItem from="1618945992288" duration="2456000" />
-      <workItem from="1619001313530" duration="487000" />
-      <workItem from="1619001818168" duration="1273000" />
-      <workItem from="1619004909791" duration="7403000" />
-      <workItem from="1619141399117" duration="30670000" />
-      <workItem from="1619259852777" duration="10462000" />
-      <workItem from="1619315535171" duration="7219000" />
-      <workItem from="1619401823666" duration="6438000" />
-      <workItem from="1619434124829" duration="755000" />
-      <workItem from="1619574771558" duration="3403000" />
-      <workItem from="1634001641216" duration="8302000" />
-      <workItem from="1634091143080" duration="1266000" />
-      <workItem from="1634200591725" duration="30000" />
-      <workItem from="1634205956415" duration="2297000" />
-      <workItem from="1634806628101" duration="2000" />
-      <workItem from="1635733651682" duration="8078000" />
-      <workItem from="1635995584176" duration="14465000" />
-      <workItem from="1636514518935" duration="6734000" />
-      <workItem from="1636962821835" duration="1000" />
-      <workItem from="1637028653453" duration="593000" />
-      <workItem from="1637630308203" duration="1267000" />
-      <workItem from="1638263783008" duration="72000" />
-      <workItem from="1638264881812" duration="624000" />
-      <workItem from="1640587128003" duration="25000" />
-      <workItem from="1642387347400" duration="1340000" />
-      <workItem from="1642400487702" duration="102000" />
-      <workItem from="1642400610043" duration="2264000" />
-      <workItem from="1642734352064" duration="3282000" />
-      <workItem from="1643006403154" duration="3800000" />
-      <workItem from="1643075256531" duration="1833000" />
-      <workItem from="1643078210403" duration="25000" />
-      <workItem from="1644542075452" duration="2751000" />
-      <workItem from="1644551428584" duration="12476000" />
-      <workItem from="1644644411629" duration="1029000" />
-      <workItem from="1646010342630" duration="1314000" />
-      <workItem from="1646032360293" duration="1346000" />
-      <workItem from="1646099094949" duration="1677000" />
-      <workItem from="1646635590155" duration="5868000" />
-      <workItem from="1646719428614" duration="601000" />
-      <workItem from="1646809213213" duration="177000" />
-      <workItem from="1646813961184" duration="268000" />
-      <workItem from="1646814262783" duration="596000" />
-      <workItem from="1647242428870" duration="754000" />
-      <workItem from="1647243197962" duration="248000" />
-      <workItem from="1647245678005" duration="1675000" />
-      <workItem from="1647247378808" duration="4420000" />
-      <workItem from="1647304204822" duration="7868000" />
-      <workItem from="1647391291329" duration="286000" />
-      <workItem from="1647391612570" duration="7336000" />
-      <workItem from="1647476963747" duration="594000" />
-      <workItem from="1647478173788" duration="592000" />
-      <workItem from="1647524878670" duration="594000" />
-      <workItem from="1647527005746" duration="1940000" />
-      <workItem from="1647564387291" duration="26000" />
-      <workItem from="1647564454590" duration="74000" />
-      <workItem from="1647564569960" duration="6344000" />
-      <workItem from="1647781681385" duration="59000" />
-      <workItem from="1647781779189" duration="593000" />
-      <workItem from="1647822484941" duration="19000" />
-      <workItem from="1647822541717" duration="273000" />
-      <workItem from="1647822851834" duration="590000" />
-      <workItem from="1647908577228" duration="8000" />
-      <workItem from="1647908619975" duration="596000" />
-      <workItem from="1648427835814" duration="10152000" />
-      <workItem from="1648525896762" duration="2269000" />
-      <workItem from="1650265267281" duration="6609000" />
-      <workItem from="1650328827888" duration="1300000" />
-      <workItem from="1650330195760" duration="13841000" />
+      <updated>1650424849307</updated>
+      <workItem from="1650424852219" duration="17240000" />
+      <workItem from="1650504161501" duration="9117000" />
+      <workItem from="1650521102977" duration="50718000" />
     </task>
-    <task id="LOCAL-00001" summary="添加进去新的设备,新的idea2021版本">
-      <created>1618542353429</created>
+    <task id="LOCAL-00001" summary="1.大文件断点续传与极速秒传：分片相关的数据传输&#10;2.将很多后端所需要的参数,都交给了big-file.vue前端进行处理,减少服务器的压力&#10;3.分片功能还未做完//TODO&#10;4.9-2">
+      <created>1650437986540</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1618542353430</updated>
+      <updated>1650437986540</updated>
     </task>
-    <task id="LOCAL-00002" summary="1，课程内容表设计与基本代码生成&#10;2,7-5">
-      <created>1619006646296</created>
+    <task id="LOCAL-00002" summary="1.大文件断点续传与极速秒传：使用文件生成md5签名，作为文件标识&#10;2.大文件新点续传与极速秒传：根据文件标识来新增或修改文件记录，修改分片索引从1开始&#10;4.还未完成合并视频&#10;5.business新增swagger配置,整合了swagger&#10;6.9-2">
+      <created>1650447774279</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1619006646296</updated>
+      <updated>1650447774279</updated>
     </task>
-    <task id="LOCAL-00003" summary="1，完成课程内容管理功能&#10;1.1新增富文本框,进行内容编辑,和查询&#10;2.7-5">
-      <created>1619089011672</created>
+    <task id="LOCAL-00003" summary="1.大文件新点续传与极速秒传；分片数据改成base64进行传输，后端统一用@RequestBody接收数据">
+      <created>1650503107879</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1619089011672</updated>
+      <updated>1650503107880</updated>
     </task>
-    <task id="LOCAL-00004" summary="1·利用setInterval完成自动保存功能&#10;2·增加日期格式化方法&#10;3·7-5结束了">
-      <created>1619093078014</created>
+    <task id="LOCAL-00004" summary="1.大文件新点续传与极速秒传；设置分片文件名，以分片索引结尾&#10;2.9.3">
+      <created>1650505346483</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1619093078014</updated>
+      <updated>1650505346483</updated>
     </task>
-    <task id="LOCAL-00005" summary="1.课程管理增加自定义排序&#10;2.修复了课程管理新增的bug&#10;3.修复了mapp没有映射到的bug(路径问题)&#10;4.修复了上次更新git没有更新核心文件(这次直接一次性更新)&#10;5.新增了排序的增删改查&#10;6.7-6">
-      <created>1619112224980</created>
+    <task id="LOCAL-00005" summary="1.大文件新点续传与极速秒传：重构文件上传代码：将上传功能提取成一个单独的upload方法，使用递归调用upload方法，实现连续上传多个分片功能&#10;2.9-3&#10;3.配置输出控制台sql语法,输出日志更改">
+      <created>1650508885820</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1619112224980</updated>
+      <updated>1650508885820</updated>
     </task>
-    <task id="LOCAL-00006" summary="1,home隐藏大章和小节&#10;2,7-6">
-      <created>1619112582003</created>
+    <task id="LOCAL-00006" summary="1，大文件断点续传与极速秒传：按分片顺序合并成原始文件&#10;2.大文件断点续传与极速秒传：合并成原始文件后，删除所有分片,调用System.gc();希望虚拟机能进行一次垃圾回收!&#10;3.9-4">
+      <created>1650525370261</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1619112582003</updated>
+      <updated>1650525370261</updated>
     </task>
-    <task id="LOCAL-00007" summary="1,sessionstoragelikey改成常量&#10;2,7-6">
-      <created>1619114275834</created>
+    <task id="LOCAL-00007" summary="1，大文件断点续传与极速秒传：上传分片之前先进行分片检查，支持断点续传&#10;2.大文件极速秒传(续传);大文件断点续传与极速秒传：支持极速秒传;就是文件如果已经存在上传成功在服务器了,那么就显示极速上传成功;&#10;3.9-5">
+      <created>1650529021355</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1619114275834</updated>
+      <updated>1650529021355</updated>
     </task>
-    <task id="LOCAL-00008" summary="1,增加全局自定义样式style.css，表格内文字上下居中&#10;2,chapter有新bug 设置全局变量没有效果, 记录待解决">
-      <created>1619143196431</created>
+    <task id="LOCAL-00008" summary="1.大文件断点续传与极速秒传：增加上传进度条组件(progress.js)&#10;2.去掉等待框改成了进度条&#10;3.9-5">
+      <created>1650534297364</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1619143196431</updated>
+      <updated>1650534297364</updated>
     </task>
-    <task id="LOCAL-00009" summary="1,课程与讲师关联&#10;2,7-7讲师头像">
-      <created>1619168650121</created>
+    <task id="LOCAL-00009" summary="1.大文件断点续传与极速秒传：讲师头像和课程封面改为用大文件组件&#10;2.解决修复上传图片视频只能上传一次的bug,因为MD5需要更改的是string类型,传进去的file其实是组件类型,因此md5无法加密,导致加密只会重名;&#10;3.9-5结束">
+      <created>1650590818847</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1619168650121</updated>
+      <updated>1650590818847</updated>
     </task>
-    <task id="LOCAL-00010" summary="1.课程列表中显示讲师信息&#10;2.课程名称字体自适应&#10;3.7-7">
-      <created>1619169871443</created>
+    <task id="LOCAL-00010" summary="1.文件上传流程图.Xmind&#10;3.9-6">
+      <created>1650594495459</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1619169871443</updated>
+      <updated>1650594495459</updated>
     </task>
-    <task id="LOCAL-00011" summary="1，增加file模块，用于文件上传和存储&#10;2,8-1">
-      <created>1619205928185</created>
+    <task id="LOCAL-00011" summary="1.用户管理与登录：用户表设计与基本代码生成&#10;2.11-1&#10;3.完成全局异常捕获,只要捕获到异常,发送给前端的message指定是 &quot;其他地方已使用,无法操作&quot;">
+      <created>1650607362501</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1619205928185</updated>
+      <updated>1650607362501</updated>
     </task>
-    <task id="LOCAL-00012" summary="1.文件上传功能开发：springboot+vue基本的文件上传功能，上传讲师头像&#10;2.修复了 jdbc:url未指定的bug;原因是server没有application.properties,&#10;3.修复了maven是官方镜像的bug,改为了本地maven,采用阿里云的镜像&#10;4.添加了一个日志输出类,但是效果不咋地,经常报错,已注释掉这个类&#10;5.修改了全部子项目jdk采用本地1.8 版本改为1.8">
-      <created>1619261653598</created>
+    <task id="LOCAL-00012" summary="1.用户管理与登录：增加用户名是否已存在校验&#10;2.增加自定义业务异常(在system模块下)&#10;3.11.1&#10;4.修改前端遇到后端报错能捕获并且输出给用户(无论方法成功与否,都要接收message)">
+      <created>1650611369866</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1619261653598</updated>
+      <updated>1650611369866</updated>
     </task>
-    <task id="LOCAL-00013" summary="1，文件上传功能开发：增加springboot静态资源配置，配置文件访问路径">
-      <created>1619291684991</created>
+    <task id="LOCAL-00013" summary="1，用户管理与登录：侧边栏激活样式优化工&#10;2.11.1">
+      <created>1650613410315</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1619291684991</updated>
+      <updated>1650613410315</updated>
     </task>
-    <task id="LOCAL-00014" summary="1.文件上传功能开发：讲师头像显示优化,课程显示优化;&#10;2.文件上传功能开发：文件上传实时显示与保存&#10;3.Maven多环境配置，将开发环境和生产环境配置成不同的值(配置在application.yml上了)&#10;4.8-2">
-      <created>1619294150986</created>
+    <task id="LOCAL-00014" summary="1.用户管理与登录：解决从登录页面跳到控台主页时，侧边栏失效的问题I&#10;2.11.1&#10;3.小技巧：在用很多第三方框架或jquery插件时，如果发现有些功能不起作用，如果看不懂源码，可以尝试这种方法解决，把核心的重新加载一遍: $.getScript('/ace/assets/js/ace.min.js');">
+      <created>1650614275316</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1619294150987</updated>
+      <updated>1650614275316</updated>
     </task>
-    <task id="LOCAL-00015" summary="1.文件上传功能开发：使用单独的文件上传按钢&#10;2.8-3">
-      <created>1619575644038</created>
+    <task id="LOCAL-00015" summary="1.用户管理与登录：密码加密传输和加密存储&#10;2.前端进行明文密码加密, 后端接收到前端密码加密后在进行一次加密&#10;3.两行代码加密,前端一行,后端一行&#10;4.前端采用:_this.user.password=hex_md5(_this.user.password+KEY);&#10;5.后端采用:     userDto.setPassword(DigestUtils.md5DigestAsHex(userDto.getPassword().getBytes()));&#10;6.11-2">
+      <created>1650616582442</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1619575644039</updated>
+      <updated>1650616582442</updated>
     </task>
-    <task id="LOCAL-00016" summary="1.文件上传功能开发：制作文件上传公共组件(File.vue)&#10;2.修复不能连续上传同一个文件的BUG,(清空v-bind:id的值.val();)&#10;3.8-4">
-      <created>1635821799149</created>
+    <task id="LOCAL-00016" summary="1.用户管理与登录：增加重置密码功能；编辑用户信息的时候不修改密码;&#10;2.11-2">
+      <created>1650619314885</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1635821799149</updated>
+      <updated>1650619314885</updated>
     </task>
-    <task id="LOCAL-00017" summary="1.文件上传功能开发：去掉文件管理的新增、修改、删除功能&#10;2.8-6">
-      <created>1650333610832</created>
+    <task id="LOCAL-00017" summary="1.用户管理与登录：基本的登录功能开发，校验用户名密码，&#10;2.11-3">
+      <created>1650764958265</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1650333610832</updated>
+      <updated>1650764958265</updated>
     </task>
-    <task id="LOCAL-00018" summary="1，文件上传功能开发：去掉文件管理的新增、修改、删除功能&#10;2，文件上传功能开发：文件按用途分类保存&#10;3,修复文件上传后缀名参数没储存&#10;4,bug还未修复,用途在前端无法显示,后端已存储&#10;2.8-7">
-      <created>1650339835642</created>
+    <task id="LOCAL-00018" summary="1，用户管理与登录：登录后前端保存登录信息并显示&#10;2.11-3">
+      <created>1650769049774</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1650339835642</updated>
+      <updated>1650769049774</updated>
     </task>
-    <task id="LOCAL-00019" summary="1，文件上传功能开发：文件上传成功后返回值的处理&#10;2.已修复用途无法显示的bug;在file.vue文件增加了   FILE_USE: FILE_USE,就搞定了">
-      <created>1650340806078</created>
+    <task id="LOCAL-00019" summary="1.用户管理与登录：增加退出登录功能，清空前后端的会话缓存&#10;2.11-4">
+      <created>1650794961654</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1650340806078</updated>
+      <updated>1650794961654</updated>
     </task>
     <option name="localTasksCounter" value="20" />
     <servers />
@@ -591,47 +476,33 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加进去新的设备,新的idea2021版本" />
-    <MESSAGE value="1，课程内容表设计与基本代码生成&#10;2,7-5" />
-    <MESSAGE value="1，完成课程内容管理功能&#10;1.1新增富文本框,进行内容编辑,和查询&#10;2.7-5" />
-    <MESSAGE value="1·利用setInterval完成自动保存功能&#10;2·增加日期格式化方法&#10;3·7-5结束了" />
-    <MESSAGE value="1.课程管理增加自定义排序&#10;2.修复了课程管理新增的bug&#10;3.修复了mapp没有映射到的bug(路径问题)&#10;4.修复了上次更新git没有更新核心文件(这次直接一次性更新)&#10;5.新增了排序的增删改查&#10;6.7-6" />
-    <MESSAGE value="1,home隐藏大章和小节&#10;2,7-6" />
-    <MESSAGE value="1,sessionstoragelikey改成常量&#10;2,7-6" />
-    <MESSAGE value="1,增加全局自定义样式style.css，表格内文字上下居中&#10;2,chapter有新bug 设置全局变量没有效果, 记录待解决" />
-    <MESSAGE value="1,课程与讲师关联&#10;2,7-7讲师头像" />
-    <MESSAGE value="1.课程列表中显示讲师信息&#10;2.课程名称字体自适应&#10;3.7-7" />
-    <MESSAGE value="1，增加file模块，用于文件上传和存储&#10;2,8-1" />
-    <MESSAGE value="1.文件上传功能开发：springboot+vue基本的文件上传功能，上传讲师头像&#10;2.修复了 jdbc:url未指定的bug;原因是server没有application.properties,&#10;3.修复了maven是官方镜像的bug,改为了本地maven,采用阿里云的镜像&#10;4.添加了一个日志输出类,但是效果不咋地,经常报错,已注释掉这个类&#10;5.修改了全部子项目jdk采用本地1.8 版本改为1.8" />
-    <MESSAGE value="1，文件上传功能开发：增加springboot静态资源配置，配置文件访问路径" />
-    <MESSAGE value="1.文件上传功能开发：讲师头像显示优化,课程显示优化;&#10;2.文件上传功能开发：文件上传实时显示与保存&#10;3.Maven多环境配置，将开发环境和生产环境配置成不同的值(配置在application.yml上了)&#10;4.8-2" />
-    <MESSAGE value="1.文件上传功能开发：使用单独的文件上传按钢&#10;2.8-3" />
-    <MESSAGE value="1.文件上传功能开发：制作文件上传公共组件(File.vue)&#10;2.修复不能连续上传同一个文件的BUG,(清空v-bind:id的值.val();)" />
-    <MESSAGE value="1.文件上传功能开发：制作文件上传公共组件(File.vue)&#10;2.修复不能连续上传同一个文件的BUG,(清空v-bind:id的值.val();)&#10;3.8-4" />
-    <MESSAGE value="1.文件上传功能开发：去掉文件管理的新增、修改、删除功能&#10;2.8-6" />
-    <MESSAGE value="1，文件上传功能开发：去掉文件管理的新增、修改、删除功能&#10;2，文件上传功能开发：文件按用途分类保存&#10;3,修复文件上传后缀名参数没储存&#10;4,bug还未修复,用途在前端无法显示,后端已存储&#10;2.8-7" />
-    <MESSAGE value="1，文件上传功能开发：文件上传成功后返回值的处理&#10;2.已修复用途无法显示的bug;在file.vue文件增加了   FILE_USE: FILE_USE,就搞定了" />
-    <option name="LAST_COMMIT_MESSAGE" value="1，文件上传功能开发：文件上传成功后返回值的处理&#10;2.已修复用途无法显示的bug;在file.vue文件增加了   FILE_USE: FILE_USE,就搞定了" />
+    <MESSAGE value="1.大文件断点续传与极速秒传：分片相关的数据传输&#10;2.将很多后端所需要的参数,都交给了big-file.vue前端进行处理,减少服务器的压力&#10;3.分片功能还未做完//TODO&#10;4.9-2" />
+    <MESSAGE value="1.大文件断点续传与极速秒传：使用文件生成md5签名，作为文件标识&#10;2.大文件新点续传与极速秒传：根据文件标识来新增或修改文件记录，修改分片索引从1开始&#10;4.还未完成合并视频&#10;5.business新增swagger配置,整合了swagger&#10;6.9-2" />
+    <MESSAGE value="1.大文件新点续传与极速秒传；分片数据改成base64进行传输，后端统一用@RequestBody接收数据" />
+    <MESSAGE value="1.大文件新点续传与极速秒传；设置分片文件名，以分片索引结尾&#10;2.9.3" />
+    <MESSAGE value="1.大文件新点续传与极速秒传：重构文件上传代码：将上传功能提取成一个单独的upload方法，使用递归调用upload方法，实现连续上传多个分片功能&#10;2.9-3&#10;3.配置输出控制台sql语法,输出日志更改" />
+    <MESSAGE value="1，大文件断点续传与极速秒传：按分片顺序合并成原始文件&#10;2.大文件断点续传与极速秒传：合并成原始文件后，删除所有分片,调用System.gc();希望虚拟机能进行一次垃圾回收!&#10;3.9-4" />
+    <MESSAGE value="1，大文件断点续传与极速秒传：上传分片之前先进行分片检查，支持断点续传&#10;2.大文件极速秒传(续传);大文件断点续传与极速秒传：支持极速秒传;就是文件如果已经存在上传成功在服务器了,那么就显示极速上传成功;&#10;3.9-5" />
+    <MESSAGE value="1.大文件断点续传与极速秒传：增加上传进度条组件(progress.js)&#10;2.去掉等待框改成了进度条&#10;3.9-5" />
+    <MESSAGE value="1.大文件断点续传与极速秒传：讲师头像和课程封面改为用大文件组件&#10;2.解决修复上传图片视频只能上传一次的bug,因为MD5需要更改的是string类型,传进去的file其实是组件类型,因此md5无法加密,导致加密只会重名;&#10;3.9-5结束" />
+    <MESSAGE value="1.文件上传流程图.Xmind&#10;3.9-6" />
+    <MESSAGE value="1.用户管理与登录：用户表设计与基本代码生成&#10;2.11-1&#10;3.完成全局异常捕获,只要捕获到异常,发送给前端的message指定是 &quot;其他地方已使用,无法操作&quot;" />
+    <MESSAGE value="1.用户管理与登录：增加用户名是否已存在校验&#10;2.增加自定义业务异常(在system模块下)&#10;3.11.1&#10;4.修改前端遇到后端报错能捕获并且输出给用户(无论方法成功与否,都要接收message)" />
+    <MESSAGE value="1，用户管理与登录：侧边栏激活样式优化工&#10;2.11.1" />
+    <MESSAGE value="1.用户管理与登录：解决从登录页面跳到控台主页时，侧边栏失效的问题I&#10;2.11.1&#10;3.小技巧：在用很多第三方框架或jquery插件时，如果发现有些功能不起作用，如果看不懂源码，可以尝试这种方法解决，把核心的重新加载一遍: $.getScript('/ace/assets/js/ace.min.js');" />
+    <MESSAGE value="1.用户管理与登录：密码加密传输和加密存储&#10;2.前端进行明文密码加密, 后端接收到前端密码加密后在进行一次加密&#10;3.两行代码加密,前端一行,后端一行&#10;4.前端采用:_this.user.password=hex_md5(_this.user.password+KEY);&#10;5.后端采用:     userDto.setPassword(DigestUtils.md5DigestAsHex(userDto.getPassword().getBytes()));&#10;6.11-2" />
+    <MESSAGE value="1.用户管理与登录：增加重置密码功能；编辑用户信息的时候不修改密码;&#10;2.11-2" />
+    <MESSAGE value="1.用户管理与登录：基本的登录功能开发，校验用户名密码，&#10;2.11-3" />
+    <MESSAGE value="1，用户管理与登录：登录后前端保存登录信息并显示&#10;2.11-3" />
+    <MESSAGE value="1.用户管理与登录：增加退出登录功能，清空前后端的会话缓存&#10;2.11-4" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.用户管理与登录：增加退出登录功能，清空前后端的会话缓存&#10;2.11-4" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/test/Test.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/com/accp/server/service/FileService.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.apache.catalina.session.StandardSession" memberName="id" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
