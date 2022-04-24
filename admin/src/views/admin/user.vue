@@ -174,7 +174,6 @@ export default {
     }
   },
   mounted: function () {
-
     let _this = this;
     _this.$refs.pagination.size = 5;
     // 调用 list()方法

@@ -1,19 +1,24 @@
 package com.accp.system.controller.admin;
 
+import com.accp.server.dto.LoginUserDto;
 import com.accp.server.dto.UserDto;
 import com.accp.server.dto.PageDto;
 import com.accp.server.dto.ResponseDto;
 import com.accp.server.service.UserService;
+import com.accp.server.util.UuidUtil;
+import com.alibaba.fastjson.JSON;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.util.DigestUtils;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import com.accp.server.util.ValidatorUtil;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.nio.charset.StandardCharsets;
+import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -86,6 +91,31 @@ public class UserController {
     ResponseDto responseDto = new ResponseDto();
     userService.savePassword(userDto);
     responseDto.setContent(userDto);
+    return responseDto;
+  }
+
+  /**
+   * 登录
+   */
+  @PostMapping("/login")
+  public ResponseDto login(@RequestBody UserDto userDto, HttpServletRequest request) {
+    LOG.info("用户登录开始");
+    userDto.setPassword(DigestUtils.md5DigestAsHex(userDto.getPassword().getBytes()));
+    ResponseDto responseDto = new ResponseDto();
+    LoginUserDto loginlogin = userService.login(userDto);
+    responseDto.setContent(loginlogin);
+    return responseDto;
+  }
+
+  /**
+   * 退出登录
+   */
+  @GetMapping("/logout/{token}")
+  public ResponseDto logout(@PathVariable String token) {
+    ResponseDto responseDto = new ResponseDto();
+//        request.getSession().removeAttribute(Constants.LOGIN_USER);
+//    redisTemplate.delete(token);
+//    LOG.info("从redis中删除token:{}", token);
     return responseDto;
   }
 }
